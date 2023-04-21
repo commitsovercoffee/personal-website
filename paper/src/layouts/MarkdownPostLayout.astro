@@ -31,9 +31,11 @@ import BaseLayout from "./BaseLayout.astro";
     <p>{frontmatter.description}</p>
 
     <!-- Tags -->
-    <div class="tags">
-        {frontmatter.tags.map((tag) => <p class="tags">#{tag}</p>)}
-    </div>
+  <div class="tags">
+    {frontmatter.tags.map((tag) => (
+      <p><a href={`/tags/${tag}`}>{tag}</a></p>
+    ))}
+  </div>
 
     <!-- Markdown Content -->
     <slot />

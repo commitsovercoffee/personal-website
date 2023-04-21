@@ -61,6 +61,25 @@ hamburger {
   display: unset;
 }
 
+    .tags {
+        display: flex;
+    }
+
+    .tags > p {
+        font-size: 14px;
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 10px;
+        border: 2px solid #2e2e2e;
+    }
+
+    .tags > p:hover,
+    .tags > p:active {
+        background-color: #2e2e2e;
+        cursor:pointer;
+        color: #ffffff;
+    }
+
 @media screen and (min-width: 636px) {
   .nav-links {
     margin-left: 5em;
