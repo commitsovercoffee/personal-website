@@ -3,9 +3,9 @@ import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 export async function get() {
   return rss({
     title: 'Commits over coffee | Blog',
-    description: 'Shower thougths...',
+    description: 'Shower Thoughts',
     site: 'https://commitsovercoffee.netlify.app/',
-    items: await pagesGlobToRssItems(import.meta.glob('../posts/**/*.md')),
+    items: await pagesGlobToRssItems(import.meta.glob('./posts/**/*.md')),
     customData: `<language>en-us</language>`,
   });
 }
