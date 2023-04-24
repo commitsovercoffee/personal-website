@@ -1,9 +1,6 @@
-html * {
-  border:solid 1px red;
-}
 
 html.dark {
-  background-color: #0d0950;
+  background-color: #1d1f21;
   color: #fff;
 }
 
