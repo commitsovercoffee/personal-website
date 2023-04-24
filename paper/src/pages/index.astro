@@ -1,10 +1,22 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page !"
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Hello!";
 ---
+<BaseLayout pageTitle={pageTitle}>
+    <p>
+        You have found my corner of the internet, and I'm glad you're here. Go
+        nuts and explore around! Here are some fun links :
+    </p>
 
-<BaseLayout pageTitle={pageTitle}> 
+    <ul class="list-disc ml-4 my-4 text-gray-500">
+        <li><a class="hover:text-gray-300" href="/about/">About : Know me, hither thou shall find!</a></li>
+        <li><a class="hover:text-gray-300" href="/projects/">Projects : work ( cough cough !) in progress.</a></li>
+        <li><a class="hover:text-gray-300" href="/blog/">Blogs : Read my mindless musings here.</a></li>
+    </ul>
 
-<p>Sit fugit nisi quae architecto ut alias tempora! Iste non voluptate officia quam eveniet. Iusto vel sapiente dolores quo delectus.</p>
+    <h1 class="text-2xl my-4">What else?</h1>
+    <p>
+        I am not sure, it's still in its early days, I'll experiment with some ideas and what sticks. Thanks for visiting and stay tuned!
+    </p>
 
 </BaseLayout>
