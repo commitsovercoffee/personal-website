@@ -16,7 +16,7 @@ const { pageTitle } = Astro.props;
     <body class="mx-auto flex flex-col justify-between max-w-prose p-4 h-screen">
         <Header />
         <div class="flex-grow"> 
-        <h1>{pageTitle}</h1>
+        <h1 class="text-3xl mt-8 mb-4">{pageTitle}</h1>
             <slot />
         </div>
         <Footer />
