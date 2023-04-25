@@ -1,22 +1,38 @@
 ---
+import Social from "../components/Social.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Hello!";
 ---
+
+<script>
+    window.onload = function () {
+        fetch("https://official-joke-api.appspot.com/random_joke")
+            .then((response) => response.json())
+            .then((data) => {
+                const jokeElement = document.getElementById("joke");
+                jokeElement.innerHTML = `${data.setup} ${data.punchline}`;
+            });
+    };
+</script>
+
 <BaseLayout pageTitle={pageTitle}>
-    <p>
-        You have found my corner of the internet, and I'm glad you're here. Go
-        nuts and explore around! Here are some fun links :
+    <p class="text-gray-400 my-8 text-base">
+        You have found my corner of the internet, and I'm glad you're here. It's
+        still in its early days, I'll experiment with some ideas and see what
+        sticks. Thanks for visiting and stay tuned!
     </p>
 
-    <ul class="list-disc ml-4 my-4 text-gray-500">
-        <li><a class="hover:text-gray-300" href="/about/">About : Know me, hither thou shall find!</a></li>
-        <li><a class="hover:text-gray-300" href="/projects/">Projects : work ( cough cough !) in progress.</a></li>
-        <li><a class="hover:text-gray-300" href="/blog/">Blogs : Read my mindless musings here.</a></li>
-    </ul>
+    <h1 class="text-2xl my-8">What next ?</h1>
 
-    <h1 class="text-2xl my-4">What else?</h1>
-    <p>
-        I am not sure, it's still in its early days, I'll experiment with some ideas and what sticks. Thanks for visiting and stay tuned!
+    <p class="text-gray-400 my-8 text-base" onload="getJoke()">
+        Explore the site ... or read the joke below :<br><br>
+    <span class="italic text-sm text-sky-500" id="joke">... ahhh</span>
     </p>
 
+    <p class="text-gray-400 my-8">
+        Find me on ...
+        <Social platform="twitter" username="astrodotbuild" />,
+        <Social platform="github" username="withastro" />
+        and <Social platform="youtube" username="astrodotbuild" />
+    </p>
 </BaseLayout>
