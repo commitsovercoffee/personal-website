@@ -1,10 +1,25 @@
 ---
----        
-<div class="nav-links">
+const links = ["about", "blog", "tags"];
+---
 
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
-<a href="/tags/">Tags</a>
+<div
+    class="nav-bar hidden flex sm:justify-evenly flex-col sm:flex-row sm:m-4 sm:p-4 sm:flex"
+>
+    <!-- index -->
+    <a
+        class="p-2 font-bold uppercase text-xl text-center hover:bg-gray-500"
+        href="/">Home</a
+    >
 
+    <!-- others links -->
+    {
+        links.map((link) => (
+            <a
+                class="p-2 font-bold uppercase text-xl text-center hover:bg-gray-500"
+                href={link}
+            >
+                {link}
+            </a>
+        ))
+    }
 </div>
