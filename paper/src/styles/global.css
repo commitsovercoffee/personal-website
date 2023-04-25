@@ -22,20 +22,6 @@ h1 {
   font-size: 2.5rem;
 }
 
-/* nav styles */
-hamburger {
-  padding-right: 20px;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
-}
-
 .nav-links {
   width: 100%;
   top: 5rem;
@@ -96,7 +82,4 @@ hamburger {
     padding: 15px 20px;
   }
 
-  .hamburger {
-    display: none;
-  }
 }
