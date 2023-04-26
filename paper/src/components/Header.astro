@@ -1,22 +1,28 @@
 ---
+const { pageTitle } = Astro.props;
 import Hamburger from "../components/header/Hamburger.astro";
 import Navigation from "../components/header/Navigation.astro";
 import ThemeIcon from "../components/header/ThemeIcon.astro";
 ---
 
 <header>
-    <nav class="mt-8">
-        <div class="float-right m-4">
+    <nav class="flex justify-between">
+        <div class="flex flex-col justify-around">
+            <a
+                href="/"
+                class="underline decoration-wavy text-gray-50 text-2xl decoration-sky-500 font-bold"
+                >Commits Over
+                <i class="align-middle text-4xl text-gray-50 material-icons"
+                    >coffee</i
+                >
+            </a>
+            <Navigation />
+            <h1 class="text-2xl my-8">{pageTitle}</h1>
+        </div>
+
+        <div class="mx-4 p-2 m-2">
             <ThemeIcon />
             <Hamburger />
         </div>
-        <h1
-            class="decoration-wavy text-gray-50 p-0 m-0 text-4xl leading-relaxed leading-42 underline decoration-sky-500 font-bold"
-        >
-            <i class="mx-4 align-middle text-5xl text-gray-50 material-icons"
-                >coffee</i
-            >Commits Over Coffee
-        </h1>
-        <Navigation />
     </nav>
 </header>

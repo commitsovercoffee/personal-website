@@ -3,19 +3,12 @@ const links = ["about", "blog", "tags"];
 ---
 
 <div
-    class=" nav-bar hidden flex sm:justify-evenly flex-col sm:flex-row m-4 sm:p-4 sm:flex"
+    class=" nav-bar hidden flex justify-between py-4 flex-col sm:flex-row sm:flex"
 >
-    <!-- index -->
-    <a
-        class="delay-75 duration-300 ease-in py-2 my-2 px-4 border border-sky-400 rounded font-bold uppercase text-xl text-center hover:bg-sky-500 hover:text-slate-900"
-        href="/">Home</a
-    >
-
-    <!-- others links -->
     {
         links.map((link) => (
             <a
-                class="delay-75 duration-300 ease-in py-2 my-2 px-4 border border-sky-400 rounded font-bold uppercase text-xl text-center hover:bg-sky-500 hover:text-slate-900"
+                class="duration-300 p-2 m-2 sm:text-zinc-500 ease-in border border-zinc-50 rounded-xl sm:border-zinc-800 uppercase text-base text-center hover:bg-zinc-50 hover:text-zinc-800"
                 href={link}
             >
                 {link}
