@@ -1,15 +1,19 @@
 ---
-import Hamburger from "../components/Hamburger.astro";
-import Navigation from "../components/Navigation.astro";
-import ThemeIcon from "../components/ThemeIcon.astro";
+import Hamburger from "../components/header/Hamburger.astro";
+import Navigation from "../components/header/Navigation.astro";
+import ThemeIcon from "../components/header/ThemeIcon.astro";
 ---
 
 <header>
     <nav>
-        <div class="flex m-4 p-2 justify-between"> 
-        <h1 class="text-2xl my-8 underline decoration-sky-500 font-bold tracking-wider">Commits Over Coffee</h1>
-        <Hamburger />
-        <ThemeIcon />
+        <div class="flex m-4 p-2 justify-between">
+            <h1
+                class="text-2xl my-8 underline decoration-sky-500 font-bold tracking-wider"
+            >
+                Commits Over Coffee
+            </h1>
+            <Hamburger />
+            <ThemeIcon />
         </div>
         <Navigation />
     </nav>

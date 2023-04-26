@@ -1,0 +1,23 @@
+---
+---
+
+<script>
+    const navLinks = document.querySelector(".nav-bar");
+    const hamburger = document.querySelector(".hamburger");
+
+    hamburger.addEventListener("click", () => {
+        if (navLinks.classList.contains("hidden")) {
+            navLinks.classList.remove("hidden");
+        } else {
+            navLinks.classList.add("hidden");
+        }
+    });
+</script>
+
+<div
+    class="hamburger block w-4 h-4 sm:opacity-0 sm:cursor-default cursor-pointer"
+>
+    <span class="line block w-8 h-1 mb-2 bg-cyan-50"></span>
+    <span class="line block w-8 h-1 mb-2 bg-cyan-50"></span>
+    <span class="line block w-8 h-1 mb-2 bg-cyan-50"></span>
+</div>
