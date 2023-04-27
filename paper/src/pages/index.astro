@@ -1,6 +1,9 @@
 ---
 import Social from "../components/Social.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Divider from "../components/Divider.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import SectionSubtitle from "../components/SectionSubtitle.astro";
 const pageTitle = "Hello!";
 ---
 
@@ -15,18 +18,29 @@ const pageTitle = "Hello!";
     };
 </script>
 
-<BaseLayout pageTitle={pageTitle}>
-    <p class="text-gray-400 text-base">
-        You have found my corner of the internet, and I'm glad you're here. It's
-        still in its early days, I'll experiment with some ideas and see what
-        sticks. Thanks for visiting and stay tuned!
+<BaseLayout>
+    <SectionTitle text="Hello !" />
+    <p>
+        Welcome to my website! I hope you're ready to have your mind blown and
+        your funny bone tickled. You've stumbled upon the digital lair of yours
+        truly, the one and only (well, maybe not the only, but definitely one of
+        a kind) <i class="text-sky-500"> Sourav Singh.</i>
+    </p>
+    <Divider />
+    <p>
+        So, kick off your shoes, grab some popcorn (or chips, or whatever snack
+        floats your boat), and let's embark on a journey through my digital
+        world. Just be warned, there may be some questionable humor and
+        shameless self-promotion ahead.
     </p>
 
-    <h1 class="text-2xl my-8">What next ?</h1>
+    <SectionSubtitle text="What Next ?" />
 
     <p class="text-gray-400 my-2 text-base" onload="getJoke()">
-        Explore the site ... or read the joke below :<br><br>
-    <span class="max-w-prose italic text-sm text-sky-500" id="joke">... ahhh</span>
+        Explore the site ... or read the joke below :<br /><br />
+        <span class="max-w-prose italic text-sm text-sky-500" id="joke"
+            >... ahhh</span
+        >
     </p>
 
     <p class="text-gray-400 my-8">
