@@ -1,0 +1,28 @@
+---
+const { links } = Astro.props;
+---
+
+<!-- List Section --->
+<ul class="list-disc my-4 ml-4 text-sky-500">
+    {
+        links.map((link) => (
+            <li>
+                <a class="hover:underline" href={link.url}>
+                    {link.label}
+                </a>{" "}
+            </li>
+        ))
+    }
+</ul>
+
+<!-- Usage
+
+    <ListSection
+        links={[
+            { label: "Google", url: "https://www.google.com/" },
+            { label: "GitHub", url: "https://github.com/" },
+            { label: "Stack Overflow", url: "https://stackoverflow.com/" },
+        ]}
+    />
+
+-->

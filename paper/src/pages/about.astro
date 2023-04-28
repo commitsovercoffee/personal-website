@@ -4,6 +4,7 @@ import SectionTitle from "../components/SectionTitle.astro";
 import SectionSubtitle from "../components/SectionSubtitle.astro";
 import Divider from "../components/Divider.astro";
 import Link from "../components/Link.astro";
+import ListSection from "../components/ListSection.astro";
 const pageTitle = "About Me";
 const identity = {
     firstName: "Sarah",
@@ -47,6 +48,14 @@ const textCase = "uppercase";
         those bad boys a click. Trust me, it'll be worth it (or at least mildly
         entertaining).
     </p>
+
+    <ListSection
+        links={[
+            { label: "Google", url: "https://www.google.com/" },
+            { label: "GitHub", url: "https://github.com/" },
+            { label: "Stack Overflow", url: "https://stackoverflow.com/" },
+        ]}
+    />
 
     <SectionSubtitle text="Hire Me !" />
     <p>
