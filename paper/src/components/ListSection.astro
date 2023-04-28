@@ -7,16 +7,17 @@ const { links } = Astro.props;
     {
         links.map((link) => (
             <li class="my-2">
-                <a
-                    class={
-                        link.hasOwnProperty("url")
-                            ? "hover:underline text-sky-500 decoration-sky-500"
-                            : "pointer-events-none text-zinc-500"
-                    }
-                    href={link.url}
-                >
-                    <i class="text-zinc-300">{link.label}</i>
-                    {link.content}
+                <a href={link.url}>
+                    <i
+                        class={
+                            link.hasOwnProperty("url")
+                                ? "hover:underline text-sky-500 decoration-sky-500"
+                                : "pointer-events-none text-zinc-300"
+                        }
+                    >
+                        {link.label}
+                    </i>
+                    <span class="text-zinc-500">{link.content}</span>
                 </a>
             </li>
         ))
@@ -29,7 +30,7 @@ const { links } = Astro.props;
         links={[
             {
                 label: "",
-                url:"",
+                url:""
                 content:""
             },
         ]}
