@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import SectionSubtitle from "../components/SectionSubtitle.astro";
+import Divider from "../components/Divider.astro";
+import Link from "../components/Link.astro";
+import ListSection from "../components/ListSection.astro";
+const pageTitle = "Philosophy";
+const identity = {
+    firstName: "Sarah",
+    country: "Canada",
+    occupation: "Technical Writer",
+    hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const happy = true;
+const finished = false;
+const goal = 3;
+const skillColor = "navy";
+const fontWeight = 800;
+const textCase = "uppercase";
+---
+
+<BaseLayout>
+    <SectionTitle text="Philosophy" />
+    <p>
+        To live a meaningful live ... <br />
+        Be the antidote, to the chaos that life is.
+
+        <ListSection
+            links={[
+                { label: "Confront the dragon." },
+                { label: "Get the gold." },
+                { label: "Share it with the community" },
+            ]}
+        />
+
+        <iframe src="https://www.youtube.com/embed/N21eVbQ7WEI" allowfullscreen
+        ></iframe>
+
+        <audio controls>
+            <source src="path/to/audio/file.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
+    </p>
+
+    <SectionSubtitle text="Rules for life" />
+    <ListSection
+        links={[
+            { label: "When you see an opportunity, start early !" },
+            { label: "" },
+            { label: "Stack Overflow" },
+        ]}
+    />
+</BaseLayout>

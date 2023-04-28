@@ -7,9 +7,12 @@ const { links } = Astro.props;
     {
         links.map((link) => (
             <li>
-                <a class="hover:underline" href={link.url}>
+                <a
+                    class={link.hasOwnProperty("url") ? "hover:underline" : "pointer-events-none"}
+                    href={link.url}
+                >
                     {link.label}
-                </a>{" "}
+                </a>
             </li>
         ))
     }
