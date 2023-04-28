@@ -3,15 +3,20 @@ const { links } = Astro.props;
 ---
 
 <!-- List Section --->
-<ul class="list-disc my-4 ml-4 text-sky-500">
+<ul class="list-disc my-4 ml-4">
     {
         links.map((link) => (
-            <li>
+            <li class="my-2">
                 <a
-                    class={link.hasOwnProperty("url") ? "hover:underline" : "pointer-events-none"}
+                    class={
+                        link.hasOwnProperty("url")
+                            ? "hover:underline text-sky-500 decoration-sky-500"
+                            : "pointer-events-none text-zinc-500"
+                    }
                     href={link.url}
                 >
-                    {link.label}
+                    <i class="text-zinc-300">{link.label}</i>
+                    {link.content}
                 </a>
             </li>
         ))
@@ -22,9 +27,11 @@ const { links } = Astro.props;
 
     <ListSection
         links={[
-            { label: "Google", url: "https://www.google.com/" },
-            { label: "GitHub", url: "https://github.com/" },
-            { label: "Stack Overflow", url: "https://stackoverflow.com/" },
+            {
+                label: "",
+                url:"",
+                content:""
+            },
         ]}
     />
 

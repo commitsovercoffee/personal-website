@@ -2,55 +2,98 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import SectionSubtitle from "../components/SectionSubtitle.astro";
-import Divider from "../components/Divider.astro";
-import Link from "../components/Link.astro";
 import ListSection from "../components/ListSection.astro";
-const pageTitle = "Philosophy";
-const identity = {
-    firstName: "Sarah",
-    country: "Canada",
-    occupation: "Technical Writer",
-    hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-const happy = true;
-const finished = false;
-const goal = 3;
-const skillColor = "navy";
-const fontWeight = 800;
-const textCase = "uppercase";
+import TextSection from "../components/TextSection.astro";
+import Youtube from "../components/Youtube.astro";
 ---
 
 <BaseLayout>
     <SectionTitle text="Philosophy" />
-    <p>
-        To live a meaningful live ... <br />
-        Be the antidote, to the chaos that life is.
 
-        <ListSection
-            links={[
-                { label: "Confront the dragon." },
-                { label: "Get the gold." },
-                { label: "Share it with the community" },
-            ]}
-        />
+    <TextSection
+        text="To live a meaningful life, you need to be the antidote to the chaos that life is. It's time to confront the dragon, get the gold, and share it with the community. What is a dragon you ask ? You may get an idea from the video below."
+    />
 
-        <iframe src="https://www.youtube.com/embed/N21eVbQ7WEI" allowfullscreen
-        ></iframe>
+    <Youtube id="N21eVbQ7WEI" />
+    <TextSection text="But how do you do that? Here are some ideas."/>
 
-        <audio controls>
-            <source src="path/to/audio/file.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
-        </audio>
-    </p>
-
-    <SectionSubtitle text="Rules for life" />
     <ListSection
         links={[
-            { label: "When you see an opportunity, start early !" },
-            { label: "" },
-            { label: "Stack Overflow" },
+            {
+                label: "Cultivate virtues and develop a strong character : ",
+                content:
+                    "Practice being a good human, like not leaving the toilet seat up and always returning your shopping cart;  don't be a troll online and stand up for what's right, like telling your grandma not to fall for clickbait.",
+            },
+
+            {
+                label: "Pursue knowledge and wisdom : ",
+                content:
+                    "Read enough books to make yourself look smart, but not so many that you become a book hoarder;  don't just believe everything you read on social media, fact-check and verify sources.",
+            },
+
+            {
+                label: "Embrace uncertainty and adapt to change : ",
+                content:
+                    "When life gives you lemons, make lemonade and then sell it for a profit;  learn new skills and be open to change, like embracing remote work or learning to cook during a pandemic.",
+            },
+
+            {
+                label: "Find balance between order and chaos : ",
+                content:
+                    "Keep your desk clean enough to impress your boss, but messy enough to show you're a creative genius;  find ways to balance work and leisure, like taking a Netflix break during the workday or having a virtual happy hour with coworkers.",
+            },
+
+            {
+                label: "Seek out meaningful relationships : ",
+                content:
+                    "Cultivate a strong support system, but also make sure to have some enemies to keep things interesting;  prioritize quality time with loved ones and make use of video chats and virtual hangouts.",
+            },
+
+            {
+                label: "Take care of your physical health : ",
+                content:
+                    "Eat your vegetables, exercise regularly, and don't forget to floss;  be mindful of screen time and take breaks to stretch or do some yoga.",
+            },
+
+            {
+                label: "Take responsibility for your own happiness : ",
+                content:
+                    "Stop waiting for someone else to make you happy, and start binge-watching your favorite TV show;  practice self-care and seek support when needed, like taking a mental health day or talking to a therapist.",
+            },
+
+            {
+                label: "Embrace creativity and express yourself : ",
+                content:
+                    "Dance like nobody's watching, paint like a kindergartener, and sing like a tone-deaf superstar;  use technology to share your creativity with others, like posting your art on Instagram or starting a blog.",
+            },
+
+            {
+                label: "Practice self-discipline and delayed gratification : ",
+                content:
+                    "Don't eat the whole pint of ice cream in one sitting, save some for later;  limit distractions and focus on what's important, like using apps to block social media during work hours or setting a timer to limit screen time.",
+            },
+
+            {
+                label: "Develop a sense of purpose and direction : ",
+                content:
+                    "Follow your dreams, but don't forget to pay your rent;  be open to new opportunities and be willing to pivot when necessary, like starting a side hustle or taking an online course.",
+            },
+
+            {
+                label: "Foster a sense of awe and wonder : ",
+                content:
+                    "Marvel at the beauty of the universe, but also don't forget to appreciate your own greatness;  take time to disconnect from technology and connect with nature, like going on a hike or camping trip.",
+            },
+
+            {
+                label: "Pursue truth and speak up against falsehood : ",
+                content:
+                    "Fact-check everything, and don't be afraid to call out BS when you see it;  be critical of sources and be willing to challenge misinformation, like calling out fake news on social media.",
+            },
         ]}
+    />
+
+    <TextSection
+        text="And there you have it folks, the recipe for a happy and fulfilling life. But remember, it's not a one-size-fits-all solution. So take these tips with a grain of salt and add your own special sauce to make it your own. Just don't forget to floss, because nobody likes a person with bad breath."
     />
 </BaseLayout>
