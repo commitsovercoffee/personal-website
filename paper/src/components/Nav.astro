@@ -1,0 +1,23 @@
+---
+const { links } = Astro.props;
+---
+
+<!-- List Section --->
+<div
+    class="nav-bar hidden flex justify-between py-4 flex-col sm:flex-row sm:flex"
+>
+    {links.map((link) => <a href={link.url}>{link.label}</a>)}
+</div>
+
+<!-- Usage
+
+    <ListSection
+        links={[
+            {
+                label: "",
+                url:""
+            },
+        ]}
+    />
+
+-->

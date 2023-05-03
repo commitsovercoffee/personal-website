@@ -16,7 +16,24 @@ import ThemeIcon from "../components/header/ThemeIcon.astro";
                     >coffee</i
                 >
             </a>
-            <Navigation />
+            <Navigation
+                links={[
+                    {
+                        label: "about",
+                        url: "/about/",
+                    },
+
+                    {
+                        label: "blog",
+                        url: "/blog/",
+                    },
+
+                    {
+                        label: "tags",
+                        url: "/tag/",
+                    },
+                ]}
+            />
         </div>
 
         <div class="mx-4 p-2 m-2">

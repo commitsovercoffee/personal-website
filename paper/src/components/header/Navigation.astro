@@ -1,18 +1,30 @@
 ---
-const links = ["about", "blog", "tags"];
+const { links } = Astro.props;
 ---
 
+<!-- Navigation Section --->
 <div
-    class=" nav-bar hidden flex justify-between py-4 flex-col sm:flex-row sm:flex"
+    class="nav-bar hidden flex justify-between py-4 flex-col sm:flex-row sm:flex"
 >
     {
         links.map((link) => (
             <a
                 class="duration-300 p-2 m-2 sm:text-zinc-500 ease-in border border-zinc-50 rounded-xl sm:border-zinc-800 uppercase text-base text-center hover:bg-zinc-50 hover:text-zinc-800"
-                href={link}
+                href={link.url}
             >
-                {link}
+                {link.label}
             </a>
         ))
     }
 </div>
+
+<!-- Usage
+    <Navigation
+        links={[
+            {
+                label: "",
+                url:""
+            },
+        ]}
+    />
+-->
