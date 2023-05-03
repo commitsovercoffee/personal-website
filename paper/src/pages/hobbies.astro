@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import TextSection from "../components/TextSection.astro";
+import Collapsible from "../components/collapsible.astro";
+---
+
+<BaseLayout>
+    <SectionTitle text="Interests and hobbies" />
+
+    <TextSection
+        text="Here, I'm a bit of a Renaissance person when it comes to my free time. Let's dive in and explore the weird and wonderful things that keep me occupied when I'm not pretending to be productive!"
+    />
+
+    <Collapsible
+        label="1. Reading"
+        content="I believe that reading is one of the most enriching experiences one can have. Through reading, we can explore different worlds, learn new things, and expand our perspectives. For me, reading is not just a hobby, but a way of life."
+    />
+    <Collapsible label="2. Note making" content="others" />
+</BaseLayout>
