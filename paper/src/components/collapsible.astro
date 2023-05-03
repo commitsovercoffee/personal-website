@@ -4,12 +4,12 @@ const { label } = Astro.props;
 
 <div class="mx-2 border-b-2 border-gray-100">
     <button
-        class="collapsible text-base duration-300 text-left w-full p-2 text-gray-100 bg-zinc-900 hover:bg-gray-500 hover:text-zinc-900"
+        class="collapsible text-xs duration-300 text-left w-full p-2 text-gray-100 bg-zinc-900 hover:bg-gray-500 hover:text-zinc-900"
         >{label}</button
     >
     <div class="panel bg-zinc-900 py-4 px-6 text-xs hidden">
         <p>
-            <slot/>
+            <slot />
         </p>
     </div>
 </div>
