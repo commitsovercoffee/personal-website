@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import TextSection from "../components/TextSection.astro";
+import Collapsible from "../components/collapsible.astro";
+import Youtube from "../components/Youtube.astro";
+---
+
+<BaseLayout>
+    <SectionTitle text="Frequently Asked Questions" />
+
+    <TextSection
+        text="Welcome to the FAQ page of this website, where all your burning questions will finally be answered! We know you've been dying to know the answers to life's most important questions, like Why does a round pizza come in a square box? and why do we park in a driveway and drive on a parkway?. fear not, dear visitor! We're here to provide you with the answers you seek ..."
+    />
+
+    <Collapsible label="Q: What do you do when you're not busy being awesome?">
+        <TextSection
+            text="A: Oh, you know, just living my best life. Watching cat videos on YouTube, eating ice cream for breakfast, and avoiding responsibilities."
+        />
+    </Collapsible>
+
+    <Collapsible
+        label="Q: If you had a million dollars, what would you do with it?"
+    >
+        <TextSection
+            text="A: I'd probably spend it all on scratch-off lottery tickets, then go on a wild shopping spree when I inevitably hit the jackpot."
+        />
+    </Collapsible>
+
+    <Collapsible
+        label="Q: What's the best piece of advice you've ever received?"
+    >
+        <TextSection
+            text="A: Never eat anything bigger than your head. It's saved me from a lot of embarrassing choking incidents over the years."
+        />
+    </Collapsible>
+
+    <Collapsible label="Q: What's your biggest fear?">
+        <TextSection
+            text="A: Losing my sense of humor. Life without laughter is like pizza without cheese – it's just plain sad."
+        />
+    </Collapsible>
+
+    <Collapsible label="Q: What's your favorite type of cheese?">
+        <TextSection
+            text="A: My favorite type of cheese is the kind that comes on a pizza. Any other kind is just a waste of time."
+        />
+    </Collapsible>
+
+    <TextSection
+        text="In conclusion, I'm a multifaceted individual with a wide range of hobbies and interests. Whether it's delving into a new book, building a side project from scratch, or simply keeping up with the latest tech news, I'm always looking for ways to learn and grow. And let's not forget the importance of taking a break from it all with a nice cup of coffee or tea, or even indulging in some good old-fashioned comfort food. So, I encourage you to explore your own hobbies and interests, whether they're similar to mine or something entirely different. Life is too short to not pursue the things that bring you joy and fulfillment."
+    />
+</BaseLayout>
