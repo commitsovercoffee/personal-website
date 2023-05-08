@@ -1,0 +1,36 @@
+---
+---
+
+<!--
+indicates that the enclosed text is an extended quotation.
+</style>
+-->
+<figure>
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>
+            Words can be like X-rays, if you use them properly—they’ll go
+            through anything. You read and you’re pierced.
+        </p>
+    </blockquote>
+    <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
+</figure>
+
+<style>
+    blockquote {
+        margin: 0;
+    }
+
+    blockquote p {
+        padding: 15px;
+        background: #eee;
+        border-radius: 5px;
+    }
+
+    blockquote p::before {
+        content: "\201C";
+    }
+
+    blockquote p::after {
+        content: "\201D";
+    }
+</style>
