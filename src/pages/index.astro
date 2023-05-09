@@ -2,21 +2,33 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Address from "../components/Content/Address.astro";
 import Article from "../components/Content/Article.astro";
+import Aside from "../components/Content/Aside.astro";
 ---
 
 <BaseLayout>
-    <h1>Address :</h1>
+    <h1 class="my-4">Address :</h1>
     <Address
         socials={[
             { platform: "github", username: "commitsovercoffee" },
             { platform: "youtube", username: "@commitsovercoffee" },
         ]}
     />
-    <h1>Article :</h1>
+    <h1 class="my-4">Article :</h1>
     <Article title="Title for an Article component.">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus,
         dicta sunt nam autem nihil architecto deleniti similique laborum ullam,
         perspiciatis quibusdam praesentium adipisci placeat soluta. Voluptate
         autem voluptates natus animi.
     </Article>
+    <h1 class="my-4">Aside :</h1>
+
+    <Aside>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
+        ducimus assumenda qui libero fugiat quam, a sed est ratione omnis
+        facilis error quae autem magnam quas iste et nulla? Nobis.
+    </Aside>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed velit quidem
+    facilis voluptatem vitae soluta molestias quae maxime impedit repellendus
+    animi corporis, dignissimos saepe ipsa non rerum culpa id corrupti?
 </BaseLayout>
