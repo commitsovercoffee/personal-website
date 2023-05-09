@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Address from "../components/Content/Address.astro";
+import Article from "../components/Content/Article.astro";
 ---
 
 <BaseLayout>
@@ -11,4 +12,11 @@ import Address from "../components/Content/Address.astro";
             { platform: "youtube", username: "@commitsovercoffee" },
         ]}
     />
+    <h1>Article :</h1>
+    <Article title="Title for an Article component.">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus,
+        dicta sunt nam autem nihil architecto deleniti similique laborum ullam,
+        perspiciatis quibusdam praesentium adipisci placeat soluta. Voluptate
+        autem voluptates natus animi.
+    </Article>
 </BaseLayout>
