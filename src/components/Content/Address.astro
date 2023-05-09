@@ -1,17 +1,32 @@
 ---
+const { socials } = Astro.props;
 ---
 
 <!---
-contact infor for a person or an org.
+contact info for a person or an org.
 -->
-<address>
-    You can contact author at
-    <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>.<br />
-    If you see any bugs, please
-    <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.<br />
-    You may also want to visit us:<br />
-    Mozilla Foundation<br />
-    331 E Evelyn Ave<br />
-    Mountain View, CA 94041<br />
-    USA
+<address class="p-4 m-2 rounded-xl bg-gray-600 w-fit">
+    {
+        socials.map((social) => (
+            <a
+                class="text-gray-50 hover:underline decoration-1 p-2"
+                href={`https://www.${social.platform}.com/${social.username}`}
+            >
+                {social.platform}
+            </a>
+        ))
+    }
 </address>
+
+<!-- Usage
+
+    <Address
+        socials={[
+            {
+                platform: "",
+                username:""
+            },
+        ]}
+    />
+
+-->

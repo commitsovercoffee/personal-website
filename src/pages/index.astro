@@ -1,7 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Address from "../components/Content/Address.astro";
 ---
 
 <BaseLayout>
-    <h1>Hello World !</h1>
+    <h1>Address :</h1>
+    <Address
+        socials={[
+            { platform: "github", username: "commitsovercoffee" },
+            { platform: "youtube", username: "@commitsovercoffee" },
+        ]}
+    />
 </BaseLayout>
