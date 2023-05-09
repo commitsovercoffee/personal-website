@@ -2,32 +2,14 @@
 ---
 
 <!--
-footer ( contains info like author, copyright etc ) for its nearest ancestor.
+footer for its nearest ancestor.
 -->
-<article>
-    <h1>How to be a wizard</h1>
-    <ol>
-        <li>Grow a long, majestic beard.</li>
-        <li>Wear a tall, pointed hat.</li>
-        <li>Have I mentioned the beard?</li>
-    </ol>
-    <footer>
-        <p>© 2018 Gandalf</p>
-    </footer>
-</article>
-
-<style>
-    article {
-        min-height: 100%;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-    }
-
-    footer {
-        display: flex;
-        justify-content: center;
-        padding: 5px;
-        background-color: #45a1ff;
-        color: #fff;
-    }
-</style>
+<footer
+    class="p-2 bottom-0 left-0 fixed w-screen bg-gray-600 text-gray-300 text-center"
+>
+    <p>
+        <small>
+            <slot />
+        </small>
+    </p>
+</footer>
