@@ -4,10 +4,12 @@
 <!--
 represents introductory or navigational aids.
 -->
-<header>
-    <h1>Main Page Title</h1>
-    <img
-        src="https://live-samples.mdn.mozilla.net/en-US/docs/Web/HTML/Element/header/mdn-logo-sm.png"
-        alt="MDN logo"
-    />
+<header class="p-4 w-auto bg-gray-600 rounded-xl">
+    <h1
+        class="underline decoration-wavy underline-offset-4 decoration-1 text-gray-50 text-2xl decoration-sky-500 font-bold"
+    >
+        <slot />
+
+        <i class="align-middle text-4xl text-gray-50 material-icons">coffee</i>
+    </h1>
 </header>

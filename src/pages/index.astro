@@ -3,7 +3,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Address from "../components/Content/Address.astro";
 import Article from "../components/Content/Article.astro";
 import Aside from "../components/Content/Aside.astro";
-import Footer from "../components/Content/Footer.astro";
 ---
 
 <BaseLayout>
@@ -14,6 +13,7 @@ import Footer from "../components/Content/Footer.astro";
             { platform: "youtube", username: "@commitsovercoffee" },
         ]}
     />
+
     <h1 class="my-4">Article :</h1>
     <Article title="Title for an Article component.">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus,
@@ -21,8 +21,8 @@ import Footer from "../components/Content/Footer.astro";
         perspiciatis quibusdam praesentium adipisci placeat soluta. Voluptate
         autem voluptates natus animi.
     </Article>
-    <h1 class="my-4">Aside :</h1>
 
+    <h1 class="my-4">Aside :</h1>
     <Aside>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
         ducimus assumenda qui libero fugiat quam, a sed est ratione omnis
@@ -32,5 +32,8 @@ import Footer from "../components/Content/Footer.astro";
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed velit quidem
     facilis voluptatem vitae soluta molestias quae maxime impedit repellendus
     animi corporis, dignissimos saepe ipsa non rerum culpa id corrupti?
+
     <h1 class="my-8">Footer : ( Look at bottom of the page. )</h1>
+
+    <h1 class="my-8">Header : ( Look at top of the page.)</h1>
 </BaseLayout>
