@@ -21,13 +21,13 @@ represents introductory or navigational aids.
     </a>
     <nav class="p-2">
         <ul class="flex w-full font-semibold text-gray-400 uppercase">
-            <li class="nav-link mx-1 hover:text-gray-900">
+            <li class="mx-1 hover:underline underline-offset-8 decoration-2">
                 <a class={url === "/" ? "text-gray-800" : ""} href="/">Home</a>
             </li>
 
             {
                 links.map((link, index) => (
-                    <li class="nav-link mx-1 hover:text-gray-800">
+                    <li class="mx-1 hover:underline underline-offset-8 decoration-2">
                         <a
                             class={url === link ? "text-gray-800" : ""}
                             href={link}

@@ -5,6 +5,7 @@ import Address from "../components/Content/Address.astro";
 import Article from "../components/Content/Article.astro";
 import Aside from "../components/Content/Aside.astro";
 import Hgroup from "../components/Content/Hgroup.astro";
+import BlockQuote from "../components/Text/BlockQuote.astro";
 ---
 
 <BaseLayout url={url}>
@@ -46,4 +47,17 @@ import Hgroup from "../components/Content/Hgroup.astro";
         asperiores expedita itaque eligendi. asperiores expedita itaque
         eligendi.
     </Hgroup>
+    <h1 class="my-8">blockquote :</h1>
+
+    <BlockQuote
+        doc="Brave New World"
+        cite="https://www.huxley.net/bnw/four.html"
+        author="Aldous Huxley"
+    >
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et cupiditate
+        blanditiis corrupti ullam quo, libero non quaerat debitis assumenda
+        sapiente vel totam velit ipsum. Temporibus harum ab facere nobis,
+        accusantium perferendis necessitatibus illo suscipit praesentium ut,
+        odio explicabo voluptatum fugiat?
+    </BlockQuote>
 </BaseLayout>

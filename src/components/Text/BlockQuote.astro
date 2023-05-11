@@ -1,36 +1,24 @@
 ---
+const { doc, author, cite } = Astro.props;
 ---
 
 <!--
 indicates that the enclosed text is an extended quotation.
 </style>
 -->
-<figure>
-    <blockquote cite="https://www.huxley.net/bnw/four.html">
-        <p>
-            Words can be like X-rays, if you use them properly—they’ll go
-            through anything. You read and you’re pierced.
+<blockquote cite={cite} class="flex flex-col">
+    <section class="rounded-t-xl text-xl p-4 flex-2/3 bg-gray-300 font-serif">
+        <p class="p-4">
+            <span class="font-bold">"</span>
+            <span class="font-thin italic"><slot /></span>
+            <span class="font-bold">"</span>
         </p>
-    </blockquote>
-    <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
-</figure>
-
-<style>
-    blockquote {
-        margin: 0;
-    }
-
-    blockquote p {
-        padding: 15px;
-        background: #eee;
-        border-radius: 5px;
-    }
-
-    blockquote p::before {
-        content: "\201C";
-    }
-
-    blockquote p::after {
-        content: "\201D";
-    }
-</style>
+    </section>
+    <section class="rounded-b-xl p-4 flex-1/3 bg-gray-600 text-gray-400">
+        <footer>
+            - {author}, <cite>
+                <a class="hover:text-gray-900" href={cite}>{doc}</a></cite
+            >
+        </footer>
+    </section>
+</blockquote>
