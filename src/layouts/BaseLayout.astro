@@ -1,6 +1,6 @@
 ---
-import Footer from "../components/Content/Footer.astro";
 import Header from "../components/Content/Header.astro";
+import Footer from "../components/Content/Footer.astro";
 ---
 
 <!DOCTYPE html>
@@ -14,9 +14,11 @@ import Header from "../components/Content/Header.astro";
         />
         <title>Lorem Ipsum</title>
     </head>
-    <Header>Lorem ipsum</Header>
+    <Header/>
     <body class="mx-auto max-w-prose p-4 mt-8 mb-32 bg-gray-400">
-        <slot />
+        <main>
+            <slot />
+        </main>
     </body>
     <Footer>Lorem ipsum dolor sit amet.</Footer>
 </html>

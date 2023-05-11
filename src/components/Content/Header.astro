@@ -1,15 +1,29 @@
 ---
+const title = "Lorem Ipsum";
+const links = ["home", "about", "projects", "contact"];
+const urls = ["/", "/about", "/projects", "/contact"];
 ---
 
 <!--
 represents introductory or navigational aids.
 -->
-<header class="p-4 w-auto bg-gray-600 rounded-xl">
+<header class="px-4 py-2 w-auto bg-gray-600 rounded-xl">
     <h1
         class="underline decoration-wavy underline-offset-4 decoration-1 text-gray-50 text-2xl decoration-sky-500 font-bold"
     >
-        <slot />
+        {title}
 
         <i class="align-middle text-4xl text-gray-50 material-icons">coffee</i>
     </h1>
+    <nav class="p-2">
+        <ul class="flex w-full font-semibold text-gray-400 uppercase">
+            {
+                links.map((link, index) => (
+                    <li class="nav-link mx-1 hover:text-gray-900">
+                        <a href={urls[index]}>{link}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </nav>
 </header>
