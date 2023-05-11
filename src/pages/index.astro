@@ -1,4 +1,5 @@
 ---
+const url = "/";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Address from "../components/Content/Address.astro";
 import Article from "../components/Content/Article.astro";
@@ -6,7 +7,7 @@ import Aside from "../components/Content/Aside.astro";
 import Hgroup from "../components/Content/Hgroup.astro";
 ---
 
-<BaseLayout>
+<BaseLayout url={url}>
     <h1 class="my-4">Address :</h1>
     <Address
         socials={[
