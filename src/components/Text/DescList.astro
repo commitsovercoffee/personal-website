@@ -1,0 +1,19 @@
+---
+const { descriptions } = Astro.props;
+---
+
+<!--
+provides the description, definition, or value for the preceding term (<dt>) in a description list (<dl>).
+-->
+<dl>
+    {
+        descriptions.map((description) => (
+            <>
+                <dt class="uppercase font-bold font-serif text-2xl">
+                    {description.term}
+                </dt>
+                <dd class="ml-8 mb-8">{description.def}</dd>
+            </>
+        ))
+    }
+</dl>

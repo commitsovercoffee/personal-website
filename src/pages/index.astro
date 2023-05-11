@@ -6,6 +6,7 @@ import Article from "../components/Content/Article.astro";
 import Aside from "../components/Content/Aside.astro";
 import Hgroup from "../components/Content/Hgroup.astro";
 import BlockQuote from "../components/Text/BlockQuote.astro";
+import DescList from "../components/Text/DescList.astro";
 ---
 
 <BaseLayout url={url}>
@@ -60,4 +61,11 @@ import BlockQuote from "../components/Text/BlockQuote.astro";
         accusantium perferendis necessitatibus illo suscipit praesentium ut,
         odio explicabo voluptatum fugiat?
     </BlockQuote>
+    <h1 class="my-8">DescDetail :</h1>
+    <DescList
+        descriptions={[
+            { term: "love", def: "an intense feeling of deep affection." },
+            { term: "hate", def: "feel intense dislike for." },
+        ]}
+    />
 </BaseLayout>
