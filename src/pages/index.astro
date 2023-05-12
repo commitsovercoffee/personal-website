@@ -8,6 +8,7 @@ import Hgroup from "../components/Content/Hgroup.astro";
 import BlockQuote from "../components/Text/BlockQuote.astro";
 import DescList from "../components/Text/DescList.astro";
 import Figure from "../components/Text/Figure.astro";
+import List from "../components/Text/List.astro";
 ---
 
 <BaseLayout url={url}>
@@ -73,5 +74,25 @@ import Figure from "../components/Text/Figure.astro";
     <Figure
         alt="An elephant at sunset."
         src="https://images.unsplash.com/photo-1683643593317-be972fa421d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
+    />
+    <h1 class="my-8">List :</h1>
+    <List
+        links={[
+            {
+                label: "Lorem",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                content: "Adipisicing beatae dolorum beatae harum sint",
+            },
+            {
+                label: "Ipsum",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                content: "Consectetur dolor debitis eum dolor ea.",
+            },
+            {
+                label: "Gypsum",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                content: "Sit saepe voluptatem ab",
+            },
+        ]}
     />
 </BaseLayout>

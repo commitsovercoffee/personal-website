@@ -1,31 +1,42 @@
 ---
+const { links } = Astro.props;
 ---
 
-<!--
-represents an ordered/unordered list of items
--->
-<ol>
-    <li>Mix flour, baking powder, sugar, and salt.</li>
-    <li>In another bowl, mix eggs, milk, and oil.</li>
-    <li>Stir both mixtures together.</li>
-    <li>Fill muffin tray 3/4 full.</li>
-    <li>Bake for 20 minutes.</li>
-</ol>
-
-<ul>
-    <li>Milk</li>
-    <li>
-        Cheese
-        <ul>
-            <li>Blue cheese</li>
-            <li>Feta</li>
-        </ul>
-    </li>
+<!-- List Section --->
+<ul class="list-none text-gray-900">
+    {
+        links.map((link) => (
+            <li class="p-2 my-1 text-gray-900">
+                <a href={link.url}>
+                    <span class="material-icons text-base align-bottom">
+                        check
+                    </span>
+                    <i
+                        class={
+                            link.hasOwnProperty("url")
+                                ? "hover:underline decoration-1"
+                                : "pointer-events-none"
+                        }
+                    >
+                        {link.label}
+                    </i>
+                </a>
+                <span class="text-gray-500">{link.content}</span>
+            </li>
+        ))
+    }
 </ul>
 
-<style>
-    li {
-        font: 1rem "Fira Sans", sans-serif;
-        margin-bottom: 0.5rem;
-    }
-</style>
+<!-- Usage
+
+    <List
+        links={[
+            {
+                label: "",
+                url:"",
+                content:"",
+            },
+        ]}
+    />
+
+-->
