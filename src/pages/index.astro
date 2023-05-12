@@ -7,6 +7,7 @@ import Aside from "../components/Content/Aside.astro";
 import Hgroup from "../components/Content/Hgroup.astro";
 import BlockQuote from "../components/Text/BlockQuote.astro";
 import DescList from "../components/Text/DescList.astro";
+import Figure from "../components/Text/Figure.astro";
 ---
 
 <BaseLayout url={url}>
@@ -67,5 +68,10 @@ import DescList from "../components/Text/DescList.astro";
             { term: "love", def: "an intense feeling of deep affection." },
             { term: "hate", def: "feel intense dislike for." },
         ]}
+    />
+    <h1 class="my-8">Figure :</h1>
+    <Figure
+        alt="An elephant at sunset."
+        src="https://images.unsplash.com/photo-1683643593317-be972fa421d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
     />
 </BaseLayout>

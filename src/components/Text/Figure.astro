@@ -1,37 +1,13 @@
 ---
+const { src, alt } = Astro.props;
 ---
 
 <!--
 represents self-contained content, potentially with an optional caption, which is specified using the <figcaption> element.
 -->
-<figure>
-    <img
-        src="/media/cc0-images/elephant-660-480.jpg"
-        alt="Elephant at sunset"
-    />
-    <figcaption>An elephant at sunset</figcaption>
+<figure class="sm border-8 border-gray-800 w-72 bg-white">
+    <img class="object-cover border-2 border-white p-4" src={src} alt={alt} />
+    <figcaption class="line-clamp-1 text-center p-2 bg-gray-600 text-gray-300">
+        {alt}
+    </figcaption>
 </figure>
-
-<style>
-    figure {
-        border: thin #c0c0c0 solid;
-        display: flex;
-        flex-flow: column;
-        padding: 5px;
-        max-width: 220px;
-        margin: auto;
-    }
-
-    img {
-        max-width: 220px;
-        max-height: 150px;
-    }
-
-    figcaption {
-        background-color: #222;
-        color: #fff;
-        font: italic smaller sans-serif;
-        padding: 3px;
-        text-align: center;
-    }
-</style>
