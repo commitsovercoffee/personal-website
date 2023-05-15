@@ -9,6 +9,7 @@ import BlockQuote from "../components/Text/BlockQuote.astro";
 import DescList from "../components/Text/DescList.astro";
 import Figure from "../components/Text/Figure.astro";
 import List from "../components/Text/List.astro";
+import Kbd from "../components/InlineText/Kbd.astro";
 ---
 
 <BaseLayout url={url}>
@@ -95,4 +96,6 @@ import List from "../components/Text/List.astro";
             },
         ]}
     />
+    <h1 class="my-8">Kbd :</h1>
+    <Kbd keys={["Alt", "Shift", "K"]} />
 </BaseLayout>
