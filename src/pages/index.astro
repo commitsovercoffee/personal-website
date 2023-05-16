@@ -10,6 +10,8 @@ import DescList from "../components/Text/DescList.astro";
 import Figure from "../components/Text/Figure.astro";
 import List from "../components/Text/List.astro";
 import Kbd from "../components/InlineText/Kbd.astro";
+import Iframe from "../components/Embedded/Iframe.astro";
+import Details from "../components/Misc/Details.astro";
 ---
 
 <BaseLayout url={url}>
@@ -98,4 +100,34 @@ import Kbd from "../components/InlineText/Kbd.astro";
     />
     <h1 class="my-8">Kbd :</h1>
     <Kbd keys={["Alt", "Shift", "K"]} />
+    <h1 class="my-8">Iframe :</h1>
+    <Iframe
+        title="Never gonna give you up."
+        src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+    />
+    <h1 class="my-8">Details :</h1>
+    <Details summary="Lorem Ipsum">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+        eaque accusantium quas, quae et dolorem deserunt quis consequuntur
+        tempora quo dicta nam, quam necessitatibus asperiores perferendis. Fugit
+        sit voluptatem omnis.
+    </Details>
+    <Details summary="Lorem Ipsum">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+        eaque accusantium quas, quae et dolorem deserunt quis consequuntur
+        tempora quo dicta nam, quam necessitatibus asperiores perferendis. Fugit
+        sit voluptatem omnis.
+    </Details>
+    <Details summary="Lorem Ipsum">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+        eaque accusantium quas, quae et dolorem deserunt quis consequuntur
+        tempora quo dicta nam, quam necessitatibus asperiores perferendis. Fugit
+        sit voluptatem omnis.
+    </Details>
+    <Details summary="Lorem Ipsum">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+        eaque accusantium quas, quae et dolorem deserunt quis consequuntur
+        tempora quo dicta nam, quam necessitatibus asperiores perferendis. Fugit
+        sit voluptatem omnis.
+    </Details>
 </BaseLayout>
