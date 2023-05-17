@@ -15,126 +15,14 @@ import Details from "../components/Details.astro";
 ---
 
 <BaseLayout url={url}>
-    <h1 class="my-8 text-sky-500">Address :</h1>
-    <Address
+    <Hgroup heading="Hello!">
+        Welcome to my corner of the internet. This is my personal website for lovers, haters and everyone in between. Have a look around ! Just be warned, there may be some questionable humor and shameless self-promotion ahead. 
+    </Hgroup>
+<p class="text-zinc-500">Find me on </p> 
+ <Address
         socials={[
             { platform: "github", username: "commitsovercoffee" },
             { platform: "youtube", username: "@commitsovercoffee" },
         ]}
-    />
-
-    <h1 class="my-8 text-sky-500 text-sky-500">Article :</h1>
-    <Article title="Title for an Article component.">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus,
-        dicta sunt nam autem nihil architecto deleniti similique laborum ullam,
-        perspiciatis quibusdam praesentium adipisci placeat soluta. Voluptate
-        autem voluptates natus animi.
-    </Article>
-
-    <h1 class="my-8 text-sky-500">Aside :</h1>
-    <Aside>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
-        ducimus assumenda qui libero fugiat quam, a sed est ratione omnis
-        facilis error quae autem magnam quas iste et nulla? Nobis.
-    </Aside>
-
-    <p class="text-zinc-400 p-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-        repellendus aut tempore eos aperiam incidunt ipsam ex, voluptatem
-        dolores consequatur eum veniam quaerat rerum, hic itaque sapiente
-        provident dolor sed!
-    </p>
-
-    <h1 class="my-8 text-sky-500 text-sky-500">
-        Footer : ( Look at bottom of the page. )
-    </h1>
-
-    <h1 class="my-8 text-sky-500 text-sky-500">
-        Header + Nav : ( Look at top of the page.)
-    </h1>
-
-    <h1 class="my-8 text-sky-500 text-sky-500">Hgroup :</h1>
-
-    <Hgroup heading="Frankenstein">
-        consequatur, fugiat quaerat inventore impedit accusantium cumque ipsam
-        asperiores expedita itaque eligendi. asperiores expedita itaque
-        eligendi.
-    </Hgroup>
-    <h1 class="my-8 text-sky-500 text-sky-500">blockquote :</h1>
-
-    <BlockQuote
-        doc="Brave New World"
-        cite="https://www.huxley.net/bnw/four.html"
-        author="Aldous Huxley"
-    >
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et cupiditate
-        blanditiis corrupti ullam quo, libero non quaerat debitis assumenda
-        sapiente vel totam velit ipsum. Temporibus harum ab facere nobis,
-        accusantium perferendis necessitatibus illo suscipit praesentium ut,
-        odio explicabo voluptatum fugiat?
-    </BlockQuote>
-    <h1 class="my-8 text-sky-500 text-sky-500">DescDetail :</h1>
-    <DescList
-        descriptions={[
-            { term: "love", def: "an intense feeling of deep affection." },
-            { term: "hate", def: "feel intense dislike for." },
-        ]}
-    />
-    <h1 class="my-8 text-sky-500 text-sky-500">Figure :</h1>
-    <Figure
-        alt="An elephant at sunset."
-        src="https://images.unsplash.com/photo-1683643593317-be972fa421d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
-    />
-    <h1 class="my-8 text-sky-500 text-sky-500">List :</h1>
-    <List
-        links={[
-            {
-                label: "Lorem",
-                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                content: "Adipisicing beatae dolorum beatae harum sint",
-            },
-            {
-                label: "Ipsum",
-                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                content: "Consectetur dolor debitis eum dolor ea.",
-            },
-            {
-                label: "Gypsum",
-                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                content: "Sit saepe voluptatem ab",
-            },
-        ]}
-    />
-    <h1 class="my-8 text-sky-500 text-sky-500">Kbd :</h1>
-    <Kbd keys={["Alt", "Shift", "K"]} />
-    <h1 class="my-8 text-sky-500 text-sky-500">Iframe :</h1>
-    <Iframe
-        title="Never gonna give you up."
-        src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
-    />
-    <h1 class="my-8 text-sky-500 text-sky-500">Details :</h1>
-    <Details summary="Lorem Ipsum">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-        eaque accusantium quas, quae et dolorem deserunt quis consequuntur
-        tempora quo dicta nam, quam necessitatibus asperiores perferendis. Fugit
-        sit voluptatem omnis.
-    </Details>
-    <Details summary="Lorem Ipsum">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-        eaque accusantium quas, quae et dolorem deserunt quis consequuntur
-        tempora quo dicta nam, quam necessitatibus asperiores perferendis. Fugit
-        sit voluptatem omnis.
-    </Details>
-    <Details summary="Lorem Ipsum">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-        eaque accusantium quas, quae et dolorem deserunt quis consequuntur
-        tempora quo dicta nam, quam necessitatibus asperiores perferendis. Fugit
-        sit voluptatem omnis.
-    </Details>
-    <Details summary="Lorem Ipsum">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-        eaque accusantium quas, quae et dolorem deserunt quis consequuntur
-        tempora quo dicta nam, quam necessitatibus asperiores perferendis. Fugit
-        sit voluptatem omnis.
-    </Details>
+    >Find me on </Address>
 </BaseLayout>
