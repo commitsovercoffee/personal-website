@@ -5,11 +5,11 @@ const { socials } = Astro.props;
 <!---
 contact info for a person or an org.
 -->
-<address class="p-4 my-4 rounded-xl bg-gray-600 w-fit">
+<address class="px-4 py-2 m-2 rounded-xl bg-zinc-900 w-fit">
     {
         socials.map((social) => (
             <a
-                class="text-gray-50 hover:underline decoration-1 p-2"
+                class="text-zinc-400 hover:text-zinc-50 transition duration-300 ease-in-out delay-200 hover:underline decoration-1 p-2"
                 href={`https://www.${social.platform}.com/${social.username}`}
             >
                 {social.platform}

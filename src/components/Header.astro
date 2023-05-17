@@ -7,29 +7,36 @@ const links = ["about", "projects", "contact"];
 <!--
 represents introductory or navigational aids.
 -->
-<header class="px-4 py-2 w-auto bg-gray-600 rounded-xl">
+<header class="px-4 py-2 mb-24 w-auto text-zinc-300 rounded-xl">
     <a href="/">
-        <h1
-            class="underline decoration-wavy underline-offset-4 decoration-1 text-gray-50 text-2xl decoration-sky-500 font-bold"
-        >
+        <h1 class="text-2xl font-bold p-2">
             {title}
 
-            <i class="align-middle text-4xl text-gray-50 material-icons"
-                >coffee</i
-            >
+            <i class="align-middle text-4xl material-icons">coffee</i>
         </h1>
     </a>
-    <nav class="p-2">
-        <ul class="flex w-full font-semibold text-gray-400 uppercase">
-            <li class="mx-1 hover:underline underline-offset-8 decoration-2">
-                <a class={url === "/" ? "text-gray-800" : ""} href="/">Home</a>
+    <nav>
+        <ul class="mt-2 flex w-full font-normal uppercase text-zinc-500">
+            <li
+                class="px-4 mx-2 py-2 hover:bg-zinc-900 rounded-xl underline-offset-8 decoration-2 transition duration-300 delay-50 ease-in"
+            >
+                <a
+                    class={url === "/"
+                        ? "underline-2 underline text-zinc-50"
+                        : ""}
+                    href="/">Home</a
+                >
             </li>
 
             {
-                links.map((link, index) => (
-                    <li class="mx-1 hover:underline underline-offset-8 decoration-2">
+                links.map((link) => (
+                    <li class="px-2 mx-2 py-2 hover:bg-zinc-900 rounded-xl underline-offset-8 decoration-2 transition duration-300 delay-50 ease-in">
                         <a
-                            class={url === link ? "text-gray-800" : ""}
+                            class={
+                                url === link
+                                    ? "underline-2 underline text-zinc-50"
+                                    : ""
+                            }
                             href={link}
                         >
                             {link}

@@ -3,10 +3,10 @@ const { links } = Astro.props;
 ---
 
 <!-- List Section --->
-<ul class="list-none text-gray-900">
+<ul class="list-none">
     {
         links.map((link) => (
-            <li class="p-2 my-1 text-gray-900">
+            <li class="p-2 my-1 text-zinc-100">
                 <a href={link.url}>
                     <span class="material-icons text-base align-bottom">
                         check
@@ -21,7 +21,7 @@ const { links } = Astro.props;
                         {link.label}
                     </i>
                 </a>
-                <span class="text-gray-500">{link.content}</span>
+                <span class="text-zinc-400">{link.content}</span>
             </li>
         ))
     }

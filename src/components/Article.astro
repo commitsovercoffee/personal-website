@@ -5,7 +5,9 @@ const { title } = Astro.props;
 <!---
 titled self contained compositions in a page.
 -->
-<article class="rounded-xl border-gray-600 border-2 p-6 my-4">
-    <h2 class="font-bold b-400 mb-8 mt-4">{title}</h2>
-    <slot />
+<article class="rounded-xl bg-zinc-900 p-6 my-4">
+    <h2 class="font-bold b-400 mb-8 mt-4 text-zinc-100">{title}</h2>
+    <p class="text-zinc-400"> 
+    <slot/>
+    </p>
 </article>

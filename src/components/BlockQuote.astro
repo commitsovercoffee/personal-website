@@ -7,17 +7,17 @@ indicates that the enclosed text is an extended quotation.
 </style>
 -->
 <blockquote cite={cite} class="flex flex-col">
-    <section class="rounded-t-xl text-xl p-4 flex-2/3 bg-gray-300 font-serif">
-        <p class="p-4">
+    <section class="p-4 rounded-t-xl border-4 border-zinc-900 text-zinc-900 flex-2/3 bg-zinc-400 font-serif">
+        <p class="p-2">
             <span class="font-bold">"</span>
             <span class="font-thin italic"><slot /></span>
             <span class="font-bold">"</span>
         </p>
     </section>
-    <section class="rounded-b-xl p-4 flex-1/3 bg-gray-600 text-gray-400">
-        <footer>
+    <section class="rounded-b-xl border-4 border-zinc-900 text-zinc-400 flex-1/3 bg-zinc-900">
+        <footer class="p-2">
             - {author}, <cite>
-                <a class="hover:text-gray-900" href={cite}>{doc}</a></cite
+                <a class="hover:text-zinc-100 transition duration-300 ease-in-out delay-200 p-2" href={cite}>{doc}</a></cite
             >
         </footer>
     </section>

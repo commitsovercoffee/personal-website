@@ -15,7 +15,7 @@ import Details from "../components/Details.astro";
 ---
 
 <BaseLayout url={url}>
-    <h1 class="my-4">Address :</h1>
+    <h1 class="my-8 text-sky-500">Address :</h1>
     <Address
         socials={[
             { platform: "github", username: "commitsovercoffee" },
@@ -23,7 +23,7 @@ import Details from "../components/Details.astro";
         ]}
     />
 
-    <h1 class="my-4">Article :</h1>
+    <h1 class="my-8 text-sky-500 text-sky-500">Article :</h1>
     <Article title="Title for an Article component.">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus,
         dicta sunt nam autem nihil architecto deleniti similique laborum ullam,
@@ -31,29 +31,36 @@ import Details from "../components/Details.astro";
         autem voluptates natus animi.
     </Article>
 
-    <h1 class="my-4">Aside :</h1>
+    <h1 class="my-8 text-sky-500">Aside :</h1>
     <Aside>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
         ducimus assumenda qui libero fugiat quam, a sed est ratione omnis
         facilis error quae autem magnam quas iste et nulla? Nobis.
     </Aside>
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed velit quidem
-    facilis voluptatem vitae soluta molestias quae maxime impedit repellendus
-    animi corporis, dignissimos saepe ipsa non rerum culpa id corrupti?
+    <p class="text-zinc-400 p-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+        repellendus aut tempore eos aperiam incidunt ipsam ex, voluptatem
+        dolores consequatur eum veniam quaerat rerum, hic itaque sapiente
+        provident dolor sed!
+    </p>
 
-    <h1 class="my-8">Footer : ( Look at bottom of the page. )</h1>
+    <h1 class="my-8 text-sky-500 text-sky-500">
+        Footer : ( Look at bottom of the page. )
+    </h1>
 
-    <h1 class="my-8">Header + Nav : ( Look at top of the page.)</h1>
+    <h1 class="my-8 text-sky-500 text-sky-500">
+        Header + Nav : ( Look at top of the page.)
+    </h1>
 
-    <h1 class="my-8">Hgroup :</h1>
+    <h1 class="my-8 text-sky-500 text-sky-500">Hgroup :</h1>
 
     <Hgroup heading="Frankenstein">
         consequatur, fugiat quaerat inventore impedit accusantium cumque ipsam
         asperiores expedita itaque eligendi. asperiores expedita itaque
         eligendi.
     </Hgroup>
-    <h1 class="my-8">blockquote :</h1>
+    <h1 class="my-8 text-sky-500 text-sky-500">blockquote :</h1>
 
     <BlockQuote
         doc="Brave New World"
@@ -66,19 +73,19 @@ import Details from "../components/Details.astro";
         accusantium perferendis necessitatibus illo suscipit praesentium ut,
         odio explicabo voluptatum fugiat?
     </BlockQuote>
-    <h1 class="my-8">DescDetail :</h1>
+    <h1 class="my-8 text-sky-500 text-sky-500">DescDetail :</h1>
     <DescList
         descriptions={[
             { term: "love", def: "an intense feeling of deep affection." },
             { term: "hate", def: "feel intense dislike for." },
         ]}
     />
-    <h1 class="my-8">Figure :</h1>
+    <h1 class="my-8 text-sky-500 text-sky-500">Figure :</h1>
     <Figure
         alt="An elephant at sunset."
         src="https://images.unsplash.com/photo-1683643593317-be972fa421d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
     />
-    <h1 class="my-8">List :</h1>
+    <h1 class="my-8 text-sky-500 text-sky-500">List :</h1>
     <List
         links={[
             {
@@ -98,14 +105,14 @@ import Details from "../components/Details.astro";
             },
         ]}
     />
-    <h1 class="my-8">Kbd :</h1>
+    <h1 class="my-8 text-sky-500 text-sky-500">Kbd :</h1>
     <Kbd keys={["Alt", "Shift", "K"]} />
-    <h1 class="my-8">Iframe :</h1>
+    <h1 class="my-8 text-sky-500 text-sky-500">Iframe :</h1>
     <Iframe
         title="Never gonna give you up."
         src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
     />
-    <h1 class="my-8">Details :</h1>
+    <h1 class="my-8 text-sky-500 text-sky-500">Details :</h1>
     <Details summary="Lorem Ipsum">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
         eaque accusantium quas, quae et dolorem deserunt quis consequuntur

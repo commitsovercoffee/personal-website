@@ -5,9 +5,9 @@ const { heading } = Astro.props;
 <!--
 groups a single <h1>–<h6> element with one or more <p>.
 -->
-<hgroup class="bg-gray-600 rounded-xl p-4 m-2 divide-x-2 divide-gray-400">
-    <h1 class="text-lg text-gray-50">{heading}</h1>
-    <p class="text-xs  text-gray-400 p-2">
+<hgroup class="p-4 m-2 divide-x-2 divide-gray-400">
+    <h1 class="text-xl text-zinc-50 font-bold">{heading}</h1>
+    <p class="mt-4 ml-4 text-xs text-zinc-500 p-2">
         <slot />
     </p>
 </hgroup>
