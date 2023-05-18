@@ -3,26 +3,22 @@ const url = "/";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Address from "../components/Address.astro";
 import Article from "../components/Article.astro";
-import Aside from "../components/Aside.astro";
-import Hgroup from "../components/Hgroup.astro";
-import BlockQuote from "../components/BlockQuote.astro";
-import DescList from "../components/DescList.astro";
-import Figure from "../components/Figure.astro";
-import List from "../components/List.astro";
-import Kbd from "../components/Kbd.astro";
-import Iframe from "../components/Iframe.astro";
-import Details from "../components/Details.astro";
 ---
 
 <BaseLayout url={url}>
-    <Hgroup heading="Hello!">
-        Welcome to my corner of the internet. This is my personal website for lovers, haters and everyone in between. Have a look around ! Just be warned, there may be some questionable humor and shameless self-promotion ahead. 
-    </Hgroup>
-<p class="text-zinc-500">Find me on </p> 
- <Address
+    <Article title="Hello !">
+        Welcome to my corner of the internet. This is my personal website for
+        lovers, haters and everyone in between. Have a look around ! Just be
+        warned, there may be some questionable humor and shameless
+        self-promotion ahead.
+    </Article>
+
+    <Address
         socials={[
             { platform: "github", username: "commitsovercoffee" },
             { platform: "youtube", username: "@commitsovercoffee" },
         ]}
-    >Find me on </Address>
+    >
+        You can also find me on ...
+    </Address>
 </BaseLayout>

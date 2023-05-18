@@ -1,6 +1,41 @@
 ---
 const url = "about";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Article from "../components/Article.astro";
+import Hgroup from "../components/Hgroup.astro";
+import List from "../components/List.astro";
 ---
 
-<BaseLayout url={url} />
+<BaseLayout url={url}>
+    <Article title="About Me">
+        I am an independent contractor based out of the city of water falls ~ <a
+            href="https://en.wikipedia.org/wiki/Ranchi"
+        >
+            Ranchi</a
+        >. Currently working with an NGO, to build tools and experiences for
+        educators and learners.
+
+        <Hgroup heading="What else ?">
+            If you want to know more about me, you can check the links below. I
+            often write to organise my thoughts, and below is an attempt in the
+            same direction.
+        </Hgroup>
+
+        <List
+            links={[
+                {
+                    label: "Philosophy",
+                    url: " /philosophy/",
+                },
+                {
+                    label: "Hobbies",
+                    url: " /hobbies/",
+                },
+                {
+                    label: "Favorites",
+                    url: "/favorites/",
+                },
+            ]}
+        />
+    </Article>
+</BaseLayout>
