@@ -7,17 +7,22 @@ import Socials from "../components/Socials.astro";
 
 <BaseLayout url={url}>
     <Article title="Hello !">
-        Welcome to my corner of the internet. This is my personal website for
-        lovers, haters and everyone in between. Have a look around ! Just be
-        warned, there may be some questionable humor and shameless
-        self-promotion ahead.
+        <p>
+            Welcome to my corner of the internet. This is my personal website
+            for lovers, haters and everyone in between. Have a look around !
+            Just be warned, there may be some questionable humor and shameless
+            self-promotion ahead.
+        </p>
     </Article>
 
     <Article title="What next ?">
-        Once you've had your fill of this site, you can find my esteemed
-        presence scattered across the internet on ...
-        <Socials platform="github" username="commitsovercoffee" />,
-        <Socials platform="twitter" username="commitsovercoffee" /> and
-        <Socials platform="youtube" username="commitsovercoffee" />.
+        <p>
+            Once you've had your fill of this site, you can find my esteemed
+            presence scattered across the internet on
+
+            <Socials platform="github" username="commitsovercoffee" />,
+            <Socials platform="twitter" username="commitsovercoffee" /> and
+            <Socials platform="youtube" username="commitsovercoffee" />.
+        </p>
     </Article>
 </BaseLayout>
