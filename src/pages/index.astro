@@ -1,8 +1,8 @@
 ---
 const url = "/";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Address from "../components/Address.astro";
 import Article from "../components/Article.astro";
+import Socials from "../components/Socials.astro";
 ---
 
 <BaseLayout url={url}>
@@ -13,12 +13,11 @@ import Article from "../components/Article.astro";
         self-promotion ahead.
     </Article>
 
-    <Address
-        socials={[
-            { platform: "github", username: "commitsovercoffee" },
-            { platform: "youtube", username: "@commitsovercoffee" },
-        ]}
-    >
-        You can also find me on ...
-    </Address>
+    <Article title="What next ?">
+        Once you've had your fill of this site, you can find my esteemed
+        presence scattered across the internet on ...
+        <Socials platform="github" username="commitsovercoffee" />,
+        <Socials platform="twitter" username="commitsovercoffee" /> and
+        <Socials platform="youtube" username="commitsovercoffee" />.
+    </Article>
 </BaseLayout>

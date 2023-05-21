@@ -1,0 +1,72 @@
+---
+const url = "about";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Article from "../../components/Article.astro";
+import Youtube from "../../components/Youtube.astro";
+import List from "../../components/List.astro";
+---
+
+<BaseLayout url={url}>
+    <Article title="Philosophy">
+        To live a meaningful life, you need to be the antidote, to the chaos
+        that life is. Its time to confront the dragon, get the gold and share it
+        with the community. What is a dragon you ask ? You may get an idea from
+        the video below.
+        <Youtube id="N21eVbQ7WEI" />
+        Overwhelmed by the video above ? Below is a more objective approach :
+        <List
+            links={[
+                {
+                    label: "Be a good person :",
+                    content:
+                        " Be kind to everyone, even the people you don't like. They might be your next boss.",
+                },
+                {
+                    label: "Seek knowledge and wisdom :",
+                    content:
+                        " Knowledge is knowing that the world is round. Wisdom is knowing not to argue with a flat-earther.",
+                },
+                {
+                    label: "Embrace change.",
+                    content:
+                        " Change is like the weather. You can't control it, but you can dress for it.",
+                },
+                {
+                    label: "Find balance.",
+                    content: " Work hard, play hard.",
+                },
+                {
+                    label: "Build strong relationships : ",
+                    content:
+                        " A friend in need is a friend indeed, but a friend with cheese is a better friend.",
+                },
+                {
+                    label: "Take care of your health :",
+                    content:
+                        " Eat healthy, exercise, and get enough sleep. You'll thank yourself later.",
+                },
+                {
+                    label: "Take responsibility for your happiness :",
+                    content:
+                        " No one can make you happy but yourself. So find what makes you happy and do it. ",
+                },
+                {
+                    label: " Be creative :",
+                    content:
+                        " Express yourself through art, music, writing, or whatever else you enjoy. And don't be afraid to fail. Failure is a part of the creative process.",
+                },
+
+                {
+                    label: " Practice self-discipline :",
+                    content: " But don't be a slave to your own rules.",
+                },
+
+                {
+                    label: " Have a sense of purpose :",
+                    content: " But don't take yourself too seriously.",
+                },
+
+            ]}
+        />
+    </Article>
+</BaseLayout>

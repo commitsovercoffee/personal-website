@@ -3,25 +3,25 @@ const { links } = Astro.props;
 ---
 
 <!-- List Section --->
-<ul class="list-none">
+<ul class="list-none my-4">
     {
         links.map((link) => (
-            <li class="p-2 text-zinc-100">
-                <a href={link.url}>
+            <li class="p-2 my-2 text-zinc-400">
+                <a href={link.url} class="font-bold">
                     <span class="material-icons text-base align-bottom">
                         check
                     </span>
-                    <i
-                        class={
+                    <span
+                        class={ 
                             link.hasOwnProperty("url")
                                 ? "hover:underline decoration-1"
                                 : "pointer-events-none"
                         }
                     >
                         {link.label}
-                    </i>
+                    </span>
                 </a>
-                <span class="text-zinc-400">{link.content}</span>
+                <span class="text-zinc-600">{link.content}</span>
             </li>
         ))
     }
