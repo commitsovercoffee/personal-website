@@ -5,10 +5,10 @@ const { summary } = Astro.props;
 <!--
 creates a disclosure widget in which information is visible only when the widget is toggled.
 -->
-<details class="border-t-2 bg-zinc-900 text-zinc-100 group">
+<details class="my-4 border-t-2 bg-zinc-900 text-zinc-100 group">
     <summary
         class="p-2 hover:cursor-pointer hover:bg-zinc-700 transition duration-200 ease-in-out group-open:bg-zinc-900 group-open:text-zinc-100"
         >{summary}</summary
     >
-    <p class="px-6 py-6 text-xs text-zinc-900 bg-zinc-400"><slot /></p>
+    <slot class="px-6 py-6 text-xs text-zinc-900 bg-zinc-400"><slot />
 </details>

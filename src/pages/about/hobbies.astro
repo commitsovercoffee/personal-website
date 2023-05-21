@@ -1,6 +1,54 @@
 ---
 const url = "about";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Article from "../../components/Article.astro";
+import Details from "../../components/Details.astro";
 ---
 
-<BaseLayout url={url} />
+<BaseLayout url={url}>
+    <Article title="Hobbies">
+        <p>when I am not working. I am indulged in one of these things :</p>
+
+        <Details summary="Reading">
+            <p>
+                Back in my school days, reading was a real drag. We were
+                assigned books not for their literary merit, but for their
+                ability to teach us vocab or history. We had to read to
+                memorize, not to discuss ideas. The joy of reading was lost in
+                the monotony of analysis and regurgitation.
+            </p>
+
+            <p>
+                But then, I discovered the joy of reading for pleasure, without
+                anyone telling me what to read. Oh, the freedom! I was finally
+                able to explore genres and authors that truly interested me, and
+                it was a game-changer.
+            </p>
+
+            <p>
+                Books have been so much more to me than just entertainment or an
+                academic exercise, I remember reading Animal Farm for the first
+                time and being completely drawn into the story of the farm
+                animals and their struggle for power. The characters were so
+                well-developed that I felt like I was right there in the middle
+                of the action, watching it all unfold. And Crime and Punishment?
+                Don't even get me started! Dostoevsky weaves together
+                philosophy, psychology, and suspense like a true master.
+            </p>
+
+            <p>
+                Now, hold on to your hats, because here's the zinger: academic
+                textbooks. I know, I know, they're as thrilling as watching
+                paint dry, but hear me out. When you read an academic book, it's
+                like having a knowledgeable friend, or even a mentor, talking to
+                you and guiding you through a topic. And when you finally grasp
+                a difficult concept, the feeling of accomplishment is
+                unparalleled. So, my friends, if you're not already an avid
+                reader, I implore you to give it a try. Don't worry about what
+                others might think of your choices or whether they fit into some
+                prescribed curriculum. Just read what you love and enjoy the
+                ride. And with that, I'm off to curl up with a good book...
+            </p>
+        </Details>
+    </Article>
+</BaseLayout>
