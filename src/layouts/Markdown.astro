@@ -1,41 +1,27 @@
 ---
 const { frontmatter } = Astro.props;
 import BaseLayout from "./BaseLayout.astro";
+import Article from "../components/Article.astro";
 ---
 
-<style>
-    .tags {
-        display: flex;
-    }
+<BaseLayout>
+    <Article title={frontmatter.title}>
+        <div class="tags">
+            <section class="flex">
+                {
+                    frontmatter.tags.map((tag) => (
+                        <a
+                            class="p-1 m-1 text-zinc-700 bg-zinc-300 hover:bg-zinc-700 hover:text-zinc-300 rounded-xl"
+                            href={`/tags/${tag}`}
+                        >
+                            {tag}
+                        </a>
+                    ))
+                }
+                <!-- Markdown Content -->
+            </section>
 
-    .tags > p {
-        font-size: 14px;
-        padding: 5px 10px;
-        margin: 5px;
-        border-radius: 10px;
-        border: 2px solid #2e2e2e;
-    }
-
-    .tags > p:hover,
-    .tags > p:active {
-        background-color: #2e2e2e;
-        cursor:pointer;
-        color: #ffffff;
-    }
-</style>
-
-<BaseLayout pageTitle={frontmatter.title}>
-
-    <!-- Description of the blog -->
-    <p>{frontmatter.description}</p>
-
-    <!-- Tags -->
-  <div class="tags">
-    {frontmatter.tags.map((tag) => (
-      <p><a href={`/tags/${tag}`}>{tag}</a></p>
-    ))}
-  </div>
-
-    <!-- Markdown Content -->
-    <slot />
+            <slot />
+        </div>
+    </Article>
 </BaseLayout>

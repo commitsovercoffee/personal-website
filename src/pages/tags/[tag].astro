@@ -1,27 +1,60 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Article from "../../components/Article.astro";
+import DescList from "../../components/DescList.astro";
+const allPosts = await Astro.glob("../posts/*.md");
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../posts/*.md');
-  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+    const allPosts = await Astro.glob("../posts/*.md");
+    const uniqueTags = [
+        ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
+    ];
 
-return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
-    return {
-      params: { tag },
-      props: { posts: filteredPosts },
-    };
-  });
-
+    return uniqueTags.map((tag) => {
+        const filteredPosts = allPosts.filter((post) =>
+            post.frontmatter.tags.includes(tag)
+        );
+        return {
+            params: { tag },
+            props: { posts: filteredPosts },
+        };
+    });
 }
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<BaseLayout pageTitle={tag}>   
-  <p>Posts tagged with {tag}</p>
-  <ul>
-    {posts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
-  </ul>
+<BaseLayout>
+    <Article title="Blogs">
+        <div class="tags">
+            <section class="flex flex-wrap">
+                {
+                    tags.map((t) => (
+                        <a
+                            class={
+                                tag === t
+                                    ? "p-1 m-1 text-zinc-300 bg-zinc-700 rounded-xl"
+                                    : "p-1 m-1 text-zinc-700 bg-zinc-300 hover:bg-zinc-700 hover:text-zinc-300 rounded-xl"
+                            }
+                            href={`/tags/${t}`}
+                        >
+                            {t}
+                        </a>
+                    ))
+                }
+            </section>
+        </div>
+
+        <section class="p-2 m-2 w-full">
+            <DescList
+                descriptions={posts.map((post) => ({
+                    term: post.frontmatter.title,
+                    url: post.url,
+                    def: post.frontmatter.description,
+                }))}
+            />
+        </section>
+    </Article>
 </BaseLayout>

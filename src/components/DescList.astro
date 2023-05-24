@@ -1,16 +1,31 @@
 ---
-const { descriptions } = Astro.props;
+const { descriptions, upperCase } = Astro.props;
 ---
 
 <!--
 provides the description, definition, or value for the preceding term (<dt>) in a description list (<dl>).
 -->
-<dl>
+<dl class="my-4">
     {
         descriptions.map((description) => (
             <>
-                <dt class="uppercase font-bold font-serif text-2xl text-zinc-100">
-                    {description.term}
+                <dt
+                    class={
+                        upperCase === true
+                            ? "uppercase font-bold font-serif text-2xl text-zinc-100"
+                            : "font-bold font-serif text-2xl text-zinc-100"
+                    }
+                >
+                    <a
+                        class={
+                            description.hasOwnProperty("url")
+                                ? "hover:underline decoration-1 underline-offset-4"
+                                : "pointer-events-none"
+                        }
+                        href={description.url}
+                    >
+                        {description.term}
+                    </a>
                 </dt>
                 <dd class="ml-8 mb-8 text-zinc-400">{description.def}</dd>
             </>

@@ -2,6 +2,7 @@
 const url = "blog";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Article from "../components/Article.astro";
+import DescList from "../components/DescList.astro";
 const allPosts = await Astro.glob("./posts/*.md");
 const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 ---
@@ -9,7 +10,7 @@ const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 <BaseLayout url={url}>
     <Article title="Blogs">
         <div class="tags">
-            <section class="flex">
+            <section class="flex flex-wrap">
                 {
                     tags.map((tag) => (
                         <a
@@ -21,6 +22,19 @@ const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
                     ))
                 }
             </section>
+
+        <section class="p-2 m-2 w-full">
+            <DescList
+                descriptions={allPosts.map((post) => ({
+                    term: post.frontmatter.title,
+                    url: post.url,
+                    def: post.frontmatter.description,
+                }))}
+            />
+        </section>
+ 
+
+
         </div>
     </Article>
 </BaseLayout>
