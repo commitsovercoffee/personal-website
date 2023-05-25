@@ -1,11 +1,14 @@
 ---
-const { title } = Astro.props;
+const { title, desc } = Astro.props;
 ---
 
 <!---
 titled self contained compositions in a page.
 -->
-<article class="rounded-xl bg-zinc-900 p-6 my-4 mx-2">
-    <h1 class="text-2xl font-bold b-400 mb-8 mt-4 text-zinc-100">{title}</h1>
-        <slot/>
+<article class="rounded-xl bg-zinc-900 p-6 my-4">
+    <h1 class="text-3xl font-extrabold mt-4 text-zinc-100">{title}</h1>
+    {desc && <p class="text-zinc-100 mb-4">{desc}</p>}
+    <section class="text-l">
+        <slot />
+    </section>
 </article>

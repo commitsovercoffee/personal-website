@@ -6,23 +6,21 @@ import Socials from "../components/Socials.astro";
 ---
 
 <BaseLayout url={url}>
-    <Article title="Hello !">
+    <Article title="Hey, I'm Sourav!" desc="Welcome to my digital abode.">
         <p>
-            Welcome to my corner of the internet. This is my personal website
-            for lovers, haters and everyone in between. Have a look around !
-            Just be warned, there may be some questionable humor and shameless
-            self-promotion ahead.
+            I'm a software contractor based out of Ranchi. Currently working
+            with Quest Alliance to build learning solutions. I like sci-fi,
+            basketball, reading and gaming. I also
+            <a class="underline hover:underline underline-offset-2" href="/blog"
+                >write</a
+            > and sketch sometimes.
         </p>
     </Article>
 
-    <Article title="What next ?">
-        <p>
-            Once you've had your fill of this site, you can find my esteemed
-            presence scattered across the internet on
-
-            <Socials platform="github" username="commitsovercoffee" />,
-            <Socials platform="twitter" username="commitsovercoffee" /> and
-            <Socials platform="youtube" username="commitsovercoffee" />.
-        </p>
-    </Article>
+    <p class="p-1">
+        Find me on
+        <Socials platform="github" username="commitsovercoffee" />,
+        <Socials platform="twitter" username="commitsovercoffee" /> and
+        <Socials platform="youtube" username="commitsovercoffee" />.
+    </p>
 </BaseLayout>
