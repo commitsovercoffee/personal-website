@@ -10,11 +10,11 @@ const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 <BaseLayout url={url}>
     <Article title="Blogs">
         <div class="tags">
-            <section class="flex flex-wrap">
+            <section class="flex flex-wrap p-2 m-2">
                 {
                     tags.map((tag) => (
                         <a
-                            class="px-2 m-1 text-zinc-700 bg-zinc-300 hover:bg-zinc-700 hover:text-zinc-300 rounded-xl"
+                            class="px-2 py-1 m-1 text-zinc-700 bg-zinc-300 hover:bg-zinc-700 hover:text-zinc-300 rounded-xl"
                             href={`/tags/${tag}`}
                         >
                             {tag}
@@ -23,18 +23,15 @@ const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
                 }
             </section>
 
-        <section class="p-2 m-2 w-full">
-            <DescList
-                descriptions={allPosts.map((post) => ({
-                    term: post.frontmatter.title,
-                    url: post.url,
-                    def: post.frontmatter.description,
-                }))}
-            />
-        </section>
- 
-
-
+            <section class="p-2 m-2 w-full">
+                <DescList
+                    descriptions={allPosts.map((post) => ({
+                        term: post.frontmatter.title,
+                        url: post.url,
+                        def: post.frontmatter.description,
+                    }))}
+                />
+            </section>
         </div>
     </Article>
 </BaseLayout>

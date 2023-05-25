@@ -7,11 +7,11 @@ import Article from "../components/Article.astro";
 <BaseLayout>
     <Article title={frontmatter.title}>
         <div class="tags">
-            <section class="flex">
+            <section class="flex flex-wrap p-2 m-2 mb-16">
                 {
                     frontmatter.tags.map((tag) => (
                         <a
-                            class="px-2 m-1 text-zinc-700 bg-zinc-300 hover:bg-zinc-700 hover:text-zinc-300 rounded-xl"
+                            class="px-2 py-1 m-1 text-zinc-700 bg-zinc-300 hover:bg-zinc-700 hover:text-zinc-300 rounded-xl"
                             href={`/tags/${tag}`}
                         >
                             {tag}
@@ -21,7 +21,9 @@ import Article from "../components/Article.astro";
                 <!-- Markdown Content -->
             </section>
 
-            <slot />
+            <article class="prose prose-zinc dark:prose-invert">
+                <slot />
+            </article>
         </div>
     </Article>
 </BaseLayout>
