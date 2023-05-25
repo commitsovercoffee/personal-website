@@ -1,0 +1,39 @@
+---
+const url = "projects";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Article from "../components/Article.astro";
+import Project from "../components/Project.astro";
+---
+
+<BaseLayout url={url}>
+    <Article title="Projects">
+        <p>How I've been spending my down time ...</p>
+    </Article>
+
+    <div class="flex flex-wrap justify-center">
+        <Project
+            name="Hope"
+            desc="shell scripts for arch"
+            demo=""
+            repo="hope"
+        />
+        <Project
+            name="Hope"
+            desc="shell scripts for arch"
+            demo=""
+            repo="hope"
+        />
+        <Project
+            name="Hope"
+            desc="shell scripts for arch"
+            demo=""
+            repo="hope"
+        />
+        <Project
+            name="Hope"
+            desc="shell scripts for arch"
+            demo=""
+            repo="hope"
+        />
+    </div>
+</BaseLayout>
