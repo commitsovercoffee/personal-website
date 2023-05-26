@@ -2,47 +2,132 @@
 const url = "about";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Article from "../components/Article.astro";
-import Hgroup from "../components/Hgroup.astro";
 import List from "../components/List.astro";
+import Socials from "../components/Socials.astro";
 ---
 
 <BaseLayout url={url}>
     <Article title="About Me">
         <p>
-            I am an independent contractor based out of the city of water falls
-            ~ <a href="https://en.wikipedia.org/wiki/Ranchi"> Ranchi</a>.
-            Currently working with an NGO, to build tools and experiences for
-            educators and learners.
+            Hello ! My name is Sourav Singh. I am a software contractor. I
+            develop websites, apps, apis and embedded systems. Besides that I
+            have a
+            <a
+                class="underline hover:underline underline-offset-2"
+                href="youtube.com/@commitsovercoffee">youtube</a
+            > channel where I teach computer science.
         </p>
+        <p>
+            When I'm not doing any of those things, I'm probably sketching,
+            reading a book,
+            <a class="underline hover:underline underline-offset-2" href="/blog"
+                >writing</a
+            >, playing video games or working on one of my next side
+            <a
+                class="underline hover:underline underline-offset-2"
+                href="/projects">projects</a
+            >. In case you're wondering, I use the popular minimalist GNU Linux
+            distribution commonly referred to as `Arch`.
+        </p>
+    </Article>
 
-        <Hgroup heading="What else ?">
-            If you want to know more about me, you can check the links below. I
-            often write to organise my thoughts, and below is an attempt in the
-            same direction.
-        </Hgroup>
-
+    <Article title="Random Facts">
         <List
             links={[
                 {
-                    label: "Philosophy",
-                    url: " /about/philosophy/",
+                    label: "I built my first game using macromedia flash.",
                 },
                 {
-                    label: "Hobbies",
-                    url: " /about/hobbies/",
+                    label: "I'm learning svelte, and building a resume builder.",
                 },
                 {
-                    label: "Favorites",
-                    url: "/about/favorites/",
+                    label: "I love strategy games and competitive MOBAs.",
+                },
+                {
+                    label: "I moved from vim-wiki to spreadsheets.",
+                },
+                {
+                    label: "In an alternate life, I would've been a drummer.",
                 },
             ]}
         />
     </Article>
 
-    <Article title="Hire Me!">
+    <Article title="Favorites">
+        <List
+            links={[
+                {
+                    label: "Music",
+                    content:
+                        "A-Ha, Abba, Baltimore, Guns N Roses, John Mayer, Joji, Led Zepplin, Queen and  The Police",
+                },
+
+                {
+                    label: "TV Shows",
+                    content:
+                        "The Silicon Valley, The Office, My Name is Earl and Rick and Morty.",
+                },
+
+                {
+                    label: "Movies",
+                    content:
+                        "Mission Impossible, Clockwork Orange, The Dark Knight and Malena. ",
+                },
+
+                {
+                    label: "Books",
+                    content:
+                        "1984, Brave New World, Man and his symbols, Of Men and Mice, Crime and Punishment and Don Quixote.  ",
+                },
+
+                {
+                    label: "Games",
+                    content:
+                        "Dota 2, The Witcher, Assasin's Creed, God of War, Portal, Hitman, Tomb Raider and Dead Space.",
+                },
+            ]}
+        />
+    </Article>
+    <Article title="Tools">
+        <p>Software :</p>
         <p>
-            Want to work together ? Check out my resume, and if it floats your
-            boat, we can hit the ground running.
+            Project H.O.P.E (Higly Optimised Productivity Env) runs all my
+            software. I use arch, dwm, st, fish, and neovim with gruvbox theme
+            applied everywhere.
+        </p>
+
+        <p>
+            Hardware :
+            <List
+                links={[
+                    {
+                        label: "CPU",
+                        content:
+                            "Ryzen 9 5900X,DeepCool AK620, MSI Tomahawk X570S, TUF 6800XT OC, Patriot Viper Steel 3200MHz CL16 8GB x 4, 980 PRO 512GB, WD Blue 2TB, DeepCool PM 750, Lian Li Lancool II RGB",
+                    },
+
+                    {
+                        label: "Monitor",
+                        content:
+                            'LG 27" UL500 UHD with Syga Monitor Arm MSE01.',
+                    },
+
+                    {
+                        label: "Audio",
+                        content:
+                            "Edifier 1855DB and Maono Condenser Mic PM422.",
+                    },
+                ]}
+            />
+        </p>
+    </Article>
+
+    <Article title="Contact">
+        <p>
+            You can contact me by email or reach out on
+            <Socials platform="github" username="commitsovercoffee" />,
+            <Socials platform="twitter" username="commitsovercoffee" /> or
+            <Socials platform="reddit" username="commitsovercoffee" />.
         </p>
     </Article>
 </BaseLayout>

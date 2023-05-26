@@ -6,7 +6,7 @@ const { links } = Astro.props;
 <ul class="list-none my-4">
     {
         links.map((link) => (
-            <li class="p-2 my-2 text-zinc-400">
+            <li class="p-2 text-zinc-400">
                 <a href={link.url} class="font-medium">
                     <span class="material-icons text-base align-bottom">
                         check
@@ -14,7 +14,7 @@ const { links } = Astro.props;
                     <span
                         class={ 
                             link.hasOwnProperty("url")
-                                ? "hover:underline decoration-1"
+                                ? "hover:underline decoration-1 my-2"
                                 : "pointer-events-none"
                         }
                     >
