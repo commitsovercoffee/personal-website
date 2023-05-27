@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Article from "../../components/Article.astro";
 import DescList from "../../components/DescList.astro";
+
 const allPosts = await Astro.glob("../posts/*.md");
 const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 
@@ -27,34 +28,30 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout>
-    <Article title="Blogs">
-        <div class="tags">
-            <section class="flex flex-wrap p-2 m-2">
-                {
-                    tags.map((t) => (
-                        <a
-                            class={
-                                tag === t
-                                    ? "px-2 py-1 m-1 text-zinc-300 bg-zinc-700 rounded-xl"
-                                    : "px-2 py-1 m-1 text-zinc-700 bg-zinc-300 hover:bg-zinc-700 hover:text-zinc-300 rounded-xl"
-                            }
-                            href={`/tags/${t}`}
-                        >
-                            {t}
-                        </a>
-                    ))
-                }
-            </section>
-        </div>
-
-        <section class="p-2 m-2 w-full">
-            <DescList
-                descriptions={posts.map((post) => ({
-                    term: post.frontmatter.title,
-                    url: post.url,
-                    def: post.frontmatter.description,
-                }))}
-            />
+    <Article title="Tags">
+        <section class="flex flex-wrap my-6">
+            {
+                tags.map((t) => (
+                    <a
+                        class={
+                            tag === t
+                                ? "px-2 py-1 m-2 no-underline bg-zinc-700 prose-invert rounded-xl"
+                                : "px-2 py-1 m-2 no-underline bg-zinc-300 prose hover:bg-zinc-700 hover:prose-invert rounded-xl transition duration-300 delay-50 ease-in"
+                        }
+                        href={`/tags/${t}`}
+                    >
+                        {t}
+                    </a>
+                ))
+            }
         </section>
+
+        <DescList
+            descriptions={posts.map((post) => ({
+                term: post.frontmatter.title,
+                url: post.url,
+                def: post.frontmatter.description,
+            }))}
+        />
     </Article>
 </BaseLayout>
