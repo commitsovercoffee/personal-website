@@ -1,13 +1,7 @@
----
----
-
-<!--
-footer for its nearest ancestor.
--->
 <footer
-    class="object-bottom fixed bottom-0 left-0 w-screen bg-zinc-900 text-zinc-500 text-center"
+    class="absolute bottom-0 left-0 w-screen bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 text-center"
 >
-    <p class="text-xs">
-            <slot />
-    </p>
+    <small>
+        <slot />
+    </small>
 </footer>
