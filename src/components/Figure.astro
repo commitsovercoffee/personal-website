@@ -5,7 +5,7 @@ const { src, alt } = Astro.props;
 <!--
 represents self-contained content, potentially with an optional caption, which is specified using the <figcaption> element.
 -->
-<figure class="sm border-8 border-zinc-900 w-72 bg-white">
+<figure class="sm border-4 border-zinc-100 w-72 bg-white">
     <img class="object-cover border-2 border-white p-4" src={src} alt={alt} />
     <figcaption class="line-clamp-1 text-center p-2 bg-zinc-400 text-zinc-900">
         {alt}
