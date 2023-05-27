@@ -1,35 +1,40 @@
 ---
 const { url } = Astro.props;
 const title = "Commits Over Coffee";
-const links = [ "projects","blog","about"];
+const links = ["projects", "blog", "about"];
 ---
 
 <header class="p-2 m-2">
-    <h1 class="text-2xl"> 
-    <a href="/" class="no-underline">{title}</a>
+    <h1 class="text-2xl">
+        <a href="/" class="no-underline">{title}</a>
     </h1>
     <nav>
         <ul class="flex uppercase list-none m-0 p-0">
             <li>
-                <a class={ url === "/"
+                <a
+                    class={url === "/"
                         ? "p-2 mr-2 rounded-xl transition duration-300 delay-50 ease-in underline decoration-2 underline-offset-8"
-                        : "p-2 mr-2 hover:bg-zinc-800 hover:dark:bg-zinc-300 hover:prose-invert hover:dark:prose rounded-xl transition duration-300 delay-50 ease-in no-underline"
-                         }
-                    href="/">Home</a>
+                        : "p-2 mr-2 hover:bg-zinc-800 hover:dark:bg-zinc-300 hover:prose-invert hover:dark:prose rounded-xl transition duration-300 delay-50 ease-in no-underline"}
+                    href="/">Home</a
+                >
             </li>
 
             {
                 links.map((link) => (
                     <li>
-                        <a class={ url === link
-                        ? "p-2 mr-2 hover:bg-zinc-800 hover:dark:bg-zinc-300 hover:prose-invert hover:dark:prose rounded-xl transition duration-300 delay-50 ease-in underline underline-4 underline-offset-8"
+                        <a
+                            class={
+                                url === link
+                        ? "p-2 mr-2 rounded-xl transition duration-300 delay-50 ease-in underline decoration-2 underline-offset-8"
                         : "p-2 mr-2 hover:bg-zinc-800 hover:dark:bg-zinc-300 hover:prose-invert hover:dark:prose rounded-xl transition duration-300 delay-50 ease-in no-underline"}
-                                 }
-                        href={`/${link}`}>{link}</a>
+                            }
+                            href={`/${link}`}
+                        >
+                            {link}
+                        </a>
                     </li>
                 ))
             }
-
         </ul>
     </nav>
 </header>

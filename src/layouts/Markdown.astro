@@ -1,29 +1,33 @@
 ---
-const { frontmatter } = Astro.props;
 import BaseLayout from "./BaseLayout.astro";
 import Article from "../components/Article.astro";
+
+const { frontmatter } = Astro.props;
+const allPosts = await Astro.glob("../pages/posts/*.md");
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 ---
 
 <BaseLayout>
     <Article title={frontmatter.title}>
-        <div class="tags">
-            <section class="flex flex-wrap p-2 m-2 mb-16">
-                {
-                    frontmatter.tags.map((tag) => (
-                        <a
-                            class="px-2 py-1 m-1 text-zinc-700 bg-zinc-300 hover:bg-zinc-700 hover:text-zinc-300 rounded-xl"
-                            href={`/tags/${tag}`}
-                        >
-                            {tag}
-                        </a>
-                    ))
-                }
-                <!-- Markdown Content -->
-            </section>
+        <section class="flex flex-wrap my-6">
+            {
+                tags.map((t) => (
+                    <a
+                        class={
+                            frontmatter.tags.includes(t)
+                                ? "px-2 py-1 m-2 no-underline bg-zinc-700 rounded-xl prose-invert"
+                                : "px-2 py-1 m-2 no-underline bg-zinc-300 rounded-xl prose hover:bg-zinc-700 hover:prose-invert transition duration-300 delay-50 ease-in"
+                        }
+                        href={`/tags/${t}`}
+                    >
+                        {t}
+                    </a>
+                ))
+            }
+        </section>
 
-            <article class="prose prose-zinc dark:prose-invert">
-                <slot />
-            </article>
-        </div>
+        <article class="prose prose-zinc dark:prose-invert">
+            <slot />
+        </article>
     </Article>
 </BaseLayout>

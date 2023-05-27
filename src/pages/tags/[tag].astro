@@ -27,7 +27,7 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout url="blog">
     <Article title="Tags">
         <section class="flex flex-wrap my-6">
             {
@@ -35,8 +35,8 @@ const { posts } = Astro.props;
                     <a
                         class={
                             tag === t
-                                ? "px-2 py-1 m-2 no-underline bg-zinc-700 prose-invert rounded-xl"
-                                : "px-2 py-1 m-2 no-underline bg-zinc-300 prose hover:bg-zinc-700 hover:prose-invert rounded-xl transition duration-300 delay-50 ease-in"
+                                ? "px-2 py-1 m-2 no-underline bg-zinc-700 rounded-xl prose-invert"
+                                : "px-2 py-1 m-2 no-underline bg-zinc-300 rounded-xl prose hover:bg-zinc-700 hover:prose-invert transition duration-300 delay-50 ease-in"
                         }
                         href={`/tags/${t}`}
                     >
