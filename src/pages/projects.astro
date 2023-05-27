@@ -7,26 +7,22 @@ import Project from "../components/Project.astro";
 
 <BaseLayout url={url}>
     <Article title="Projects">
-        <p>How I've been spending my down time ...</p>
+        <section class="flex flex-wrap justify-center">
+            <Project
+                name="Hope"
+                desc="scripts & dot files for my arch setup."
+                repo="hope"
+            />
+            <Project
+                name="Suckless"
+                desc="pre-patched suckless apps."
+                repo="suckless"
+            />
+            <Project
+                name="commitsovercoffee.com"
+                desc="source of this website."
+                repo="personal-website"
+            />
+        </section>
     </Article>
-
-    <div class="flex flex-wrap justify-center">
-        <Project
-            name="Hope"
-            desc="scripts & dot files for my arch setup."
-            repo="hope"
-        />
-        <Project
-            name="Suckless"
-            desc="pre-patched suckless apps."
-            repo="suckless"
-        />
-        <Project
-            name="commitsovercoffee.com"
-            desc="source of this website."
-            repo="personal-website"
-        />
- 
-
-    </div>
 </BaseLayout>

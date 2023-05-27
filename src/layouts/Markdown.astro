@@ -15,8 +15,8 @@ const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
                     <a
                         class={
                             frontmatter.tags.includes(t)
-                                ? "px-2 py-1 m-2 no-underline bg-zinc-700 rounded-xl prose-invert"
-                                : "px-2 py-1 m-2 no-underline bg-zinc-300 rounded-xl prose hover:bg-zinc-700 hover:prose-invert transition duration-300 delay-50 ease-in"
+                                ? "m-1 px-2 py-1 decoration-2 bg-zinc-900 dark:bg-zinc-100 border border-zinc-800 rounded-xl dark:border-zinc-200 no-underline prose-invert dark:prose"
+                                : "m-1 px-2 py-1 decoration-2 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 rounded-xl dark:border-zinc-800 hover:border-zinc-900 hover:dark:border-zinc-100 no-underline transition duration-300 ease-in"
                         }
                         href={`/tags/${t}`}
                     >
