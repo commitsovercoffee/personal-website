@@ -7,7 +7,7 @@ const { name, desc, demo, repo } = Astro.props;
 >
     <a
         href={repo}
-        class="underline decoration-1 decoration-transparent hover:decoration-zinc-900 hover:dark:decoration-white transition duration-300 delay-50 ease-in"
+        class="underline decoration-2 underline-offset-4 decoration-transparent hover:decoration-zinc-900 hover:dark:decoration-white transition duration-300 delay-50 ease-in"
     >
         <h1 class="p-1 text-xl">{name}</h1>
     </a>
@@ -25,7 +25,7 @@ const { name, desc, demo, repo } = Astro.props;
         }
         <a
             href={`https://github.com/commitsovercoffee/${repo}`}
-            class="px-2 py-1 m-1 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 rounded-xl dark:border-zinc-800 hover:border-zinc-900 hover:dark:border-zinc-100 no-underline transition duration-300 ease-in"
+            class="px-2 py-1 m-1 bg-zinc-100 dark:bg-zinc-900 border-2 border-zinc-200 rounded-xl dark:border-zinc-800 hover:border-zinc-900 hover:dark:border-zinc-100 no-underline transition duration-300 ease-in"
             >Source</a
         >
     </section>
