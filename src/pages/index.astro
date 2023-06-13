@@ -1,15 +1,17 @@
 ---
 const url = "/";
+const meta =
+    "Craft elegant solutions with a commitment to minimal design language. Discover Sourav's website, gain insights into his work, perspectives, and witness how he can bring a blend of fun and functionality to empower your team.";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Article from "../components/Article.astro";
 ---
 
-<BaseLayout url={url}>
+<BaseLayout {url} {meta}>
     <Article title="Hey, I'm Sourav!" desc="Welcome to my digital abode.">
         <p>
-            I'm a software contractor based out of Ranchi. Currently working
-            with Quest Alliance to build learning solutions. I like sci-fi,
-            basketball, reading and gaming. I also
+            I'm a software contractor based out of Ranchi, India. Currently
+            working with Quest Alliance to build learning solutions. I like
+            sci-fi, basketball, reading and gaming. I also
             <a href="/blog">write</a> and
             <a href="https:youtube.com/@commitsovercoffee">youtube</a> sometimes.
         </p>

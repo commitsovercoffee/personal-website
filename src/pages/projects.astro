@@ -1,34 +1,37 @@
 ---
 const url = "projects";
+const meta =
+    "Explore Sourav's projects page, a collection of standout creations accompanied by gitHub links and demo showcases.";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Article from "../components/Article.astro";
 import Project from "../components/Project.astro";
 ---
 
-<BaseLayout url={url}>
+<BaseLayout {url} {meta}>
     <Article title="Projects">
         <section class="flex flex-wrap justify-center">
             <Project
                 name="Hope"
-                desc="scripts & dot files for my arch setup."
                 repo="hope"
+                desc="scripts & dot files for my arch setup."
             />
             <Project
                 name="Key Probe"
-                desc="pre-patched suckless apps."
-                repo="Diagnose computer keyboards."
+                repo="key-probe"
+                desc="diagnose computer keyboards."
                 demo="https://key-probe.commitsovercoffee.com"
             />
 
             <Project
                 name="Suckless"
-                desc="pre-patched suckless apps."
                 repo="suckless"
+                desc="pre-patched suckless apps."
             />
             <Project
                 name="commitsovercoffee.com"
-                desc="source of this website."
                 repo="personal-website"
+                desc="source of this website."
+                demo="https://commitsovercoffee.com"
             />
         </section>
     </Article>

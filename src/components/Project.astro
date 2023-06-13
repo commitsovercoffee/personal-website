@@ -3,16 +3,16 @@ const { name, desc, demo, repo } = Astro.props;
 ---
 
 <div
-    class="m-2 p-4 border border-zinc-200 dark:border-zinc-800 rounded-xl flex-grow w-60 bg-zinc-50 dark:bg-zinc-800 overflow-hidden"
+    class="m-2 p-4 flex flex-col border border-zinc-200 dark:border-zinc-800 rounded-xl flex-grow w-60 bg-zinc-50 dark:bg-zinc-800 overflow-hidden"
 >
     <a
-        href={repo}
-        class="underline decoration-2 underline-offset-4 decoration-transparent hover:decoration-zinc-900 hover:dark:decoration-white transition duration-300 delay-50 ease-in"
+        href={`https://github.com/commitsovercoffee/${repo}`}
+        class="p-2 font-bold basis-1/4 underline decoration-2 underline-offset-4 decoration-transparent hover:decoration-zinc-900 hover:dark:decoration-white transition duration-300 delay-50 ease-in"
     >
-        <h1 class="p-1 text-xl">{name}</h1>
+        {name}
     </a>
-    <p class="p-1">{desc}</p>
-    <section class="flex">
+    <p class="p-2 basis-1/2">{desc}</p>
+    <section class="flex basis-1/4">
         {
             demo && (
                 <a
