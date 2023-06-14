@@ -4,11 +4,15 @@ const title = "Commits Over Coffee";
 const links = ["projects", "blog", "about"];
 ---
 
-<header class="p-2 my-16 mx-4">
-    <h1 class="text-3xl font-sans">
-        <a href="/" class="no-underline">{title}</a>
-    </h1>
-    <nav>
+<header class="p-2 mt-8">
+    <nav> 
+        <div class="flex my-2"> 
+            <a href="/" class="no-underline text-3xl grow-0 font-sans flex items-center p-o m-0 -teal-100 my-0">
+            <img src="/favicon.png" alt="" class="h-8 mx-4 my-0">
+            {title}
+            </a>
+        </div>
+
         <ul class="flex uppercase list-none m-0 p-0 font-sans">
             <li>
                 <a

@@ -4,6 +4,7 @@ const { url, meta } = Astro.props;
 
 import "@fontsource/contrail-one";
 import "@fontsource-variable/open-sans";
+import "@fontsource-variable/vollkorn";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -18,6 +19,8 @@ Loads for each page, for a consistent look & feel.
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={meta} />
+        <link rel="icon" href="/favicon.png" />
+
         <title>{title}</title>
     </head>
     <!-- visible content of the page -->
@@ -26,7 +29,7 @@ Loads for each page, for a consistent look & feel.
     >
         <!-- page headings and nav links -->
         <Header url={url} />
-        <main>
+        <main class="my-16">
             <!-- visiting page content -->
             <slot />
         </main>

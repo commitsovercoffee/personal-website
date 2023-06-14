@@ -6,7 +6,7 @@ const { title, desc } = Astro.props;
 titled self contained compositions in a page.
 -->
 <article class="m-2 p-4">
-    <h1 class="text-3xl font-sans">{title}</h1>
+    <h1 class="font-light font-sans">{title}</h1>
     {desc && <p>{desc}</p>}
     <slot />
 </article>

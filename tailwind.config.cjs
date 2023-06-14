@@ -6,7 +6,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ["Contrail One", ...defaultTheme.fontFamily.sans],
-                serif: ["Open Sans", ...defaultTheme.fontFamily.sans],
+                serif: ["Vollkorn Variable", ...defaultTheme.fontFamily.sans],
             },
         },
     },
