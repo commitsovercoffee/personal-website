@@ -1,7 +1,10 @@
 ---
 const title = "Commits Over Coffee";
 const { url, meta } = Astro.props;
-import "../styles/global.css";
+
+import "@fontsource/contrail-one";
+import "@fontsource-variable/open-sans";
+
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
@@ -19,7 +22,7 @@ Loads for each page, for a consistent look & feel.
     </head>
     <!-- visible content of the page -->
     <body
-        class="bg-zinc-100 dark:bg-zinc-900 prose prose-zinc dark:prose-invert max-w-prose mx-auto mb-32"
+        class="font-serif bg-zinc-100 dark:bg-zinc-900 prose prose-zinc dark:prose-invert max-w-prose mx-auto mb-32"
     >
         <!-- page headings and nav links -->
         <Header url={url} />

@@ -11,9 +11,9 @@ import Article from "../components/Article.astro";
         <img
             src="/profile.webp"
             alt="Headshot of Sourav."
-            class="h-32 mt-0 mr-4 mb-0 float-left border-4 border-zinc-200 dark:border-zinc-800 rounded-full"
+            class="mx-auto h-40 border-4 border-zinc-200 dark:border-zinc-800 rounded-full"
         />
-        <p class="max-w-prose h-min p-0 m-0">
+        <p>
             Hello ! My name is Sourav Singh. I am a software contractor. I
             develop websites, apps, apis and embedded systems. Besides that I
             have a
@@ -23,7 +23,7 @@ import Article from "../components/Article.astro";
             > channel where I teach computer science.
         </p>
 
-        <p>
+        <p class="">
             When I'm not doing any of those things, I'm probably sketching,
             reading a book,
             <a class="underline hover:underline underline-offset-2" href="/blog"
@@ -43,217 +43,220 @@ import Article from "../components/Article.astro";
             > or on <a href="https:twitter.com/hey_coc">twitter</a>.
         </p>
     </Article>
+
+    <Article title="Random Facts">
+        <ul>
+            <li>I built my first game using macromedia flash.</li>
+            <li>I love strategy games and competitive MOBAs.</li>
+            <li>I'm learning svelte and loving it!</li>
+            <li>I moved from vim-wiki to spreadsheets.</li>
+            <li>In an alternate life, I would've been a drummer.</li>
+        </ul>
+    </Article>
+
+    <Article title="Favorites">
+        <ul>
+            <li>
+                <strong>Music</strong> : A-ha, Abba, Baltimore, Guns N Roses, John
+                Mayer, Joji, Led Zepplin, Queen and The Police.
+            </li>
+            <li>
+                <strong>Shows</strong> : The Silicon Valley, The Office, My Name
+                is Earl and Rick and Morty.
+            </li>
+            <li>
+                <strong>Movies</strong> : Mission Impossible, Clockwork Orange, The
+                Dark Knight and Malena.
+            </li>
+            <li>
+                <strong>Books</strong> : 1984, Brave New World, Man and his Symbols,
+                Of Men and Mice, Crime and Punishment and Don Quixote.
+            </li>
+            <li>
+                <strong>Games</strong> : Dota 2, The Witcher, Assasin's Creed, God
+                of War, Portal, Tomb Raider, Hitman and Inside.
+            </li>
+        </ul>
+    </Article>
+
+    <Article title="Tools">
+        <h2 class="font-sans text-xl">Software</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Software</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Operating System</td>
+                    <td> <a href="https://archlinux.org/">Arch</a></td>
+                </tr>
+                <tr>
+                    <td>Desktop Environment</td>
+                    <td> <a href="https://dwm.suckless.org/"> Dwm</a></td>
+                </tr>
+
+                <tr>
+                    <td>Terminal Emulator</td>
+                    <td>
+                        <a href="https://st.suckless.org/">St</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Commandline Shell</td>
+                    <td> <a href="https://fishshell.com/">Fish</a></td>
+                </tr>
+                <tr>
+                    <td>Shell Prompt</td>
+                    <td> <a href="https://starship.rs/">Starship</a></td>
+                </tr>
+                <tr>
+                    <td>Text Editor</td>
+                    <td> <a href="https://neovim.io/">Neovim</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="font-sans text-xl">Hardware</h2>
+        Below is my primary work machine. Besides that I use <a
+            href="https://www.acer.com/in-en/laptops/swift/swift-3-intel"
+            >Acer Swift 3</a
+        > and ofcourse my phone <a
+            href="https://www.motorola.com/we/smartphones-motorola-edge-40/p?skuId=515"
+            >Moto Edge 40</a
+        >.
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Model</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Processor</td>
+                    <td>
+                        <a
+                            href="https://www.amd.com/en/products/cpu/amd-ryzen-9-5900x"
+                            >5900X</a
+                        >, <a
+                            href="https://www.thermal-grizzly.com/produkte/2-kryonaut"
+                            >Kryonaut</a
+                        >, <a
+                            href="https://www.deepcool.com/products/Cooling/cpuaircoolers/AK620-High-Performance-CPU-Cooler-1700-AM5/2021/13067.shtml"
+                            >AK620</a
+                        >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Mobo</td>
+                    <td>
+                        <a
+                            href="https://www.msi.com/Motherboard/MAG-X570S-TOMAHAWK-MAX-WIFI"
+                            >Tomahawk X570S</a
+                        >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>GPU</td>
+                    <td>
+                        <a
+                            href="https://www.asus.com/in/motherboards-components/graphics-cards/tuf-gaming/tuf-rx6800xt-o16g-gaming/"
+                            >TUF 6800XT OC</a
+                        >,
+                        <a href="https://lian-li.com/product/gb-001/">
+                            Lian Li Anti-sag
+                        </a></td
+                    >
+                </tr>
+                <tr>
+                    <td>Memory</td>
+                    <td>
+                        <a
+                            href="https://viper.patriotmemory.com/products/viper-steel-ddr4-performance-memory-ram-viper-gaming-by-patriot-memory"
+                            >Patriot Viper 32GB</a
+                        >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Storage</td>
+                    <td>
+                        <a
+                            href="https://www.samsung.com/us/computing/memory-storage/solid-state-drives/980-pro-pcie-4-0-nvme-ssd-500gb-mz-v8p500b-am/"
+                            >980 PRO 512GB</a
+                        >, <a
+                            href="https://www.westerndigital.com/en-in/products/internal-drives/wd-blue-desktop-sata-hdd#WD20EZAZ"
+                            >WD Blue 2TB</a
+                        ></td
+                    >
+                </tr>
+
+                <tr>
+                    <td>Case</td>
+                    <td>
+                        <a
+                            href="https://lian-li.com/product/lancool-ii-mesh-rgb/"
+                            >Lancool II</a
+                        >,
+                        <a
+                            href="https://www.deepcool.com/products/PowerSupplyUnits/powersupplyunits/PM750D-80-PLUS-Gold-Power-Supply/2021/12995.shtml"
+                            >DeepCool PM750D</a
+                        >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Mouse & Keyboard</td>
+                    <td>
+                        <a
+                            href="https://www.logitechg.com/en-in/products/gaming-mice/g304-lightspeed-wireless-gaming-mouse.html"
+                            >Logitech G304</a
+                        >, <a
+                            href="https://keychron.in/product/keychron-k8-pro-qmk-via-wireless-mechanical-keyboard/"
+                            >Keychron K8 Pro</a
+                        ></td
+                    >
+                </tr>
+
+                <tr>
+                    <td>Webcam & Mic</td>
+                    <td>
+                        <a href="/about">Rapoo C500</a>, <a
+                            href="https://www.maono.com/products/usb-podcast-microphone-maono-pm422"
+                            >Maono PM422</a
+                        ></td
+                    >
+                </tr>
+
+                <tr>
+                    <td>Speakers</td>
+                    <td>
+                        <a href="https://www.edifier.com/product-r1855db.html"
+                            >Edifier 1855DB</a
+                        >
+                        <a href=""></a>
+                        <a href=""></a></td
+                    >
+                </tr>
+
+                <tr class="h-8">
+                    <td>Misc</td>
+                    <td>
+                        <a href="https://www.xpg.com/us/xpg/626"
+                            >XPG Mouse Pad</a
+                        >, <a
+                            href="https://honeywellconnection.com/product/4-port-usb-non-powered-hub-2-0/"
+                            >Honeywell Hub</a
+                        >
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </Article>
 </BaseLayout>
-
-<Article title="Random Facts">
-    <ul>
-        <li>I built my first game using macromedia flash.</li>
-        <li>I love strategy games and competitive MOBAs.</li>
-        <li>I'm learning svelte and loving it!</li>
-        <li>I moved from vim-wiki to spreadsheets.</li>
-        <li>In an alternate life, I would've been a drummer.</li>
-    </ul>
-</Article>
-
-<Article title="Favorites">
-    <ul>
-        <li>
-            <strong>Music</strong> : A-ha, Abba, Baltimore, Guns N Roses, John Mayer,
-            Joji, Led Zepplin, Queen and The Police.
-        </li>
-        <li>
-            <strong>Shows</strong> : The Silicon Valley, The Office, My Name is Earl
-            and Rick and Morty.
-        </li>
-        <li>
-            <strong>Movies</strong> : Mission Impossible, Clockwork Orange, The Dark
-            Knight and Malena.
-        </li>
-        <li>
-            <strong>Books</strong> : 1984, Brave New World, Man and his Symbols,
-            Of Men and Mice, Crime and Punishment and Don Quixote.
-        </li>
-        <li>
-            <strong>Games</strong> : Dota 2, The Witcher, Assasin's Creed, God of
-            War, Portal, Tomb Raider, Hitman and Inside.
-        </li>
-    </ul>
-</Article>
-
-<Article title="Tools">
-    <h2>Software</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Category</th>
-                <th>Software</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Operating System</td>
-                <td> <a href="https://archlinux.org/">Arch</a></td>
-            </tr>
-            <tr>
-                <td>Desktop Environment</td>
-                <td> <a href="https://dwm.suckless.org/"> Dwm</a></td>
-            </tr>
-
-            <tr>
-                <td>Terminal Emulator</td>
-                <td>
-                    <a href="https://st.suckless.org/">St</a>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Commandline Shell</td>
-                <td> <a href="https://fishshell.com/">Fish</a></td>
-            </tr>
-            <tr>
-                <td>Shell Prompt</td>
-                <td> <a href="https://starship.rs/">Starship</a></td>
-            </tr>
-            <tr>
-                <td>Text Editor</td>
-                <td> <a href="https://neovim.io/">Neovim</a></td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>Hardware</h2>
-    Below is my primary work machine. Besides that I use <a
-        href="https://www.acer.com/in-en/laptops/swift/swift-3-intel"
-        >Acer Swift 3</a
-    > and ofcourse my phone <a
-        href="https://www.motorola.com/we/smartphones-motorola-edge-40/p?skuId=515"
-        >Moto Edge 40</a
-    >.
-    <table>
-        <thead>
-            <tr>
-                <th>Category</th>
-                <th>Model</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Processor</td>
-                <td>
-                    <a
-                        href="https://www.amd.com/en/products/cpu/amd-ryzen-9-5900x"
-                        >5900X</a
-                    >, <a
-                        href="https://www.thermal-grizzly.com/produkte/2-kryonaut"
-                        >Kryonaut</a
-                    >, <a
-                        href="https://www.deepcool.com/products/Cooling/cpuaircoolers/AK620-High-Performance-CPU-Cooler-1700-AM5/2021/13067.shtml"
-                        >AK620</a
-                    >
-                </td>
-            </tr>
-
-            <tr>
-                <td>Mobo</td>
-                <td>
-                    <a
-                        href="https://www.msi.com/Motherboard/MAG-X570S-TOMAHAWK-MAX-WIFI"
-                        >Tomahawk X570S</a
-                    >
-                </td>
-            </tr>
-
-            <tr>
-                <td>GPU</td>
-                <td>
-                    <a
-                        href="https://www.asus.com/in/motherboards-components/graphics-cards/tuf-gaming/tuf-rx6800xt-o16g-gaming/"
-                        >TUF 6800XT OC</a
-                    >,
-                    <a href="https://lian-li.com/product/gb-001/">
-                        Lian Li Anti-sag
-                    </a></td
-                >
-            </tr>
-            <tr>
-                <td>Memory</td>
-                <td>
-                    <a
-                        href="https://viper.patriotmemory.com/products/viper-steel-ddr4-performance-memory-ram-viper-gaming-by-patriot-memory"
-                        >Patriot Viper 32GB</a
-                    >
-                </td>
-            </tr>
-
-            <tr>
-                <td>Storage</td>
-                <td>
-                    <a
-                        href="https://www.samsung.com/us/computing/memory-storage/solid-state-drives/980-pro-pcie-4-0-nvme-ssd-500gb-mz-v8p500b-am/"
-                        >980 PRO 512GB</a
-                    >, <a
-                        href="https://www.westerndigital.com/en-in/products/internal-drives/wd-blue-desktop-sata-hdd#WD20EZAZ"
-                        >WD Blue 2TB</a
-                    ></td
-                >
-            </tr>
-
-            <tr>
-                <td>Case</td>
-                <td>
-                    <a href="https://lian-li.com/product/lancool-ii-mesh-rgb/"
-                        >Lancool II</a
-                    >,
-                    <a
-                        href="https://www.deepcool.com/products/PowerSupplyUnits/powersupplyunits/PM750D-80-PLUS-Gold-Power-Supply/2021/12995.shtml"
-                        >DeepCool PM750D</a
-                    >
-                </td>
-            </tr>
-
-            <tr>
-                <td>Mouse & Keyboard</td>
-                <td>
-                    <a
-                        href="https://www.logitechg.com/en-in/products/gaming-mice/g304-lightspeed-wireless-gaming-mouse.html"
-                        >Logitech G304</a
-                    >, <a
-                        href="https://keychron.in/product/keychron-k8-pro-qmk-via-wireless-mechanical-keyboard/"
-                        >Keychron K8 Pro</a
-                    ></td
-                >
-            </tr>
-
-            <tr>
-                <td>Webcam & Mic</td>
-                <td>
-                    <a href="/about">Rapoo C500</a>, <a
-                        href="https://www.maono.com/products/usb-podcast-microphone-maono-pm422"
-                        >Maono PM422</a
-                    ></td
-                >
-            </tr>
-
-            <tr>
-                <td>Speakers</td>
-                <td>
-                    <a href="https://www.edifier.com/product-r1855db.html"
-                        >Edifier 1855DB</a
-                    >
-                    <a href=""></a>
-                    <a href=""></a></td
-                >
-            </tr>
-
-            <tr class="h-8">
-                <td>Misc</td>
-                <td>
-                    <a href="https://www.xpg.com/us/xpg/626">XPG Mouse Pad</a>, <a
-                        href="https://honeywellconnection.com/product/4-port-usb-non-powered-hub-2-0/"
-                        >Honeywell Hub</a
-                    >
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</Article>
