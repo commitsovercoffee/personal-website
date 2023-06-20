@@ -10,16 +10,27 @@ import Project from "../components/Project.astro";
 <BaseLayout {url} {meta}>
     <Article title="Projects">
         <section class="flex flex-wrap justify-center">
-            <Project
-                name="Hope"
-                repo="hope"
-                desc="Shell scripts & dot files for my arch setup."
+ 	   <Project
+                name="Instant Resume"
+                repo="instant-resume"
+                desc="Web app to create polished resumes instantly, written in svelte."
+            />
+    	    <Project
+                name="Minima Nvim"
+                repo="minima-nvim"
+                desc="Highly opinionated yet flexible base configuration for neovim writte in lua."
             />
             <Project
                 name="Key Probe"
                 repo="key-probe"
-                desc="Diagnose computer keyboards."
+                desc="Web app to diagnose computer keyboards for unresponsive keys and ghosting."
                 demo="https://key-probe.commitsovercoffee.com"
+            />
+
+            <Project
+                name="Hope"
+                repo="hope"
+                desc="Scripts and dot files to setup and document my ever evolving arch setup."
             />
 
             <Project
@@ -33,6 +44,7 @@ import Project from "../components/Project.astro";
                 desc="Source of this website."
                 demo="https://commitsovercoffee.com"
             />
+
         </section>
     </Article>
 </BaseLayout>
