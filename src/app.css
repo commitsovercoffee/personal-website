@@ -12,3 +12,42 @@
 		font-family: InterVariable, sans-serif;
 	}
 }
+
+@theme inline {
+	--color-bg: var(--bg);
+	--color-fg: var(--fg);
+	--color-panel: var(--panel);
+
+	--color-primary: var(--primary);
+	--color-secondary: var(--secondary);
+	--color-tertiary: var(--tertiary);
+
+	--color-body: var(--body);
+	--color-anchor: var(--anchor);
+	--color-highlight: var(--highlight);
+}
+
+@layer base {
+	.dark {
+		--bg: #1c1b1c;
+		--fg: #e0e0e2;
+		--panel: #262427;
+		--primary: #f5bc6a;
+		--secondary: #f27b7b;
+		--tertiary: #a48de0;
+		--body: #7a7b80;
+		--anchor: #3fb9dd;
+		--highlight: #5fe0b6;
+	}
+	.light {
+		--bg: #f0f4f9;
+		--fg: #333446;
+		--anchor: #3186b2;
+		--panel: #e7ecf2;
+		--body: #66696c;
+		--primary: #b65348;
+		--secondary: #6e5b55;
+		--tertiary: #8b70a4;
+		--highlight: #4c8887;
+	}
+}

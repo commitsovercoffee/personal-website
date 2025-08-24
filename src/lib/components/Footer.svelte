@@ -1,6 +1,12 @@
-<footer class="m-2 flex flex-wrap justify-between p-2 md:m-4 md:p-4">
-	<p class="text-body m-0 p-0 text-base">© {new Date().getFullYear()} CommitsOverCoffee</p>
-	<div class="flex gap-4 self-center">
+<script>
+	import { theme } from '$lib/shared.svelte';
+</script>
+
+<footer
+	class="{theme.prefers} flex flex-wrap justify-between bg-bg p-4 text-fg transition-colors duration-300"
+>
+	<p class="text-body">© {new Date().getFullYear()} CommitsOverCoffee</p>
+	<div class="flex gap-4">
 		<a target="_blank" aria-label="Github" href="https://github.com/commitsovercoffee">
 			<svg
 				width="24"
