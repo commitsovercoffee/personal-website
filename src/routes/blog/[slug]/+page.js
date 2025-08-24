@@ -1,19 +1,15 @@
-// Loads a single markdown post by slug
+import { error } from '@sveltejs/kit';
+
 export async function load({ params }) {
-	const modules = import.meta.glob('/src/posts/*.md');
+	try {
+		const post = await import(`../../../posts/${params.slug}.md`);
 
-	const match = Object.entries(modules).find(([path]) => path.endsWith(`${params.slug}.md`));
-
-	if (!match) {
-		throw new Error(`Post not found: ${params.slug}`);
+		return {
+			content: post.default,
+			meta: post.metadata,
+			slug: params.slug
+		};
+	} catch (e) {
+		throw error(404, `Could not find post: ${params.slug}`);
 	}
-
-	const resolver = match[1];
-	const post = await resolver();
-
-	return {
-		slug: params.slug,
-		...post.metadata,
-		content: post.default // the compiled Svelte component from markdown
-	};
 }
