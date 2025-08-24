@@ -13,7 +13,9 @@
 </svelte:head>
 
 <Nav />
-<div class="py-32 {theme.prefers} bg-bg transition-colors duration-300">
+<div
+	class="fixed h-screen w-screen overflow-y-scroll py-32 {theme.prefers} bg-bg transition-colors duration-300"
+>
 	<main class="mx-auto prose text-fg">
 		{@render children?.()}
 	</main>
