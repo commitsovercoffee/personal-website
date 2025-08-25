@@ -1,9 +1,10 @@
 ---
 title: "List 100"
-date: "2025-04-01"
+date: "2021-03-21"
 description: "Things I want to do before I become worm food."
-tags: ["personal"]
+tags: ["svelte","fish"]
 published: true
+position: 3
 ---
 
 # List 100

@@ -1,9 +1,11 @@
 ---
 title: "About Me"
-date: "2021-03-21"
+date: "2025-01-01"
 description: "Who I am, what I do, and where I’m going."
 tags: ["personal","svelte" ]
 published: true
+pinned: true
+position: 1
 ---
 
 # Hello. I'm Sourav.

@@ -1,18 +1,24 @@
 <script>
 	import { SvelteSet } from 'svelte/reactivity';
-	import { cubicIn, cubicInOut, cubicOut } from 'svelte/easing';
+	import { cubicIn, cubicInOut } from 'svelte/easing';
 	import { fly } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
+	import { Flame } from '@lucide/svelte';
 
 	let { data } = $props();
 	let { posts } = data;
 
 	const tags = [...new Set(posts.flatMap((p) => p.tags || []))];
 	let selectedTags = new SvelteSet();
+	const pinned = posts.filter((p) => p.pinned);
+	const unpinned = posts.filter((p) => !p.pinned);
 
-	let filteredPosts = $derived(
-		selectedTags.size > 0 ? posts.filter((p) => p.tags?.some((t) => selectedTags.has(t))) : posts
-	);
+	let filteredPosts = $derived([
+		...pinned,
+		...(selectedTags.size > 0
+			? unpinned.filter((p) => p.tags?.some((t) => selectedTags.has(t)))
+			: unpinned)
+	]);
 
 	function toggleTag(tag) {
 		selectedTags[selectedTags.has(tag) ? 'delete' : 'add'](tag);
@@ -48,13 +54,18 @@
 		{#each filteredPosts as post (post)}
 			<a
 				href={`/blog/${post.slug}`}
-				animate:flip={{ easing: cubicInOut, duration: 400, delay: 400 }}
-				in:fly={{ easing: cubicOut, x: -40, duration: 400, delay: 800 }}
-				out:fly={{ easing: cubicIn, x: -40, duration: 400 }}
+				animate:flip={{ easing: cubicInOut, duration: 200, delay: 200 }}
+				in:fly={{ easing: cubicInOut, x: -20, duration: 200, delay: 400 }}
+				out:fly={{ easing: cubicIn, x: -20, duration: 200 }}
 				class="group no-underline"
 			>
 				<dl>
-					<dt class="text-fg">{post.title}</dt>
+					<dt class="flex gap-2 text-fg">
+						{#if post.pinned}
+							<Flame class="fill-primary stroke-primary" strokeWidth={1.2} size={16} />
+						{/if}
+						{post.title}
+					</dt>
 					<span
 						class="block h-0.5 max-w-16 bg-primary transition-all duration-300 group-hover:max-w-sm"
 					></span>

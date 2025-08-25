@@ -1,11 +1,12 @@
 ---
 title: "My Projects"
-date: "2025-08-25"
+date: "2023-04-01"
 description: "This is the first post in my new blog!"
 tags: ["personal"]
 published: true
+pinned: true
+position: 2
 ---
-
 
 # Projects
 

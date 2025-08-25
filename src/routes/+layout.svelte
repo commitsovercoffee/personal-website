@@ -12,12 +12,12 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<Nav />
 <div
-	class="fixed h-screen w-screen overflow-y-scroll py-32 {theme.prefers} bg-bg transition-colors duration-300"
+	class="{theme.prefers} flex min-h-screen flex-col justify-between bg-bg transition-colors duration-300"
 >
-	<main class="mx-auto prose text-fg">
+	<Nav />
+	<div class="mx-auto prose mt-32 text-fg">
 		{@render children?.()}
-	</main>
+	</div>
+	<Footer />
 </div>
-<Footer />

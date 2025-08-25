@@ -3,6 +3,7 @@
 	import { fly } from 'svelte/transition';
 	import { cubicIn, cubicOut } from 'svelte/easing';
 
+	import { page } from '$app/state';
 	import { theme } from '$lib/shared.svelte';
 	import { onMount } from 'svelte';
 
@@ -35,7 +36,7 @@
 </script>
 
 <div
-	class="{theme.prefers} fixed z-40 w-full bg-panel p-2 text-fg shadow-md/10 shadow-black transition-colors duration-300"
+	class="{theme.prefers} fixed z-50 w-full bg-panel p-2 text-fg shadow-md/10 shadow-black transition-colors duration-300"
 >
 	<header class="m-2 flex justify-between">
 		<a class="group flex gap-2" href="/">
@@ -82,8 +83,11 @@
 			{/if}
 		</div>
 	</header>
-	<hr
-		class="absolute left-0 z-50 mt-2 h-1 border-none bg-primary p-0 transition-all duration-300 ease-out"
-		style="width: {scrollProgress * 100}%"
-	/>
+
+	{#if page.url.pathname.includes('/blog/')}
+		<hr
+			class="absolute left-0 z-50 mt-2 h-1 border-none bg-primary p-0 transition-all duration-300 ease-out"
+			style="width: {scrollProgress * 100}%"
+		/>
+	{/if}
 </div>
