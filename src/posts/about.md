@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 date: "2025-01-01"
-description: "Who I am, what I do, and where I’m going."
+desc: "Who I am, what I do, and where I’m going."
 tags: ["personal"]
 published: true
 pinned: true

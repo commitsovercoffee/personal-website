@@ -36,9 +36,9 @@
 </script>
 
 <div
-	class="{theme.prefers} fixed z-50 w-full bg-bg p-4 text-fg shadow-md/10 shadow-black transition-colors duration-300"
+	class="{theme.prefers} fixed z-50 w-full bg-bg p-2 text-fg shadow-md/10 shadow-black transition-colors duration-300"
 >
-	<header class="flex justify-between">
+	<header class="m-2 flex justify-between md:m-4">
 		<a class="group flex gap-2" href="/">
 			<Coffee
 				class="-rotate-12 transition-all duration-100 ease-in group-hover:rotate-0"

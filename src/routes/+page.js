@@ -1,21 +1,18 @@
 export async function load() {
 	const modules = import.meta.glob('/src/posts/*.md', { eager: true });
 
-	let posts = Object.entries(modules).map(([path, post]) => {
+	const posts = Object.entries(modules).map(([path, post]) => {
 		const slug = path.split('/').pop().replace('.md', '');
-		return { slug, ...post.metadata };
+		return { slug, ...(post.metadata ?? {}) };
 	});
 
-	// Split pinned and unpinned, sort by position
-	const pinned = posts
-		.filter((p) => p.pinned)
-		.sort((a, b) => (a.position ?? 0) - (b.position ?? 0));
-
-	const unpinned = posts
-		.filter((p) => !p.pinned)
-		.sort((a, b) => (a.position ?? 0) - (b.position ?? 0));
-
-	posts = [...pinned, ...unpinned];
+	posts.sort((a, b) => {
+		// Pinned posts first
+		if (a.pinned && !b.pinned) return -1;
+		if (!a.pinned && b.pinned) return 1;
+		// Then sort by position
+		return (a.position ?? Number.MAX_SAFE_INTEGER) - (b.position ?? Number.MAX_SAFE_INTEGER);
+	});
 
 	return { posts };
 }

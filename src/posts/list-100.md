@@ -1,7 +1,7 @@
 ---
 title: "List 100"
 date: "2021-03-21"
-description: "Things I want to do before I become worm food."
+desc: "Things I want to do before I become worm food."
 tags: ["personal"]
 published: true
 position: 3

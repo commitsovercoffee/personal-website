@@ -2,9 +2,7 @@
 	import { theme } from '$lib/shared.svelte';
 </script>
 
-<footer
-	class="{theme.prefers} mt-16 flex flex-wrap justify-between bg-bg p-4 text-fg transition-colors duration-300"
->
+<footer class="{theme.prefers} m-2 mt-16 flex flex-wrap justify-between bg-bg p-2 md:m-4 md:p-4">
 	<p class="text-body">© {new Date().getFullYear()} CommitsOverCoffee</p>
 	<div class="flex gap-4">
 		<a target="_blank" aria-label="Github" href="https://github.com/commitsovercoffee">
