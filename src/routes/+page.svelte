@@ -27,8 +27,9 @@
 
 <section>
 	<h1 class="font-medium text-fg">Hello <span class="text-primary">Beautiful</span></h1>
+	<p class="text-body">How are you doing today?</p>
 	<p>
-		Welcome to my corner of the web. Here you’ll find half-finished projects, wandering thoughts,
+		Welcome to my corner of the web. Here you’ll find half finished projects, wandering thoughts,
 		and maybe a cozy idea to ponder about. Thanks for stopping by.
 	</p>
 </section>
@@ -36,10 +37,10 @@
 <hr class="border-panel" />
 
 {#if tags.length > 0}
-	<div class="flex flex-wrap gap-2">
+	<div class="mb-16 flex flex-wrap gap-2">
 		{#each tags as tag (tag)}
 			<button
-				class="cursor-pointer rounded-xl px-2 py-1 transition-all duration-200 active:translate-y-2
+				class="transition-color cursor-pointer rounded-2xl px-4 py-1 duration-300 active:translate-y-2
 						{selectedTags.has(tag) ? 'bg-fg text-bg' : 'bg-panel text-fg hover:bg-fg hover:text-bg'}"
 				onclick={() => toggleTag(tag)}
 			>
@@ -54,16 +55,13 @@
 		{#each filteredPosts as post (post)}
 			<a
 				href={`/blog/${post.slug}`}
-				animate:flip={{ easing: cubicInOut, duration: 200, delay: 200 }}
-				in:fly={{ easing: cubicInOut, x: -20, duration: 200, delay: 400 }}
-				out:fly={{ easing: cubicIn, x: -20, duration: 200 }}
-				class="group no-underline"
+				animate:flip={{ easing: cubicInOut, duration: 300, delay: 300 }}
+				in:fly={{ easing: cubicInOut, x: -40, duration: 300, delay: 600 }}
+				out:fly={{ easing: cubicIn, x: -40, duration: 300 }}
+				class="group my-1 no-underline"
 			>
 				<dl>
-					<dt class="flex gap-2 text-fg">
-						{#if post.pinned}
-							<Flame class="fill-primary stroke-primary" strokeWidth={1.2} size={16} />
-						{/if}
+					<dt class="flex gap-2 font-medium text-fg">
 						{post.title}
 					</dt>
 					<span

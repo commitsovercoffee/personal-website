@@ -3,7 +3,7 @@
 </script>
 
 <footer
-	class="{theme.prefers} flex flex-wrap justify-between bg-bg p-4 text-fg transition-colors duration-300"
+	class="{theme.prefers} mt-16 flex flex-wrap justify-between bg-bg p-4 text-fg transition-colors duration-300"
 >
 	<p class="text-body">© {new Date().getFullYear()} CommitsOverCoffee</p>
 	<div class="flex gap-4">

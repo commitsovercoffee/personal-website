@@ -51,3 +51,87 @@
 		--highlight: #4c8887;
 	}
 }
+
+@utility prose {
+	.blog {
+		a {
+			color: var(--anchor);
+			text-underline-offset: 4px;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+
+		table {
+			border-collapse: collapse; /* Ensure borders collapse into single lines */
+			width: 100%;
+
+			th {
+				color: var(--primary);
+			}
+
+			td,
+			th {
+				border-bottom: 2px solid var(--panel); /* Change the color of row separators */
+			}
+
+			tr:last-child td {
+				border-bottom: none; /* Remove the border from the last row */
+			}
+		}
+
+		blockquote {
+			border-left: solid 2px var(--secondary);
+			p {
+				font-weight: 300;
+				color: var(--secondary);
+			}
+			p:first-of-type::before,
+			p:last-of-type::after {
+				content: none;
+			}
+		}
+
+		code {
+			background-color: var(--panel);
+			color: var(--body);
+			font-weight: 400;
+			padding: 4px;
+			border-radius: 8px;
+			&::before,
+			&::after {
+				content: none;
+			}
+		}
+
+		pre > code {
+			background-color: transparent;
+		}
+
+		hr {
+			border: 2px solid var(--panel);
+		}
+
+		p,
+		span {
+			color: var(--body);
+		}
+
+		em,
+		strong {
+			color: var(--fg);
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: var(--fg);
+			font-weight: 500;
+			text-decoration: none;
+		}
+	}
+}

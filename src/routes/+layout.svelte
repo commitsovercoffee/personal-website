@@ -16,7 +16,7 @@
 	class="{theme.prefers} flex min-h-screen flex-col justify-between bg-bg transition-colors duration-300"
 >
 	<Nav />
-	<div class="mx-auto prose mt-32 text-fg">
+	<div class="mx-auto my-32 prose px-2 text-fg md:px-0">
 		{@render children?.()}
 	</div>
 	<Footer />

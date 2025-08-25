@@ -2,12 +2,10 @@
 title: "List 100"
 date: "2021-03-21"
 description: "Things I want to do before I become worm food."
-tags: ["svelte","fish"]
+tags: ["personal"]
 published: true
 position: 3
 ---
-
-# List 100
 
 1. Be kind (always, to myself too).
 2. Design & publish a game (even a tiny one).

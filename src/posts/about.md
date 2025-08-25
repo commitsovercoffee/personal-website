@@ -2,20 +2,18 @@
 title: "About Me"
 date: "2025-01-01"
 description: "Who I am, what I do, and where I’m going."
-tags: ["personal","svelte" ]
+tags: ["personal"]
 published: true
 pinned: true
 position: 1
 ---
 
-# Hello. I'm Sourav.
+Hello, I am __Sourav__. I go by __@commitsovercoffee__ on the web. I code for a living, and for better or worse it is both my profession and my pastime, which means I'm always tinkering with side [projects](/blog/projects).
 
-I go by @commitsovercoffee on the web. I code for a living, and for better or worse it is both my profession and my pastime, which means I'm always tinkering with side projects.
+I currently work at __Quest Alliance__, a non profit working in the education space where I mainly focus on design, development ( __mostly frontend, sometimes backend__ ) and support.
 
-I currently work at Quest Alliance, a non profit working in the education space where I mainly focus on design, development ( mostly frontend, sometimes backend ) and support.
+__I like cycling and reading__ in my leisure time. I also write sometimes to clear my head. If I really need an escape, I indulge in video games. And recently, I have also started blabbering on [Youtube](https://www.youtube.com/@commitsovercoffee).
 
-I like cycling and reading in my leisure time. I also write sometimes to clear my head. If I really need an escape, I indulge in video games. And recently, I have also started blabbering on Youtube.
+__I live in Ranchi__, a quiet city in eastern India surrounded by waterfalls and greenery. I work remotely, __but every few months I travel__ for meetups, workshops or just a change of pace.
 
-I live in Ranchi, a quiet city in eastern India surrounded by waterfalls and greenery. I work remotely, but every few months I travel for meetups, workshops or just a change of pace.
-
-Feel free to reach out. Whether you want to share ideas, talk shop, or just say hello. You can ping me on bluesky or drop me a mail.
+__Feel free to reach out__. Whether you want to share ideas, talk shop, or just say hello. You can ping me on [bluesky](https://bsky.app/profile/commitsovercoffee.com) or [drop me a mail](mailto:commitsovercoffee@gmail.com).
