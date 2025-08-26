@@ -38,6 +38,7 @@
 	},
 	"dependencies": {
 		"@lucide/svelte": "^0.541.0",
+		"feed": "^5.1.0",
 		"lucide-svelte": "^0.541.0"
 	}
 }
