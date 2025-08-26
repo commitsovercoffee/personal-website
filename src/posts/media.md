@@ -1,7 +1,7 @@
 ---
 title: "Media Log"
 date: "2023-03-21"
-desc: "Log of movies, shows, games & books I have enjoyed."
+desc: "Log of content I enjoyed consuming."
 tags: ["personal"]
 published: true
 position: 4

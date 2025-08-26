@@ -57,14 +57,13 @@
 	{/key}
 </div>
 
-<p class="mt-12">
+<p class="mt-6 md:mt-12">
 	Welcome to my corner of the web. Here you’ll find half finished projects, wandering thoughts, and
 	maybe a cozy idea to ponder about. Thanks for stopping by.
 </p>
-<hr class="border-panel" />
 
 {#if tags.length > 0}
-	<div class="my-16 flex flex-wrap gap-2">
+	<div class="my-8 flex flex-wrap gap-2 md:my-16">
 		{#each tags as tag (tag)}
 			<button
 				class="transition-color cursor-pointer rounded-2xl px-4 py-1 duration-200 active:translate-y-4
@@ -94,7 +93,7 @@
 					<span
 						class="block h-0.5 max-w-12 bg-primary transition-all duration-300 group-hover:max-w-sm"
 					></span>
-					<dd class="text-body">{post.desc}</dd>
+					<dd class="pl-0 text-body md:pl-4">{post.desc}</dd>
 				</dl>
 			</a>
 		{/each}

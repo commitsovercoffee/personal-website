@@ -1,7 +1,7 @@
 ---
 title: "What I Use"
 date: "2022-10-15"
-desc: "All the hardware and software that I currently use."
+desc: "Tools that I currently use."
 tags: ["personal"]
 published: true
 position: 5
