@@ -4,7 +4,7 @@ date: "2022-10-15"
 desc: "All the hardware and software that I currently use."
 tags: ["personal"]
 published: true
-position: 4
+position: 5
 ---
 
 ## Software
