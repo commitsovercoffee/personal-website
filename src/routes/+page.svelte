@@ -46,15 +46,11 @@
 
 <div class="h-24">
 	{#key greeting}
-		<div
-			in:fly={{ y: 20, duration: 400, delay: 400 }}
-			out:fly={{ y: 20, duration: 400 }}
-			class="transition-all duration-300 ease-in active:translate-y-2"
-		>
-			<h1 class="mb-0 h-10 font-semibold text-fg">
+		<div in:fly={{ y: 20, duration: 300, delay: 600 }} out:fly={{ y: 20, duration: 400 }}>
+			<h1 class="mb-0 h-10 font-medium text-fg">
 				{greeting.first} <span class="text-primary">{greeting.second}</span>
 			</h1>
-			<p in:fly={{ y: 20, duration: 400, delay: 800 }} class="h-8">
+			<p in:fly={{ y: 20, duration: 300, delay: 900 }} class="h-8">
 				{greeting.comment}
 			</p>
 		</div>

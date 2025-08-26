@@ -3,16 +3,23 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import { theme } from '$lib/shared.svelte';
-
-	let { children } = $props();
+	import { fly } from 'svelte/transition';
+	import { cubicIn, cubicOut } from 'svelte/easing';
+	let { data, children } = $props();
 </script>
 
 <div
 	class="{theme.prefers} flex min-h-screen flex-col justify-between bg-bg transition-colors duration-300"
 >
 	<Nav />
-	<div class="mx-auto my-40 prose px-2 text-fg md:px-0">
-		{@render children?.()}
-	</div>
+	{#key data.url}
+		<div
+			in:fly={{ easing: cubicOut, y: 40, duration: 300, delay: 300 }}
+			out:fly={{ easing: cubicIn, y: -40, duration: 300 }}
+			class="mx-auto my-40 prose px-2 text-fg md:px-0"
+		>
+			{@render children?.()}
+		</div>
+	{/key}
 	<Footer />
 </div>
