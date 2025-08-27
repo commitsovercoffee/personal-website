@@ -1,5 +1,7 @@
 <script>
 	import '../app.css';
+	import '@fontsource-variable/inter'; // supports 100-900
+
 	import Footer from '$lib/components/Footer.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import { theme } from '$lib/shared.svelte';
@@ -26,3 +28,9 @@
 	</div>
 	<Footer />
 </div>
+
+<style>
+	:global(body) {
+		font-family: 'Inter Variable', sans-serif;
+	}
+</style>
