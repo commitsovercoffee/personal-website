@@ -7,7 +7,6 @@
 	import { fly } from 'svelte/transition';
 
 	import { pickGreeting } from '$lib/utils.js';
-	import { IdCardLanyard } from '@lucide/svelte';
 
 	// Dynamic Greetings -------------------------------------------------------
 
@@ -67,7 +66,7 @@
 </div>
 
 {#if tags.length > 0}
-	<div class="my-8 flex flex-wrap gap-2 md:my-16">
+	<div class="my-8 flex flex-wrap gap-2 md:my-12">
 		{#each tags as tag (tag)}
 			<button
 				class="transition-color cursor-pointer rounded-2xl px-4 py-1 duration-200 active:translate-y-4
@@ -87,7 +86,7 @@
 				animate:flip={{ easing: cubicInOut, duration: 300, delay: 300 }}
 				in:fly={{ easing: cubicInOut, x: -40, duration: 300, delay: 600 }}
 				out:fly={{ easing: cubicIn, x: -40, duration: 300 }}
-				class="group no-underline"
+				class="group border-panel pl-4 no-underline not-last:border-b"
 			>
 				<dl>
 					<dt class="text-fg">
@@ -96,7 +95,7 @@
 					<span
 						class="block h-0.5 max-w-12 bg-primary transition-all duration-300 group-hover:max-w-sm"
 					></span>
-					<dd class="pl-0 text-body md:pl-4">{post.desc}</dd>
+					<dd class="pl-0 font-normal text-body md:pl-4">{post.desc}</dd>
 				</dl>
 			</a>
 		{/each}

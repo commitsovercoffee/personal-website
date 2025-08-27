@@ -90,6 +90,7 @@
 		em,
 		strong {
 			color: var(--fg);
+			font-weight: 500;
 		}
 
 		h1,

@@ -84,7 +84,8 @@ position: 4
 | ----------------------------- | -------------------- | ------------ |
 | Split Fiction                 | Hazelight Studios    | 06 Mar, 2025 |
 | God of War Ragnarok           | Santa Monico Studios | 19 Sep, 2024 |
-| Marvels Spider-man Remastered | Insomniac Games      | 12 Aug, 2022 |
+| High on Life                  | Squanch Games Inc    | 13 Dec, 2022 |
+| Marvels Spider-man            | Insomniac Games      | 12 Aug, 2022 |
 | God of War                    | Santa Monico Studios | 14 Jan, 2022 |
 | Death Doors                   | Acid Nerve           | 20 Jul, 2021 |
 | Red Dead Redemption II        | Rockstar Games       | 05 Dec, 2019 |
@@ -103,7 +104,7 @@ position: 4
 {:else if selected==='Novels'}
 | Book                     | Author               | Year |
 | ------------------------ | -------------------- | ---- |
-| Orginary Men             | Christopher Browning | 1992 |
+| Ordinary Men             | Christopher Browning | 1992 |
 | The Handmaid\`s Tale     | Margaret Atwood      | 1985 |
 | The Master and Margarita | Mikhail Bulgakov     | 1967 |
 | Ariel                    | Sylvia Plath         | 1965 |

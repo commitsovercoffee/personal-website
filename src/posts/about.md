@@ -8,6 +8,13 @@ pinned: true
 position: 1
 ---
 
+
+<img
+	class="w-min bg-panel md:h-92"
+	src="https://storage.googleapis.com/commitsovercoffee/jbpvu.jpg"
+	alt="Sourav Singh"
+/>
+
 Hello, I am __Sourav__. I go by __@commitsovercoffee__ on the web. I code for a living, and for better or worse it is both my profession and my pastime, which means I'm always tinkering with side [projects](/blog/projects).
 
 I currently work at __Quest Alliance__, a non profit working in the education space where I mainly focus on design, development ( __mostly frontend, sometimes backend__ ) and support.

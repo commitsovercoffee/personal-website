@@ -2,7 +2,7 @@
 title: "Projects"
 date: "2023-04-01"
 desc: "What I’ve been spending my weekends on."
-tags: ["project"]
+tags: ["personal"]
 published: true
 pinned: true
 position: 2
