@@ -8,6 +8,14 @@ pinned: true
 position: 2
 ---
 
-1. [hope](https://github.com/commitsovercoffee/hope) : arch install script. ⚡
-2. [dwm-remix](https://github.com/commitsovercoffee/dwm-remix) : pre-patched dwm. ✨
-3. [border-patrol](https://github.com/commitsovercoffee/border-patrol) : toggles element borders. 🚧
+<script>
+	import Project from '$lib/components/Project.svelte';
+</script>
+
+<Project
+	projects={[
+		{ repo: 'hope', desc: 'arch install script. ⚡', demo: '' },
+		{ repo: 'dwm-remix', desc: 'pre-patched dwm. ✨', demo: '' },
+		{ repo: 'border-patrol', desc: 'toggles element borders. 🚧', demo: '' }
+	]}
+/>
