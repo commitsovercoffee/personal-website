@@ -7,6 +7,7 @@
 	import { fly } from 'svelte/transition';
 
 	import { pickGreeting } from '$lib/utils.js';
+	import { IdCardLanyard } from '@lucide/svelte';
 
 	// Dynamic Greetings -------------------------------------------------------
 
@@ -57,10 +58,13 @@
 	{/key}
 </div>
 
-<p class="mt-6 md:mt-12">
-	Welcome to my corner of the web. Here you’ll find half finished projects, wandering thoughts, and
-	maybe a cozy idea to ponder about. Thanks for stopping by.
-</p>
+<div class="mt-6 text-body md:mt-12">
+	<p>
+		Hey, I'm Sourav, and this is my brain dump. Here you'll find everything I've worked on or
+		thought about ~ half-baked projects, fleeting thoughts, skyrim cheatcodes, and more. Dive into
+		the posts below, or use tags to cherry pick.
+	</p>
+</div>
 
 {#if tags.length > 0}
 	<div class="my-8 flex flex-wrap gap-2 md:my-16">
@@ -75,7 +79,6 @@
 		{/each}
 	</div>
 {/if}
-
 <ul class="flex flex-col pl-0">
 	{#if filteredPosts.length > 0}
 		{#each filteredPosts as post (post)}
