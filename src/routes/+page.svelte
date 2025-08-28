@@ -44,6 +44,14 @@
 	]);
 </script>
 
+<svelte:head>
+	<title>Commits Over Coffee</title>
+	<meta
+		name="description"
+		content="Sourav's personal website for lovers, haters and everyone in between. A brain dump of projects & writings ~ notes, cheatcodes, blogs and more."
+	/>
+</svelte:head>
+
 <div class="h-24">
 	{#key greeting}
 		<div in:fly={{ y: 20, duration: 300, delay: 600 }} out:fly={{ y: 20, duration: 400 }}>

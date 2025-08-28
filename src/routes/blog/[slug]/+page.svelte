@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Writings ~ {data.title}</title>
+	<title>{data.title} | Commits Over Coffee Blog</title>
 	<meta name="description" content={data.desc} />
 </svelte:head>
 

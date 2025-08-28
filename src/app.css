@@ -1,12 +1,6 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-@supports (font-variation-settings: normal) {
-	:root {
-		font-family: InterVariable, sans-serif;
-	}
-}
-
 @theme inline {
 	--color-bg: var(--bg);
 	--color-fg: var(--fg);
@@ -20,6 +14,32 @@
 
 	--color-anchor: var(--anchor);
 	--color-highlight: var(--highlight);
+}
+
+@layer base {
+	.dark {
+		--bg: #1c1b1c;
+		--fg: #e0e0e2;
+		--body: #7a7b80;
+		--panel: #262427;
+		--primary: #f5b36a;
+		--secondary: #f36e75;
+		--tertiary: #9b84e0;
+		--anchor: #3fb9dd;
+		--highlight: #5fe0b6;
+	}
+
+	.light {
+		--bg: #fdfaf8;
+		--fg: #2c2c2c;
+		--body: #6b6b70;
+		--panel: #f5f2ef;
+		--primary: #c1542f;
+		--secondary: #e07b7b;
+		--tertiary: #957edc;
+		--anchor: #1b9fcf;
+		--highlight: #38c9a1;
+	}
 }
 
 @utility prose {
@@ -105,31 +125,5 @@
 			font-weight: 500;
 			text-decoration: none;
 		}
-	}
-}
-
-@layer base {
-	.dark {
-		--bg: #1c1b1c;
-		--fg: #e0e0e2;
-		--body: #7a7b80;
-		--panel: #262427;
-		--primary: #f5b36a;
-		--secondary: #f36e75;
-		--tertiary: #9b84e0;
-		--anchor: #3fb9dd;
-		--highlight: #5fe0b6;
-	}
-
-	.light {
-		--bg: #fdfaf8;
-		--fg: #2c2c2c;
-		--body: #6b6b70;
-		--panel: #f5f2ef;
-		--primary: #c1542f;
-		--secondary: #e07b7b;
-		--tertiary: #957edc;
-		--anchor: #1b9fcf;
-		--highlight: #38c9a1;
 	}
 }
