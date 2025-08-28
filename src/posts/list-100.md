@@ -7,15 +7,19 @@ published: true
 position: 3
 ---
 
+Ahh... I came across this idea on a blog I read a while back, and I liked it so much that I decided to make my own list of things I want to do.
+
+<br/>
+
 1. Be kind.
 2. Design & publish an indie game.
-3. Build a personal website.
+3. ~~Build a personal website.~~
 4. Start a YouTube channel.
-5. Teach a graduate level course.
-6. Fly an airplane.
-7. Read 100 books I really like.
-8. Learn to master mom's recipes.
+5. Fly an airplane.
+6. Read 100 books I really like.
+7. Learn to master mom's recipes.
+8. ~~Go on a solo multi-day hiking trip.~~
 9. Design PCB for a product.
 10. Start a tradition.
 11. Trace my family tree.
-12. Visit an active volcano (and return safely).
+12. ~~Attend Coldplay concert.~~

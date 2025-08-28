@@ -54,6 +54,10 @@
 			}
 		}
 
+		p:first-of-type::first-letter {
+			@apply float-left mr-2 text-7xl leading-none text-primary;
+		}
+
 		table {
 			border-collapse: collapse; /* Ensure borders collapse into single lines */
 			width: 100%;
@@ -112,7 +116,7 @@
 		em,
 		strong {
 			color: var(--fg);
-			font-weight: 500;
+			font-weight: 400;
 		}
 
 		h1,

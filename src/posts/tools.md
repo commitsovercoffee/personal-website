@@ -1,22 +1,16 @@
 ---
-title: "What I Use"
+title: "Tools of Trade"
 date: "2022-10-15"
-desc: "Tools that I currently use."
+desc: "All the hardware and software that I currently use."
 tags: ["personal"]
 published: true
 position: 5
 ---
 
-## Software
-
 My workstation and laptop both run a [custom arch setup](https://github.com/commitsovercoffee/hope)
 with [dwm](https://dwm.suckless.org/), [ghostty](https://ghostty.org/) and [zed](https://zed.dev/)
 being my primary tools. Besides that, I use [these](https://github.com/commitsovercoffee/hope/blob/a98d281d7f9a0f778e21d81386a519415a80cd45/setup.sh)
-apps (ones listed under the tui and gui functions in my setup script).
-
-## Hardware
-
-Don't you love the smell of freshly unboxed electronics :P
+apps, ones listed under the tui and gui functions in my setup script.
 
 ## My Workstation
 
@@ -24,7 +18,7 @@ I come from a humble background, so owning a machine like this has been a childh
 dream. After saving up for a year, surviving a pandemic and not losing hope during
 the global chip shortage, I finally managed to build my PC in 2022.
 
-And I absolutely love it. I love how blazing fast it is and how easily it handles
+I absolutely love how blazing fast it is, and how easily it handles
 whatever I throw at it. It is powered by Team Red, whom I support loyally for their
 amazing per watt performance and no-nonsense linux support. You can find the specs below:
 
@@ -52,7 +46,7 @@ amazing per watt performance and no-nonsense linux support. You can find the spe
 | Mouse          | Razer Basilisk V3 Wired           | My latest gamble.                     |
 | Keyboard       | Royal Kludge R75 Wired            | The fast silver switches are great.   |
 | Drawing Tablet | XP Pen Deco V2                    | For signing and casual doodles.       |
-| Desk Mat       | XPG Battleground XL               | Becase the amazon one sucks.          |
+| Desk Mat       | Arion Cordura XL                  | Becase the amazon one sucks.          |
 | Extension      | Belkin 6 socket x 2               | Just works.                           |
 
 ## My Laptop

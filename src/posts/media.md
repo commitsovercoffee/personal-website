@@ -1,7 +1,7 @@
 ---
 title: "Media Log"
 date: "2023-03-21"
-desc: "Log of content I enjoyed consuming."
+desc: "Log of content I have consumed & enjoyed."
 tags: ["personal"]
 published: true
 position: 4
@@ -12,7 +12,9 @@ position: 4
 	let selected = $state('Movies');
 </script>
 
-<div class="mb-12 flex gap-2 border-b border-fg">
+Of course I have seen a lot more movies and shows, read a lot more books, and played plenty of video games, but these are the ones I really liked. And I’m always looking for more, so feel free to share your favorites! And who knows, maybe your recommendations will end up on my list :)
+
+<div class="component mt-16 mb-8 flex gap-2 border-b border-fg">
 	{#each tabs as tab, i (i)}
 		<button
 			onclick={() => {
