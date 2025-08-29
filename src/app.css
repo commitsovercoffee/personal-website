@@ -54,7 +54,7 @@
 			}
 		}
 
-		p:first-of-type::first-letter {
+		> p:first-of-type::first-letter {
 			@apply float-left mr-2 text-7xl leading-none text-primary;
 		}
 

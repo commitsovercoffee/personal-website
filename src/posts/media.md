@@ -12,7 +12,7 @@ position: 4
 	let selected = $state('Movies');
 </script>
 
-Of course I have seen a lot more movies and shows, read a lot more books, and played plenty of video games, but these are the ones I really liked. And I’m always looking for more, so feel free to share your favorites! And who knows, maybe your recommendations will end up on my list :)
+Of course I have seen a lot more movies and shows, read a lot more books, and played plenty of video games, but these are the ones I really liked. I’m always looking for more, so feel free to share your favorites! Who knows, maybe your recommendations will end up on my list :)
 
 <div class="component mt-16 mb-8 flex gap-2 border-b border-fg">
 	{#each tabs as tab, i (i)}
