@@ -40,8 +40,10 @@ const greetings = {
 		{ first: 'Happy', second: 'Weekend', comment: 'Do what makes you happy.' }
 	],
 	random: [
-		{ first: 'Hello', second: 'Friend', comment: 'Are you a pescatarian by any chance?' },
-		{ first: 'Hello', second: 'Friend', comment: 'Do you play dota by any chance?' },
+		{ first: 'Hello', second: 'Beautiful', comment: 'Are you a pescatarian by any chance?' },
+		{ first: 'Hello', second: 'Beautiful', comment: 'Do you play dota by any chance?' },
+		{ first: 'Hello', second: 'Beautiful', comment: 'You smell funny. Do I know you?' },
+		{ first: 'Hello', second: 'Beautiful', comment: 'You smell funny. Do I know you?' },
 
 		{ first: 'Hey', second: 'Champ', comment: 'Having a bad day? Here’s a virtual hug.' },
 		{ first: 'Hey', second: 'Champ', comment: 'Stressful day? Pat yourself on the back.' },
