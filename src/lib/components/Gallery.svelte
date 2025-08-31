@@ -38,7 +38,7 @@
 	{#each images as image, i (i)}
 		<div transition:fly={{ easing: cubicOut, y: 40, duration: 300, delay: 300 }}>
 			<Image
-				class="not-prose rounded-2xl object-cover"
+				class="rounded-2xl object-cover"
 				onclick={() => {
 					selected = i;
 				}}
