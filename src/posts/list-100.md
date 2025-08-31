@@ -7,19 +7,24 @@ published: true
 position: 3
 ---
 
-Here’s a list of things I want to do ~ some silly, some a bit wild. Mostly
+Here’s a list of things I want to do before I die ~ some silly, some a bit wild. Mostly
 it’s just a reminder to break out of the daily grind and actually live a little.
 Oh btw, I stole this list idea from [Chip Huyen](https://huyenchip.com/list-100/).
 <br/>
 
-1. Be kind.
-2. Design & publish an indie game.
-3. Start a YouTube channel.
-4. Fly an airplane.
-5. Read 100 books I really like.
-5. Learn to master mom's recipes.
-6. ~~Go on a solo multi-day hiking trip.~~
-7. Design PCB for a product.
-8. Start a tradition.
-9. Trace my family tree.
-10. ~~Attend Coldplay concert.~~
+0. ~ Be kind.
+1. ✗ Live in another country.
+2. ✗ Read 100 books I adore. (~20% done)
+3. ✗ Teach a graduate level course.
+4. ✗ Design and publish an indie game.
+5. ✓ Fall in love.
+6. ✗ Go on a trip overseas with my whole family.
+7. ✗ Fly an airplane.
+8. ✓ Learn to drive a car.
+9. ✗ Sleep outside on the beach.
+10. ✗ See auroras.
+11. ✓ Do stand-up.
+12. ✗ Design and print a PCB.
+13. ✗ Travel Southeast Asia.
+14. ✗ Drink vodka in Russia.
+15. ✗ Eat sushi in Japan.

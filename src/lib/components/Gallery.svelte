@@ -14,24 +14,29 @@
 			case 'ArrowLeft':
 			case 'h':
 			case 'a':
-				selected = (selected - 1 + images.length) % images.length;
+				if (images.length > 1) {
+					selected = (selected - 1 + images.length) % images.length;
+				}
 				break;
 			case 'ArrowRight':
 			case 'l':
 			case 'd':
-				selected = (selected + 1) % images.length;
+				if (images.length > 1) {
+					console.log(images.length);
+					selected = (selected + 1) % images.length;
+				}
 				break;
 		}
 	}
 
-	function handleGesture(event) {
-		if (event.detail.direction === 'right') {
-			selected = (selected + 1) % images.length;
-		}
-		if (event.detail.direction === 'left') {
-			selected = (selected - 1 + images.length) % images.length;
-		}
-	}
+	// function handleGesture(event) {
+	// 	if (event.detail.direction === 'right') {
+	// 		selected = (selected + 1) % images.length;
+	// 	}
+	// 	if (event.detail.direction === 'left') {
+	// 		selected = (selected - 1 + images.length) % images.length;
+	// 	}
+	// }
 </script>
 
 <div class="justifycenter flex flex-wrap items-center gap-2">
@@ -64,8 +69,6 @@
 {#if selected !== -1}
 	<div
 		transition:fade={{ easing: cubicOut, duration: 200 }}
-		use:swipe={() => ({ timeframe: 300, minSwipeDistance: 40, touchAction: 'pan-y' })}
-		onswipe={handleGesture}
 		class="not-prose fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-lg"
 	>
 		<div class="max-h-screen max-w-screen">
