@@ -20,7 +20,7 @@
 			<div
 				in:fly={{ easing: cubicOut, y: 40, duration: 300, delay: 300 }}
 				out:fly={{ easing: cubicIn, y: -40, duration: 300 }}
-				class="mx-auto my-28 prose px-4 text-fg md:my-40 md:px-0"
+				class="prose mx-auto my-28 px-4 text-fg md:my-40 md:px-0"
 			>
 				{@render children?.()}
 			</div>

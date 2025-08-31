@@ -7,9 +7,9 @@ published: true
 position: 3
 ---
 
-Ahh... I came across this idea on a blog, and I liked it so much that I decided
-to make my own list of things I want to do. Open to suggestions.
-
+Here’s a list of things I want to do ~ some silly, some a bit wild. Mostly
+it’s just a reminder to break out of the daily grind and actually live a little.
+Oh btw, I stole this list idea from [Chip Huyen](https://huyenchip.com/list-100/).
 <br/>
 
 1. Be kind.

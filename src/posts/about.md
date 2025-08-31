@@ -12,9 +12,6 @@ position: 1
 import Gallery from '$lib/components/Gallery.svelte';
 </script>
 
-This is neither a resume not a professional bio. Just a glimpse into who I am,
-what keeps me curious, inspired and sometimes a little restless.
-
 ## Who I am
 
 <Gallery images={[{src:'https://storage.googleapis.com/commitsovercoffee/jbpvu.jpg',alt:'Sourav holding a pigeon with both hands.'}]} />
@@ -75,6 +72,6 @@ So yeah, that's me.
 
 ## Contact
 
- Feel free to reachout, whether you want to share ideas, talk
+Feel free to reachout, whether you want to share ideas, talk
 shop, or just say hello. You can ping me on [bluesky](https://bsky.app/profile/commitsovercoffee.com)
 or [drop me a mail](mailto:commitsovercoffee@gmail.com).

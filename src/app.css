@@ -77,10 +77,10 @@
 		}
 
 		blockquote {
-			border-left: solid 2px var(--secondary);
+			border-left: solid 4px var(--tertiary);
 			p {
 				font-weight: 300;
-				color: var(--secondary);
+				color: var(--tertiary);
 			}
 			p:first-of-type::before,
 			p:last-of-type::after {

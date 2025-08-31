@@ -12,8 +12,10 @@ position: 4
 	let selected = $state('Movies');
 </script>
 
-Of course I have watched a lot more movies and shows, read a lot more books, and
-played plenty of video games, but these are the ones I really liked.
+I have watched tons of movies and shows, read countless books, and played plenty
+of video games, but these are the ones that really stuck with me. I’d love to
+hear your recommendations! And if you’re curious why one entry made the list
+while another (better one) didn’t, I’m always up for a chat about it.
 
 <div class="component mt-16 mb-8 flex gap-2 border-b border-fg">
 	{#each tabs as tab, i (i)}

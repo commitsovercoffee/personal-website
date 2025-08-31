@@ -1,7 +1,7 @@
 ---
 title: "Tools of Trade"
 date: "2022-10-15"
-desc: "All the hardware and software that I currently use."
+desc: "All the hardware & software that I currently use."
 tags: ["personal"]
 published: true
 position: 5
@@ -51,8 +51,7 @@ amazing per watt performance and no-nonsense linux support. You can find the spe
 
 ## My Laptop
 
-Having spent a fortune on my workstation already, I had to be more frugal with my laptop purchase.
-So I went with the Acer Swift, which has aged surprisingly well. Thanks to the metal body, it
+I have the Acer Swift laptop, and it has aged surprisingly well. Thanks to the metal body, it
 still looks new. Sure, I can't play heavy games on this but it has plenty juice for my workloads,
 and gets the job done. On top of that, it' super light and hence makes for a really handy
 work machine when I'm on the go.
@@ -75,6 +74,7 @@ I use an Android phone, the Motorola Edge.
 I've been using Motorola for over 5 years. And while the camera isn't exactly award
 winning, the phone gets all the essentials right. With a near stock os, a gorgeous
 oled panel, all day battery, storage that never runs out and a decent processor,
-it's the perfect fit for my low-key usage. Plus, the IP68 adds peace of mind.
+it's the perfect fit for my low-key usage. On top of this, the IP69 adds peace
+of mind.
 
-## Thats all folks.
+Thats all folks.

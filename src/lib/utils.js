@@ -8,8 +8,8 @@ const greetings = {
 		{ first: 'Good', second: 'Morning', comment: 'Did you have breakfast?' }
 	],
 	late_morning: [
-		{ first: 'Hello', second: 'Sunshine', comment: '... avoiding work already?' },
-		{ first: 'Hello', second: 'Sunshine', comment: 'Yak shaving are we?' }
+		{ first: 'Hello', second: 'Gorgeous', comment: '... avoiding work already?' },
+		{ first: 'Hello', second: 'Gorgeous', comment: 'Yak shaving are we?' }
 	],
 	early_afternoon: [
 		{ first: 'Good', second: 'Afternoon', comment: 'Did you have lunch?' },
@@ -36,24 +36,17 @@ const greetings = {
 		{ first: 'Hello', second: 'Insomniac', comment: 'Surely, Sleep is for the weak.' }
 	],
 	weekend: [
-		{ first: 'Happy', second: 'Weekend', comment: 'I hope you are not working today.' },
-		{ first: 'Happy', second: 'Weekend', comment: 'Do what makes you happy.' }
+		{ first: 'Hello', second: 'Dear', comment: 'I hope you are not working today.' },
+		{ first: 'Hello', second: 'Dear', comment: "Shouldn't you be out having fun?." },
+		{ first: 'Hello', second: 'Dear', comment: 'Why are you here on a weekend?' }
 	],
 	random: [
 		{ first: 'Hello', second: 'Beautiful', comment: 'Are you a pescatarian by any chance?' },
 		{ first: 'Hello', second: 'Beautiful', comment: 'Do you play dota by any chance?' },
 		{ first: 'Hello', second: 'Beautiful', comment: 'You smell funny. Do I know you?' },
-		{ first: 'Hello', second: 'Beautiful', comment: 'You smell funny. Do I know you?' },
-
-		{ first: 'Hello', second: 'Champ', comment: 'Having a bad day? Here’s a virtual hug.' },
-		{ first: 'Hello', second: 'Champ', comment: 'Stressful day? Pat yourself on the back.' },
-		{ first: 'Hello', second: 'Explorer', desc: 'Try clicking on things, see what breaks.' },
 
 		{ first: 'Breaking', second: 'News', comment: 'You’ve just wasted 3 seconds reading this.' },
-		{ first: 'Breaking', second: 'News', comment: "This line you're reading is unnecessary." },
-
 		{ first: 'Error', second: '404', comment: "Just kidding, You're right where you should be :P" },
-		{ first: 'Error', second: '404', comment: "Lost? Don't worry, so is everyone else." },
 
 		{ first: 'Shower', second: 'Thought', comment: 'Do fish know they’re wet?' },
 		{ first: 'Shower', second: 'Thought', comment: 'To your stomach, all potatoes are mashed.' },
@@ -61,7 +54,6 @@ const greetings = {
 		{ first: 'Fun', second: 'Fact', comment: 'Sharks existed before Saturn got its rings.' },
 		{ first: 'Fun', second: 'Fact', comment: 'Sharks existed before trees.' },
 		{ first: 'Fun', second: 'Fact', comment: 'Rabbits can’t vomit.' },
-		{ first: 'Fun', second: 'Fact', comment: 'Turtles can breathe through their butts.' },
 		{ first: 'Fun', second: 'Fact', comment: 'Rats laugh when tickled.' },
 		{ first: 'Fun', second: 'Fact', comment: 'A blue whale’s heart is the size of a small car.' },
 		{ first: 'Fun', second: 'Fact', comment: 'Bananas are berries, but strawberries aren’t.' },
