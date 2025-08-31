@@ -7,7 +7,7 @@
 	import { theme } from '$lib/shared.svelte';
 	import { fly } from 'svelte/transition';
 	import { cubicIn, cubicOut } from 'svelte/easing';
-	let { data, children } = $props();
+	let { children } = $props();
 	import { navigating } from '$app/state';
 </script>
 

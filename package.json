@@ -39,6 +39,7 @@
 	"dependencies": {
 		"@fontsource-variable/inter": "^5.2.6",
 		"@lucide/svelte": "^0.541.0",
+		"@unpic/svelte": "^1.0.0",
 		"feed": "^5.1.0",
 		"lucide-svelte": "^0.541.0"
 	}

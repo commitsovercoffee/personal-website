@@ -8,11 +8,11 @@ pinned: true
 position: 1
 ---
 
-<img
-	class="w-min bg-panel md:h-92 not-prose"
-	src="https://storage.googleapis.com/commitsovercoffee/jbpvu.jpg"
-	alt="Sourav Singh"
-/>
+<script>
+import Gallery from '$lib/components/Gallery.svelte';
+</script>
+
+<Gallery images={[{src:'https://storage.googleapis.com/commitsovercoffee/jbpvu.jpg',alt:'Sourav holding a pigeon with both hands.'}]} />
 
 ## Who I am
 

@@ -45,10 +45,9 @@ const greetings = {
 		{ first: 'Hello', second: 'Beautiful', comment: 'You smell funny. Do I know you?' },
 		{ first: 'Hello', second: 'Beautiful', comment: 'You smell funny. Do I know you?' },
 
-		{ first: 'Hey', second: 'Champ', comment: 'Having a bad day? Here’s a virtual hug.' },
-		{ first: 'Hey', second: 'Champ', comment: 'Stressful day? Pat yourself on the back.' },
-		{ first: 'Hey', second: 'Explorer', desc: 'Try clicking on things, see what breaks.' },
-		{ first: 'Hey', second: 'Explorer', desc: 'Try clicking on things, see what breaks.' },
+		{ first: 'Hello', second: 'Champ', comment: 'Having a bad day? Here’s a virtual hug.' },
+		{ first: 'Hello', second: 'Champ', comment: 'Stressful day? Pat yourself on the back.' },
+		{ first: 'Hello', second: 'Explorer', desc: 'Try clicking on things, see what breaks.' },
 
 		{ first: 'Breaking', second: 'News', comment: 'You’ve just wasted 3 seconds reading this.' },
 		{ first: 'Breaking', second: 'News', comment: "This line you're reading is unnecessary." },
