@@ -4,7 +4,7 @@ date: "2022-10-15"
 desc: "All the hardware & software that I currently use."
 tags: ["personal"]
 published: true
-position: 5
+position: 6
 ---
 
 My workstation and laptop both run a [custom arch setup](https://github.com/commitsovercoffee/hope)

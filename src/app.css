@@ -79,7 +79,7 @@
 		blockquote {
 			border-left: solid 4px var(--tertiary);
 			p {
-				font-weight: 300;
+				font-weight: 400;
 				color: var(--tertiary);
 			}
 			p:first-of-type::before,
@@ -115,8 +115,8 @@
 
 		em,
 		strong {
-			color: var(--fg);
-			font-weight: 400;
+			color: var(--highlight);
+			font-weight: 500;
 		}
 
 		h1,
