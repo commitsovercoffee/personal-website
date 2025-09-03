@@ -7,6 +7,7 @@
 	import { fly } from 'svelte/transition';
 
 	import { pickGreeting } from '$lib/utils.js';
+	import Component from '$lib/components/Component.svelte';
 
 	// Dynamic Greetings -------------------------------------------------------
 

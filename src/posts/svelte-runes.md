@@ -1,27 +1,25 @@
 ---
-title: "Runes 101"
+title: "Svelte & Runes"
 date: "2025-09-02"
-desc: "My notes on svelte's reactivity system."
+desc: "Notes on svelte's reactviity system."
 tags: ["notes", "svelte"]
 published: true
 position: 4
 ---
 
 <script>
-	import { counter } from '$lib/shared.svelte.js';
-
   const outputStyle="p-4 border border-highlight border-dashed rounded-lg"
   const buttonStyle="p-2 rounded-xl bg-panel shadow";
+
+	const goal = 8;
+	let glasses = $state(0);
+	let liters = $derived(glasses * 0.25);
+	let progress = $derived.by(() => Math.min(100, (glasses / goal) * 100));
 
 	let count = $state(0);
 	$inspect(count);
 
-	let glasses = $state(0);
-  let liters = $derived(glasses * 0.25);
-  let progress = $derived.by(() => {
-    const goal = 8;
-    return Math.min(100, (glasses / goal) * 100);
-  });
+	import { counter } from '$lib/shared.svelte.js';
 </script>
 
 Svelte is a tool for building web applications. It allows you to build your app
@@ -29,17 +27,15 @@ declaratively out of components that combine markup, styles and behaviours.
 
 In this blog, we will look at the heart of svelte ~ reactivity.
 
-## State, Reactivity & Runes
+---
 
 In svelte...
 
-__State__ refers to the current values held by variables, when the state updates
+- __State__ refers to the current values held by variables, when the state updates
 through a reassignment or mutation, it triggers reactivity.
-
-__Reactivity__ is a mechanism that ensures when your state changes, the DOM
+- __Reactivity__ is a mechanism that ensures when your state changes, the DOM
 and dependent computations automatically update.
-
-__Runes__ are explicit syntax through which you can mark a variable
+- __Runes__ are explicit syntax through which you can mark a variable
 as reactive, so that when the variable’s value changes, reactivity gets triggered.
 
 ## Runes
@@ -58,28 +54,44 @@ Sample Program :
 
 ```svelte
 <script>
-  let glasses = $state(0); // This is a rune.
-  let liters = $derived(glasses * 0.25); // So, is this.
+	const goal = 8;
 
-  let progress = $derived.by(() => { // ...and this.
-    const goal = 8;
-    return Math.min(100, (glasses / goal) * 100);
-  });
+	let glasses = $state(0);
+	let liters = $derived(glasses * 0.25);
+	let progress = $derived.by(() => {
+		Math.min(100, (glasses / goal) * 100);
+	});
 </script>
 
 <p>💧 Water Tracker :</p>
-<p>Glasses: {glasses}, Liters: {liters}</p>
-<p>Progress: {progress.toFixed(0)}%</p>
-<button onclick={() => glasses++}>+ Add a glass</button>
+<p>🥤 Glasses: {glasses}</p>
+<p>🪣 Liters: {liters}</p>
+<p>📊 Progerss: {progress}%</p>
+<button
+	disabled={liters >= goal * 0.25}
+	onclick={() => {
+		glasses++;
+	}}
+>
+	Add a Glass
+</button>
 ```
 
 Output :
 
 <div class={outputStyle}>
 <p>💧 Water Tracker :</p>
-<p>Glasses: {glasses}, Liters: {liters}</p>
-<p>Progress: {progress.toFixed(0)}%</p>
-<button class={buttonStyle} onclick={() => glasses++}>+ Add a glass</button>
+<p>🥤 Glasses: {glasses}</p>
+<p>🪣 Liters: {liters}</p>
+<p>📊 Progerss: {progress}%</p>
+<button class={buttonStyle}
+	disabled={liters >= goal * 0.25}
+	onclick={() => {
+		glasses++;
+	}}
+>
+	Add a Glass
+</button>
 </div>
 
 ---
@@ -136,13 +148,9 @@ Sample Program :
 <script>
 	let count = $state(0);
 	$inspect(count); // will console.log when count changes.
-
-	function increment() {
-		count += 1;
-	}
 </script>
 
-<button onclick={increment}>
+<button onclick={() => count++}>
 	Clicked {count}
 	{count === 1 ? 'time' : 'times'}
 </button>
@@ -151,7 +159,7 @@ Sample Program :
 Output :
 
 <div class={outputStyle}>
-<button class={buttonStyle} onclick={()=>{count++;}}>
+<button class={buttonStyle} onclick={() => count++}>
 	Clicked {count}
 	{count === 1 ? 'time' : 'times'}
 </button>
@@ -203,10 +211,29 @@ Subtract
 </button>
 ````
 
+`routes/+page.svelte`
+```svelte
+<script>
+	import { counter } from '$lib/shared.svelte';
+	import Increment from '$lib/components/Increment.svelte';
+	import Decrement from '$lib/components/Decrement.svelte';
+</script>
+
+<p>
+	Clicked {counter.count}
+	{counter.count === 1 ? 'time' : 'times'}.
+</p>
+<Increment />
+<Decrement />
+```
+
 Output :
 
 <div class={outputStyle}>
-<p>Clicked {counter.count} times.</p>
+<p>
+	Clicked {counter.count}
+	{counter.count === 1 ? 'time' : 'times'}.
+</p>
 <button class={buttonStyle} onclick={() => (counter.count += 1)}> Add </button>
 <button class={buttonStyle} onclick={() => (counter.count -= 1)}> Subtract </button>
 </div>
@@ -215,9 +242,8 @@ Output :
 
 ## Reactive Built-ins
 
-Svelte provides reactive versions of various built-ins like Map, Set and URL
-that can be used just like their native counterparts, as well as a handful
-of additional utilities for handling reactivity.
+Svelte provides [reactive versions of various built-ins](https://svelte.dev/docs/svelte/svelte-reactivity)
+like Map, Set and URL that can be used just like their native counterparts.
 
 ```svelte
 <script>
@@ -231,8 +257,8 @@ import {
 	createSubscriber
 } from 'svelte/reactivity';
 </script>
-````
+```
 
 ---
 
-## That's all folks.
+## End
