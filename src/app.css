@@ -108,8 +108,7 @@
 			border: 2px solid var(--panel);
 		}
 
-		p,
-		span {
+		p {
 			color: var(--body);
 		}
 

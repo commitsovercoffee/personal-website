@@ -9,140 +9,168 @@ position: 4
 
 <script>
   import Balloon from '$lib/components/blog/Balloon.svelte';
+  import Typer from '$lib/components/blog/Typer.svelte';
   import Button from '$lib/components/blog/Button.svelte';
 
   const outputStyle="p-4 border border-highlight border-dashed rounded-lg";
-  const buttonStyle="p-2 rounded-xl bg-panel shadow";
-
-	let type = $state('success'); // success, error, warning
-	let size = $state('small'); // small, large
+  const buttonStyle="p-2 rounded-xl bg-panel shadow my-2";
 </script>
 
 Svelte components bundle markup, styles, and behavior. Styles are scoped by
 default, so they apply only to the component and don’t leak out.
 
-By default, a svelte component is styled using a single `<style>` tag with
-CSS rules. In this blog, however, we’ll focus on using Tailwind and utility
-classes for styles.
+By default, a Svelte component is styled with a single `<style>` tag containing
+CSS rules. In this blog, though, we’ll lean towards Tailwind for styling.
 
 ---
 
-## The Class Attribute.
+## Conditional Styling
 
-Adding or removing a class based on some condition is a common pattern
-in UI development. In svelte, we can do this in three different ways:
+Adding or removing a class based on a condition is a common pattern in UI
+development. In Svelte, there are several ways to do this. Consider the sample
+program below, and explore the different approaches discussed.
 
-### 1. Using a ternary operator :
+Sample Program :
 
+`$lib/components/blog/Typer.svelte`
 ```svelte
 <script>
-	let type = $state('success'); // success, error, warning
-	let size = $state('small'); // small, large
+	const paragraph = 'The quick brown fox jumps over the lazy dog.';
+
+	let typed = $state('');
+	let active = $state(false);
+
+	let chars = $derived(paragraph.split(''));
+	let typedChars = $derived(typed.split(''));
+	let currentIndex = $derived(typedChars.length);
+
+	function handleKeydown(e) {
+		if (!active) return;
+		if (e.key.length === 1) {
+			e.preventDefault(); // Prevent scrolling
+			typed += e.key;
+		} else if (e.key === 'Backspace') {
+			typed = typed.slice(0, -1);
+		}
+	}
 </script>
 
-<div
-	class="{type === 'success'
-		? 'bg-green-100 text-green-800'
-		: type === 'error'
-			? 'bg-red-100 text-red-800'
-			: 'bg-yellow-100 text-yellow-800'} {size === 'large'
-		? 'px-6 py-3 text-lg'
-		: 'px-3 py-1 text-sm'} rounded-md font-medium"
->
-	🔔 Notification
+<svelte:window on:keydown={handleKeydown} />
+<div class="not-prose flex flex-wrap py-4">
+	{#each chars as char, i (i)}
+		<span
+			class="text-xl transition-all duration-100 ease-in
+			{active && i == currentIndex
+				? 'bg-primary text-bg' // cursor
+				: typedChars[i] === char
+					? 'text-highlight' // correct letter
+					: typedChars[i] && typedChars[i] !== char
+						? char != ' '
+							? 'text-secondary' // incorrect letter
+							: 'bg-secondary' // incorrect space
+						: !typedChars[i] && !active && 'text-body'}"
+		>
+			{char === ' ' ? '\u00A0' : char}
+		</span>
+	{/each}
 </div>
-```
-
-Using ternary operators for simple conditional styling is fine. But, for more
-complex cases, they quickly become verbose and hard to read. Therefore, I
-consider their usage `❌ Bad Practice`.
-
-### 2. Passing an Object :
-
-```svelte
-<script>
-	let type = $state('success'); // success, error, warning
-	let size = $state('small'); // small, large
-</script>
-
-<div
-	class={{
-		'bg-green-100 text-green-800': type === 'success',
-		'bg-red-100 text-red-800': type === 'error',
-		'bg-yellow-100 text-yellow-800': type === 'warning',
-		'px-6 py-3 text-lg': size === 'large',
-		'px-3 py-1 text-sm': size === 'small',
-		'rounded-md font-medium': true
+<button
+	class="my-2 rounded-xl bg-panel p-2 shadow"
+	onclick={() => {
+		active = !active;
+		typed = '';
 	}}
 >
-	🔔 Notification
-</div>
+	{active ? 'End Typing' : 'Start Typing'}
+</button>
 ```
 
-Using objects for conditional styling is more readable than using ternary
-operators. Personally, I am not fond of this syntax, but using it is still
-a `✅ Good Practice`.
-
-### 3. Passing an Array :
-
-```svelte
-<script>
-	let type = $state('success'); // success, error, warning
-	let size = $state('small'); // small, large
-</script>
-
-<div
-	class={[
-		type === 'success' && 'bg-green-100 text-green-800',
-		type === 'error' && 'bg-red-100 text-red-800',
-		type === 'warning' && 'bg-yellow-100 text-yellow-800',
-		size === 'large' && 'px-6 py-3 text-lg',
-		size === 'small' && 'px-3 py-1 text-sm',
-		'rounded-md font-medium'
-	]}
->
-	🔔 Notification
-</div>
-```
-
-Using arrays for conditional styling is just as readable as using objects.
-Personally, I find the array syntax the clearest, since it reads like a
-collection of __if this, then that style__ statements. Definitely a `✅ Good Practice`.
-
-### Output :
+Output :
 
 <div class={outputStyle}>
-<div
-	class={[
-		type === 'success' && 'bg-green-100 text-green-800',
-		type === 'error' && 'bg-red-100 text-red-800',
-		type === 'warning' && 'bg-yellow-100 text-yellow-800',
-		size === 'large' && 'px-6 py-3 text-lg',
-		size === 'small' && 'px-3 py-1 text-sm',
-		'rounded-md font-medium'
-	]}
->
-	Notification
+    <Typer/>
 </div>
 
-<div class="mt-4 space-x-2">
-	<label>Type:</label>
-	<select bind:value={type} class="rounded border px-2 py-1">
-		<option value="success">Success</option>
-		<option value="error">Error</option>
-		<option value="warning">Warning</option>
-	</select>
-	<label>Size:</label>
-	<select bind:value={size} class="rounded border px-2 py-1">
-		<option value="small">Small</option>
-		<option value="large">Large</option>
-	</select>
-</div>
-</div>
+### 1. Using Ternary Operators
+
+```svelte
+<span
+	class="text-xl transition-all duration-100 ease-in
+			{active && i === currentIndex
+		? 'bg-primary text-bg' // cursor
+		: typedChars[i] === char
+			? 'text-highlight' // correct
+			: typedChars[i] && typedChars[i] !== char
+				? char != ' '
+					? 'text-secondary' // incorrect letter
+					: 'bg-secondary' // incorrect space
+				: !typedChars[i] && !active && 'text-body'}"
+>
+	{char === ' ' ? '\u00A0' : char}
+</span>
+```
+
+In the `Output` above, style of the text is applied conditionally using a
+ternary operator. Using ternary operators for simple conditional styling is
+fine. But, for more complex cases (as above), they quickly become verbose and
+hard to read (as you may have felt). That’s why I consider their usage
+`❌ Bad Practice`.
+
+### 2. Passing an Object
+
+```svelte
+<span
+	class={{
+		'text-xl transition-all duration-100 ease-in': true, // always
+		'bg-primary text-bg': active && i === currentIndex, // cursor
+		'text-highlight': typedChars[i] === char, // correct
+		'text-secondary': typedChars[i] && typedChars[i] !== char && char !== ' ', // wrong letter
+		'bg-secondary': typedChars[i] && typedChars[i] !== char && char === ' ', // wrong space
+		'text-body': !typedChars[i] && !active // untyped
+	}}
+>
+	{char === ' ' ? '\u00A0' : char}
+</span>
+```
+
+We can rewrite the logic in an object. Using objects for conditional styling is
+more readable than using ternary operators. Personally, I’m not fond of this
+syntax, but using it is still a `✅ Good Practice`.
+
+### 3. Passing an Array
+
+```svelte
+<span
+	class={[
+		'text-xl transition-all duration-100 ease-in', // always
+		active && i === currentIndex && 'bg-primary text-bg', // cursor
+		typedChars[i] === char && 'text-highlight', // correct
+		typedChars[i] && typedChars[i] !== char && char !== ' ' && 'text-secondary', // wrong letter
+		typedChars[i] && typedChars[i] !== char && char === ' ' && 'bg-secondary', // wrong space
+		!typedChars[i] && !active && 'text-body' // untyped
+	]}
+>
+	{char === ' ' ? '\u00A0' : char}
+</span>
+````
+
+We can also rewrite the logic in an array. Using arrays for conditional styling
+is just as readable as using objects. Personally, I find the array syntax the
+clearest, since it reads like a collection of __if this, then that__ statements.
+Definitely a `✅ Good Practice`.
+
+Besides the approaches discuss above, we can also achieve the same using a `class:`
+directive, which was once a convenient way to set classes on elements conditionally.
+However, It's [no longer recommended](https://svelte.dev/docs/svelte/class#The-class:-directive).
 
 ---
 
-## Passing Classes to Components
+## Style Child Component
+
+Often, you need to influence the styles inside a child component. To do this,
+we can pass classes to components as props.
+
+Sample Program :
 
 `Button.svelte`
 ```svelte
@@ -165,12 +193,17 @@ collection of __if this, then that style__ statements. Definitely a `✅ Good Pr
 <Button class={['border-sky-400 bg-sky-200 text-sky-800']}>Secondary</Button>
 ```
 
-### Output :
+Output :
 
 <div class={outputStyle}>
     <Button class={['border-red-400 bg-red-200 text-red-800']}>Primary</Button>
     <Button class={['border-sky-400 bg-sky-200 text-sky-800']}>Secondary</Button>
 </div>
+
+Since we cannot construct [dynamic classes in tailwind](https://tailwindcss.com/docs/detecting-classes-in-source-files#dynamic-class-names).
+This approach limits its usage when we need something really dynamic. In those,
+cases we can fall back to style and css vairabels I guess.
+
 
 ---
 

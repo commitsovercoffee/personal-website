@@ -1,7 +1,7 @@
 ---
 title: "Svelte & Runes"
 date: "2025-09-02"
-desc: "Notes on svelte's reactviity system."
+desc: "Notes on svelte's reactivity system."
 tags: ["notes", "svelte"]
 published: true
 position: 4
@@ -25,22 +25,22 @@ position: 4
 Svelte is a tool for building web applications. It allows you to build your app
 declaratively out of components that combine markup, styles and behaviours.
 
-In this blog, we will look at the heart of svelte ~ reactivity.
+In this blog, we will look at the heart of Svelte ~ reactivity.
 
 ---
 
-In svelte...
+In Svelte...
 
 - __State__ refers to the current values held by variables, when the state updates
 through a reassignment or mutation, it triggers reactivity.
 - __Reactivity__ is a mechanism that ensures when your state changes, the DOM
 and dependent computations automatically update.
 - __Runes__ are explicit syntax through which you can mark a variable
-as reactive, so that when the variable’s value changes, reactivity gets triggered.
+as reactive, so that when the variable’s value change, reactivity gets triggered.
 
 ## Runes
 
-There are 7 types of Runes in svelte :
+There are [7 types of Runes](https://svelte.dev/docs/svelte/what-are-runes) in Svelte :
 
 1. __$state__ rune allows you to create reactive state, which means that your UI
 reacts when it changes. If $state is used with an array or a simple object, we
@@ -52,6 +52,7 @@ are updated. __$derived.by__ can be used for complex derivations.
 
 Sample Program :
 
+`src/routes/+page.svelte`
 ```svelte
 <script>
 	const goal = 8;
@@ -116,7 +117,7 @@ Sample Program :
 <p>© {new Date().getFullYear()} {company}</p>
 ```
 
-`+layout.svelte`
+`src/routes/+layout.svelte`
 ```svelte
 <script>
   import Footer from '$lib/components/Footer.svelte';
@@ -144,10 +145,12 @@ changes.
 
 Sample Program :
 
+`src/routes/+page.svelte`
+
 ```svelte
 <script>
 	let count = $state(0);
-	$inspect(count); // will console.log when count changes.
+	$inspect(count);
 </script>
 
 <button onclick={() => count++}>
@@ -211,7 +214,7 @@ Subtract
 </button>
 ````
 
-`routes/+page.svelte`
+`src/routes/+page.svelte`
 ```svelte
 <script>
 	import { counter } from '$lib/shared.svelte';
@@ -261,4 +264,9 @@ import {
 
 ---
 
-## End
+## That's all Folks
+
+I think Svelte is moving in the right direction with this new reactivity system.
+By making it explicit, it becomes more predictable, easier to debug, and simpler
+to maintain. Runes give clarity and control without adding unnecessary overhead,
+and that balance really hits the sweet spot.
