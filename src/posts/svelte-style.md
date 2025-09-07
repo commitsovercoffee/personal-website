@@ -9,11 +9,19 @@ position: 4
 
 <script>
   import Balloon from '$lib/components/blog/Balloon.svelte';
-  import Typer from '$lib/components/blog/Typer.svelte';
-  import Button from '$lib/components/blog/Button.svelte';
+	import Typer from '$lib/components/blog/Typer.svelte';
+	import Button from '$lib/components/blog/Button.svelte';
+	import Box from '$lib/components/blog/Box.svelte';
 
-  const outputStyle="p-4 border border-highlight border-dashed rounded-lg";
-  const buttonStyle="p-2 rounded-xl bg-panel shadow my-2";
+	const outputStyle = 'p-4 border border-highlight border-dashed rounded-lg';
+	const buttonStyle = 'p-2 rounded-xl bg-panel shadow my-2';
+
+	function randomPastel() {
+		const hue = Math.floor(Math.random() * 360); // random hue
+		const saturation = Math.floor(Math.random() * 20 + 80); // 80–100% for bright pastel
+		const lightness = Math.floor(Math.random() * 15 + 75); // 75–90% for soft bright color
+		return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+	}
 </script>
 
 Svelte components bundle markup, styles, and behavior. Styles are scoped by
@@ -28,11 +36,11 @@ CSS rules. In this blog, though, we’ll lean towards Tailwind for styling.
 
 Adding or removing a class based on a condition is a common pattern in UI
 development. In Svelte, there are several ways to do this. Consider the sample
-program below, and explore the different approaches discussed.
+program below, and then let's explore the different approaches.
 
 Sample Program :
 
-`$lib/components/blog/Typer.svelte`
+`src/routes/+page.svelte`
 ```svelte
 <script>
 	const paragraph = 'The quick brown fox jumps over the lazy dog.';
@@ -167,23 +175,29 @@ However, It's [no longer recommended](https://svelte.dev/docs/svelte/class#The-c
 
 ## Style Child Component
 
-Often, you need to influence the styles inside a child component. To do this,
-we can pass classes to components as props.
+Often, you need to influence the styles inside a child component. In Svelte,
+you can do this by passing classes as props or using CSS variables, allowing the
+parent to control the styling.
+
+### 1. Passing classes as prop
+
+With this method, you can easily pass Tailwind utility classes to style a child
+component as you like. However, because Tailwind doesn’t support constructing
+[dynamic classes](https://tailwindcss.com/docs/detecting-classes-in-source-files#dynamic-class-names), this approach has its limitations.
 
 Sample Program :
 
-`Button.svelte`
+`$lib/components/Button.svelte`
 ```svelte
 <script>
 	let props = $props();
 </script>
-
 <button {...props} class={['rounded-xl border p-2 shadow', props.class]}>
 	{@render props.children?.()}
 </button>
 ```
 
-`App.svelte`
+`src/routes/+page.svelte`
 ```svelte
 <script>
 	import Button from '$lib/components/Button.svelte';
@@ -200,60 +214,72 @@ Output :
     <Button class={['border-sky-400 bg-sky-200 text-sky-800']}>Secondary</Button>
 </div>
 
-Since we cannot construct [dynamic classes in tailwind](https://tailwindcss.com/docs/detecting-classes-in-source-files#dynamic-class-names).
-This approach limits its usage when we need something really dynamic. In those,
-cases we can fall back to style and css vairabels I guess.
+### 2. Passing CSS Variables
 
+With this method, you can pass CSS custom properties to a child component, making
+it easy to style elements dynamically. Unlike Tailwind classes, CSS variables can
+be computed on the fly.
 
----
+Sample Program :
 
-## Custom Animations with Tailwind
-
-Here’s a simple balloon animation using plain CSS:
-
+`$lib/components/Box.svelte`
 ```svelte
-<script>
-	let balloon = '🎈';
-</script>
-
-<div class="sky">
-	<p class="balloon">{balloon}</p>
-</div>
+<div class="box"></div>
 
 <style>
-	.sky {
-		position: relative;
-		height: 200px;
-		background: linear-gradient(skyblue, white);
-		overflow: hidden;
-		border-radius: 8px;
-	}
-
-	.balloon {
-		font-size: 2.5rem;
-		position: absolute;
-		left: 50%;
-		bottom: -50%;
-		transform: translateX(-50%);
-		animation: float 6s ease-in-out infinite;
-	}
-
-	@keyframes float {
-		0% {
-			transform: translate(-50%, 100px) rotate(0deg);
-		}
-		50% {
-			transform: translate(-50%, -100px) rotate(3deg);
-		}
-		100% {
-			transform: translate(-50%, -300px) rotate(-3deg);
-		}
+	.box {
+		width: 5em;
+		height: 5em;
+		background-color: var(--bg-color, #dcdcdc);
+		transition: background-color 1s ease;
 	}
 </style>
 ```
 
-We can rewrite the same animation using tailwind as shown below.
+`src/routes/+page.svelte`
+```svelte
+<script>
+	import Box from '$lib/components/Box.svelte';
 
+	function randomPastel() {
+		const hue = Math.floor(Math.random() * 360); // random hue
+		const saturation = Math.floor(Math.random() * 20 + 80); // 80–100% for bright pastel
+		const lightness = Math.floor(Math.random() * 15 + 75); // 75–90% for soft bright color
+		return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+	}
+</script>
+
+<div class="my-2 flex flex-row gap-2">
+	<Box --bg-color={randomPastel()} />
+	<Box --bg-color={randomPastel()} />
+</div>
+```
+
+Output :
+
+<div class={outputStyle}>
+	<div class="my-2 flex flex-row gap-2">
+		<Box --bg-color={randomPastel()} />
+		<Box --bg-color={randomPastel()} />
+		<Box --bg-color={randomPastel()} />
+		<Box --bg-color={randomPastel()} />
+	</div>
+</div>
+
+---
+
+## Custom Animations
+
+When working with Tailwind, you can’t directly define custom animations inside it.
+
+### 1. Component Scoped
+
+If the animation is only needed for a single component and won’t be reused elsewhere,
+we can define it inside that component’s `<style>` tag.
+
+Sample Program :
+
+`src/routes/+page.svelte`
 ```svelte
 <script>
 	let balloon = '🎈';
@@ -266,15 +292,7 @@ We can rewrite the same animation using tailwind as shown below.
 		{balloon}
 	</p>
 </div>
-```
 
-If you notice in the above rewrite, we have used a class named `animate-float`.
-This class will be responsible for the animation. But to make it work, we'll
-need to define it somewhere first. We have two options:
-
-1. Define it in `<style>` of the (above) component. If, it's only used there.
-
-```svelte
 <style>
 	@keyframes float {
 		0% {
@@ -294,15 +312,20 @@ need to define it somewhere first. We have two options:
 </style>
 ```
 
-2. Define it in `app.css`. If you plan to reuse it across components.
+### 2. Global ~ Outside the Component
 
+If the animation should be shared across multiple components, we can define it in
+`app.css` (or another global stylesheet) so it can be reused anywhere.
+
+Sample Program :
+
+`src/app.css`
 ```css
-
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
 @theme {
-	--animate-float-up: float-up 6s ease-in-out infinite;
+	--animate-float: float-up 6s ease-in-out infinite;
 	@keyframes float-up {
 		0% {
 			transform: translate(-50%, 100px) rotate(0deg);
@@ -317,8 +340,22 @@ need to define it somewhere first. We have two options:
 }
 ```
 
-Output :
+`src/routes/+page.svelte`
+```svelte
+<script>
+	let balloon = '🎈';
+</script>
 
+<div
+	class="relative h-[200px] w-full overflow-hidden rounded-md bg-gradient-to-t from-white to-sky-300"
+>
+	<p class="animate-float absolute -bottom-1/2 left-1/2 -translate-x-1/2 text-[2.5rem]">
+		{balloon}
+	</p>
+</div>
+```
+
+Output :
 
 <div class={outputStyle}>
     <Balloon/>
@@ -326,46 +363,8 @@ Output :
 
 ---
 
-## Extras
+## That's all folks.
 
-###   The style directive
-
-We can use `style:` directive to write multiple inline styles.
-
-```svelte
-<button
-	class="card"
-	style:transform={flipped ? 'rotateY(0)' : ''}
-	style:--bg-1="palegoldenrod"
-	style:--bg-2="black"
-	style:--bg-3="goldenrod"
-	onclick={() => flipped = !flipped}
->
-```
-
-### Custom Properties
-
-`Box.svelte`
-```svelte
-<style>
-	.box {
-		width: 5em;
-		height: 5em;
-		border-radius: 0.5em;
-		margin: 0 0 1em 0;
-		background-color: var(--color, #ddd);
-	}
-</style>
-```
-
-We can set the value of `--color` on individual components. These values can be
-dynamic, like any other attribute.
-
-`App.svelte`
-```svelte
-<div class="boxes">
-	<Box --color="red" />
-	<Box --color="green" />
-	<Box --color="blue" />
-</div>
-```
+Svelte and Tailwind play really well together. You get scoped styles by default,
+utility-driven styling, and the freedom to fall back on CSS variables or custom
+animations whenever you need more fine-grained control.
